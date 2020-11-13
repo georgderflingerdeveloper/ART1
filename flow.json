@@ -13381,8 +13381,8 @@
         "z": "bbeaf112.72e1d",
         "name": "AUTO_COMMITTER",
         "info": "",
-        "x": 4460,
-        "y": 80,
+        "x": 4440,
+        "y": 160,
         "wires": []
     }
 ]
