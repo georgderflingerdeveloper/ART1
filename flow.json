@@ -2147,7 +2147,9 @@
             "d93a8435.6671f8"
         ],
         "x": 174,
-        "y": 59
+        "y": 59,
+        "w": 1027,
+        "h": 262
     },
     {
         "id": "67e35083.d2ceb",
@@ -2188,7 +2190,9 @@
             "ab2254c8.a1a2f8"
         ],
         "x": 98,
-        "y": 59
+        "y": 59,
+        "w": 1678,
+        "h": 482
     },
     {
         "id": "efc47727.94b3e8",
@@ -2258,7 +2262,9 @@
             "e64bc328.f08bb"
         ],
         "x": 194,
-        "y": 19
+        "y": 19,
+        "w": 1302,
+        "h": 682
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2389,7 +2395,9 @@
             "7e702f94.d8d83"
         ],
         "x": 734,
-        "y": 239
+        "y": 239,
+        "w": 752,
+        "h": 262
     },
     {
         "id": "1876b4fb.31fdfb",
@@ -2413,7 +2421,9 @@
             "88529efb.9767f"
         ],
         "x": 2174,
-        "y": 119
+        "y": 119,
+        "w": 432,
+        "h": 302
     },
     {
         "id": "598b40d2.e8268",
@@ -2432,7 +2442,9 @@
             "4957956b.226ebc"
         ],
         "x": 2674,
-        "y": 179
+        "y": 179,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "61242e42.52d0d",
@@ -2454,7 +2466,9 @@
             "88211a4.dd44be8"
         ],
         "x": 414,
-        "y": 139
+        "y": 139,
+        "w": 1112,
+        "h": 182
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2474,7 +2488,9 @@
             "cbc9ccd0.4f35e"
         ],
         "x": 174,
-        "y": 39
+        "y": 39,
+        "w": 622,
+        "h": 202
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -2490,7 +2506,9 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59
+        "y": 59,
+        "w": 602,
+        "h": 82
     },
     {
         "id": "cd213aec.cccc28",
@@ -2592,7 +2610,9 @@
             "1b52b3ef.a9adec"
         ],
         "x": 1574,
-        "y": 171.5
+        "y": 171.5,
+        "w": 552,
+        "h": 349.5
     },
     {
         "id": "88c8327a.46d43",
@@ -2609,7 +2629,9 @@
             "f2e41c73.5c255"
         ],
         "x": 474,
-        "y": 79
+        "y": 79,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "47cc638b.63a52c",
@@ -2627,7 +2649,9 @@
             "bfa81f19.97ad9"
         ],
         "x": 314,
-        "y": 219
+        "y": 219,
+        "w": 332,
+        "h": 262
     },
     {
         "id": "f2ae83b.dc73b8",
@@ -2752,7 +2776,9 @@
             "eb42fcd1.96712"
         ],
         "x": 124,
-        "y": 399
+        "y": 399,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "e86d8e3b.0c92f",
@@ -6132,6 +6158,8 @@
         "func": "var NewMsg         = { payload : ''};\nvar phidget22      = global.get('phidget22')\nvar conn           = new phidget22.Connection(5661,'192.168.1.51');\nvar Initialized    = context.get('init') || 0;\nvar digitalOutput0 = new phidget22.DigitalOutput();\n\nvar SerialNumber = 597039;\nvar PortNumber   = 5000;\n\ndigitalOutput0.onAttach = function onDigitalOutput0_Error() {\n        global.set(\"OfficePublicVintHubInit\", 1);\n\t\tconsole.log('Office Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = function onDigitalOutput0_Error() {\n\t    global.set(\"OfficePublicVintHubInit\", 0);\n\t\tconsole.log('Office Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(PortNumber).then(function () \n    {\n       global.set(\"OfficePublicDigitalOutput0\", digitalOutput0);\n    });\n}\n\nconn.connect().then(Start).catch(function(err) {\n\tconsole.error(\"Error during connect:\", err);\n});\n\n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 530,
         "y": 140,
         "wires": [
@@ -6209,6 +6237,18 @@
         "type": "inject",
         "z": "74ecbe6.1a00e4",
         "name": "CONFIG_VINT_HUB_OFFICE",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"VintHub\":{\"Location\":\"Office\",\"ipadress\":\"192.168.0.51\",\"port\":5661,\"serialnumber\":597039,\"timeout\":10000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":4},\"DigitalInput\":{\"HubPort\":1,\"Channel\":0},\"DigitalOutput\":{\"PublicId\":\"PublicDigitalOutput\",\"PublicInit\":\"PublicInit1\",\"HubPort\":3}}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "TOPIC_CONFIG",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
@@ -8986,6 +9026,8 @@
         "func": "var NewMsg = {};\nvar Config = {};\nvar phidget22      = global.get('phidget22');\nvar DigitalOutput = 0;\nvar IsInitialized = 0;\nvar ON             = 'ON';\nvar OFF            = 'OFF';\nvar Location;\nvar SerialNumber;\nvar HubPort;\n\nvar LogInfo;\nvar DigOutError;\n\n\nfunction Start(digitalOutput, config)\n{\n    digitalOutput.setIsHubPortDevice(true);\n    digitalOutput.setHubPort(config.DigitalOutput.HubPort);\n    digitalOutput.setDeviceSerialNumber(config.VintHub.serialnumber);\n    digitalOutput.open(config.VintHub.timeout).then( () =>\n    {\n       global.set(Config.DigitalOutput.PublicInit, 1);\n    });\n}\n\nif( msg.topic === \"TOPIC_CONFIG\" )\n{\n    Config         = msg.payload;\n    global.set(\"Config\",Config);\n    var conn           = new phidget22.Connection(Config.VintHub.port, Config.VintHub.ipadress);\n    DigitalOutput = new phidget22.DigitalOutput();\n    global.set(Config.DigitalOutput.PublicId,DigitalOutput);\n    conn.connect().then(Start(DigitalOutput, Config)).catch( err => {\n    \tconsole.error(\"Error during connect:\" + LogInfo, err);\n    });\n}\n\nConfig = global.get(\"Config\"||0);\nif( Config)\n{\n    DigitalOutput = global.get(Config.DigitalOutput.PublicId);\n    IsInitialized = global.get(Config.DigitalOutput.PublicInit);\n    Location       = Config.VintHub.Location;\n    SerialNumber   = Config.VintHub.serialnumber;\n    HubPort        = Config.DigitalOutput.HubPort;\n    LogInfo        = Location + ' with digital output '                 + HubPort + ' Serial number is: ' + SerialNumber;\n    DigOutError    = Location + \"Error setting digital output at port \" + HubPort +  'Serial number is: ' + SerialNumber;\n}\n\n\n\n   DigitalOutput.onAttach = () => {\n             global.set(Config.DigitalOutput.PublicInit, 1);\n             console.log(\"Vinthub ATTACHED! \" + LogInfo);\n   };\n\n   DigitalOutput.onDetach = () => {\n             global.set(Config.DigitalOutput.PublicInit,  0);\n             console.log(\"Vinthub DETACHED! \" + LogInfo);\n   }; \n\n\nif( IsInitialized  )\n{\n    if( msg.payload === ON)\n    {\n        DigitalOutput.setDutyCycle(1).catch( err => { console.error(DigOutError, err); } );\n    }\n\n    if( msg.payload === OFF)\n    {\n        DigitalOutput.setDutyCycle(0).catch( err => { console.error(DigOutError, err); } );\n    }\n}\n\nNewMsg = msg;\n\nreturn(NewMsg);\n\n\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 200,
         "y": 80,
         "wires": [
@@ -10621,6 +10663,15 @@
         "type": "inject",
         "z": "74ecbe6.1a00e4",
         "name": "CONFIG_VINT_HUB_OFFICE_DIG_1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
@@ -12401,6 +12452,8 @@
         "func": "var DigitalOutput0 = global.get('PublicDigitalOutput0');\nvar IsInitialized = global.get(\"PublicVintHubInit\");\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput0.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput0.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 2580,
         "y": 920,
         "wires": [
@@ -13381,8 +13434,8 @@
         "z": "bbeaf112.72e1d",
         "name": "AUTO_COMMITTER",
         "info": "",
-        "x": 4000,
-        "y": 100,
+        "x": 3600,
+        "y": 60,
         "wires": []
     }
 ]
