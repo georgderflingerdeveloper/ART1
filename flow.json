@@ -13693,8 +13693,7 @@
         "g": "9ac34d81.c06d4",
         "name": "TO_MANUAL_OFF",
         "links": [
-            "84acfff1.11654",
-            "fc182d89.2e52f"
+            "84acfff1.11654"
         ],
         "x": 715,
         "y": 280,
@@ -13761,7 +13760,6 @@
         "z": "1ec665eb.b278ca",
         "name": "ACTIVATE_TIMER",
         "links": [
-            "2e5a5549.e204ba",
             "9a8416cb.ae79e8"
         ],
         "x": 615,
