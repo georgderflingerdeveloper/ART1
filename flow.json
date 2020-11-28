@@ -303,6 +303,14 @@
                     {
                         "id": "1abc2ce5.bbd9a3",
                         "port": 0
+                    },
+                    {
+                        "id": "22541297.3df04e",
+                        "port": 0
+                    },
+                    {
+                        "id": "412e1f52.e4cf7",
+                        "port": 0
                     }
                 ]
             }
@@ -2788,7 +2796,9 @@
             "8e2c901c.65dcf",
             "868d9197.79d6d",
             "e720a593.ff1128",
-            "2046a19e.dad38e"
+            "2046a19e.dad38e",
+            "2e5a5549.e204ba",
+            "9a8416cb.ae79e8"
         ],
         "x": 334,
         "y": 39,
@@ -3143,7 +3153,8 @@
         "wires": [
             [
                 "72e1f476.a40ddc",
-                "30671a43.23e986"
+                "30671a43.23e986",
+                "2e5a5549.e204ba"
             ]
         ]
     },
@@ -3274,12 +3285,13 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "x": 650,
-        "y": 560,
+        "x": 670,
+        "y": 460,
         "wires": [
             [
                 "bd752582.ad6ac8",
-                "b3b1cf5c.3a142"
+                "b3b1cf5c.3a142",
+                "9a8416cb.ae79e8"
             ]
         ]
     },
@@ -13602,5 +13614,175 @@
                 "d656019d.55ba1"
             ]
         ]
+    },
+    {
+        "id": "22541297.3df04e",
+        "type": "change",
+        "z": "1ec665eb.b278ca",
+        "name": "MESSAGE_MANUAL_OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C_MANUAL_OPERATION_OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GetValueByKey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5eb3da27.519704",
+        "type": "switch",
+        "z": "1ec665eb.b278ca",
+        "name": "IsPressed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 760,
+        "wires": [
+            [
+                "22541297.3df04e"
+            ]
+        ]
+    },
+    {
+        "id": "84acfff1.11654",
+        "type": "link in",
+        "z": "1ec665eb.b278ca",
+        "name": "MANUAL_OFF",
+        "links": [
+            "2e5a5549.e204ba"
+        ],
+        "x": 615,
+        "y": 760,
+        "wires": [
+            [
+                "5eb3da27.519704"
+            ]
+        ]
+    },
+    {
+        "id": "2e5a5549.e204ba",
+        "type": "link out",
+        "z": "1ec665eb.b278ca",
+        "g": "9ac34d81.c06d4",
+        "name": "TO_MANUAL_OFF",
+        "links": [
+            "84acfff1.11654",
+            "fc182d89.2e52f"
+        ],
+        "x": 715,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "412e1f52.e4cf7",
+        "type": "change",
+        "z": "1ec665eb.b278ca",
+        "name": "MESSAGE_ACTIVATE_TIMER",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C_ACTIVATE_TIMER",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GetValueByKey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79a31b15.e9bc84",
+        "type": "switch",
+        "z": "1ec665eb.b278ca",
+        "name": "IsPressed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 820,
+        "wires": [
+            [
+                "412e1f52.e4cf7"
+            ]
+        ]
+    },
+    {
+        "id": "fc182d89.2e52f",
+        "type": "link in",
+        "z": "1ec665eb.b278ca",
+        "name": "ACTIVATE_TIMER",
+        "links": [
+            "2e5a5549.e204ba",
+            "9a8416cb.ae79e8"
+        ],
+        "x": 615,
+        "y": 820,
+        "wires": [
+            [
+                "79a31b15.e9bc84"
+            ]
+        ]
+    },
+    {
+        "id": "9a8416cb.ae79e8",
+        "type": "link out",
+        "z": "1ec665eb.b278ca",
+        "g": "9ac34d81.c06d4",
+        "name": "TO_MESSAGE_ACTIVATE_TIMER",
+        "links": [
+            "fc182d89.2e52f"
+        ],
+        "x": 815,
+        "y": 540,
+        "wires": []
     }
 ]
