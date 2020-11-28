@@ -2469,12 +2469,13 @@
             "d656019d.55ba1",
             "31ca19a.9fd6ee6",
             "3ea891b6.8ab8ce",
-            "88211a4.dd44be8"
+            "88211a4.dd44be8",
+            "eb4f02b2.5bbf1"
         ],
         "x": 414,
         "y": 139,
         "w": 1112,
-        "h": 182
+        "h": 222
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2535,7 +2536,8 @@
             "1d5db904.043c77",
             "5da1c028.06ef5",
             "da56313.f8ed9d",
-            "bc73624a.9bf6c"
+            "bc73624a.9bf6c",
+            "c1fcccdc.e979c"
         ],
         "x": 1174,
         "y": 79,
@@ -4124,7 +4126,9 @@
                 "41a99d5f.d90424",
                 "4fda9dd4.739754"
             ],
-            []
+            [
+                "c1fcccdc.e979c"
+            ]
         ]
     },
     {
@@ -13568,5 +13572,35 @@
         "x": 645,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "c1fcccdc.e979c",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "cd213aec.cccc28",
+        "name": "INFO_HEATER_COMMANDER",
+        "links": [
+            "eb4f02b2.5bbf1"
+        ],
+        "x": 1505,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "eb4f02b2.5bbf1",
+        "type": "link in",
+        "z": "cd8f43b1.9fb88",
+        "g": "61242e42.52d0d",
+        "name": "HEATER_COMMANDER",
+        "links": [
+            "c1fcccdc.e979c"
+        ],
+        "x": 575,
+        "y": 320,
+        "wires": [
+            [
+                "d656019d.55ba1"
+            ]
+        ]
     }
 ]
