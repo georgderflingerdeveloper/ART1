@@ -2870,6 +2870,31 @@
         "h": 82
     },
     {
+        "id": "cf2bb747.271778",
+        "type": "group",
+        "z": "1ec665eb.b278ca",
+        "name": "MESSAGES_TIMER_MANUAL_HEATER_CONTROL",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "1abc2ce5.bbd9a3",
+            "316a65f0.27f2ea",
+            "b02711c1.bb556",
+            "22541297.3df04e",
+            "5eb3da27.519704",
+            "84acfff1.11654",
+            "412e1f52.e4cf7",
+            "79a31b15.e9bc84",
+            "fc182d89.2e52f"
+        ],
+        "x": 574,
+        "y": 659,
+        "w": 612,
+        "h": 202
+    },
+    {
         "id": "1f630ff1.1800f",
         "type": "ui_group",
         "name": "HAUS",
@@ -13505,6 +13530,7 @@
         "id": "1abc2ce5.bbd9a3",
         "type": "change",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "MESSAGE_MANUAL_ON",
         "rules": [
             {
@@ -13537,6 +13563,7 @@
         "id": "316a65f0.27f2ea",
         "type": "switch",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "IsPressed",
         "property": "payload",
         "propertyType": "msg",
@@ -13560,6 +13587,7 @@
         "id": "b02711c1.bb556",
         "type": "link in",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "MANUAL_ON",
         "links": [
             "2046a19e.dad38e"
@@ -13619,6 +13647,7 @@
         "id": "22541297.3df04e",
         "type": "change",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "MESSAGE_MANUAL_OFF",
         "rules": [
             {
@@ -13651,6 +13680,7 @@
         "id": "5eb3da27.519704",
         "type": "switch",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "IsPressed",
         "property": "payload",
         "propertyType": "msg",
@@ -13674,6 +13704,7 @@
         "id": "84acfff1.11654",
         "type": "link in",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "MANUAL_OFF",
         "links": [
             "2e5a5549.e204ba"
@@ -13703,6 +13734,7 @@
         "id": "412e1f52.e4cf7",
         "type": "change",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "MESSAGE_ACTIVATE_TIMER",
         "rules": [
             {
@@ -13735,6 +13767,7 @@
         "id": "79a31b15.e9bc84",
         "type": "switch",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "IsPressed",
         "property": "payload",
         "propertyType": "msg",
@@ -13758,6 +13791,7 @@
         "id": "fc182d89.2e52f",
         "type": "link in",
         "z": "1ec665eb.b278ca",
+        "g": "cf2bb747.271778",
         "name": "ACTIVATE_TIMER",
         "links": [
             "9a8416cb.ae79e8"
