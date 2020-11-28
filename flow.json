@@ -2740,7 +2740,7 @@
         "id": "9ac34d81.c06d4",
         "type": "group",
         "z": "1ec665eb.b278ca",
-        "name": "",
+        "name": "TIMER AND MANUAL HEATER CONTROL ",
         "style": {
             "fill": "#e3f3d3",
             "label": true
