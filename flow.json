@@ -13819,7 +13819,7 @@
         "type": "ui_switch",
         "z": "9087d93a.9a7648",
         "name": "",
-        "label": "switch",
+        "label": "Lüfter 1",
         "tooltip": "",
         "group": "6d0c3e2.dd286c",
         "order": 0,
@@ -13836,8 +13836,8 @@
         "offvalue": "false",
         "offvalueType": "bool",
         "officon": "fa-2x fa-superpowers",
-        "offcolor": "gray",
-        "x": 480,
+        "offcolor": "grey",
+        "x": 490,
         "y": 140,
         "wires": [
             []
