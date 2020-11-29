@@ -2283,7 +2283,9 @@
             "e64bc328.f08bb"
         ],
         "x": 194,
-        "y": 19
+        "y": 19,
+        "w": 1302,
+        "h": 682
     },
     {
         "id": "398b2b64.1f06a4",
@@ -10434,7 +10436,7 @@
         "type": "change",
         "z": "2cb9c15e.79fc0e",
         "g": "efc47727.94b3e8",
-        "name": "INFO_WTIMER_ON_MESSAGE",
+        "name": "INFO_WTIMER1_ON_MESSAGE",
         "rules": [
             {
                 "t": "set",
@@ -10456,7 +10458,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
+        "x": 940,
         "y": 420,
         "wires": [
             [
@@ -10555,7 +10557,7 @@
         "type": "change",
         "z": "2cb9c15e.79fc0e",
         "g": "efc47727.94b3e8",
-        "name": "INFO_WTIMER_OFF_MESSAGE",
+        "name": "INFO_WTIMER1_OFF_MESSAGE",
         "rules": [
             {
                 "t": "set",
@@ -10590,7 +10592,7 @@
         "type": "change",
         "z": "2cb9c15e.79fc0e",
         "g": "efc47727.94b3e8",
-        "name": "INFO_WTIMER_ON_MESSAGE",
+        "name": "INFO_WTIMER2_ON_MESSAGE",
         "rules": [
             {
                 "t": "set",
@@ -10612,7 +10614,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
+        "x": 940,
         "y": 500,
         "wires": [
             [
@@ -10711,7 +10713,7 @@
         "type": "change",
         "z": "2cb9c15e.79fc0e",
         "g": "efc47727.94b3e8",
-        "name": "INFO_WTIMER_OFF_MESSAGE",
+        "name": "INFO_WTIMER2_OFF_MESSAGE",
         "rules": [
             {
                 "t": "set",
