@@ -3115,7 +3115,7 @@
     {
         "id": "6d0c3e2.dd286c",
         "type": "ui_group",
-        "name": "LUEFTERSTEUERING",
+        "name": "LUEFTERSTEUERUNG",
         "tab": "99af1fc4.221fe",
         "order": 3,
         "disp": true,
@@ -13813,5 +13813,34 @@
         "x": 815,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "75270371.70b35c",
+        "type": "ui_switch",
+        "z": "9087d93a.9a7648",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-fan",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-fan",
+        "offcolor": "gray",
+        "x": 480,
+        "y": 140,
+        "wires": [
+            []
+        ]
     }
 ]
