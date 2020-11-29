@@ -13837,8 +13837,37 @@
         "offvalueType": "bool",
         "officon": "fa-2x fa-superpowers",
         "offcolor": "grey",
-        "x": 490,
-        "y": 140,
+        "x": 500,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a47daa3b.aafc98",
+        "type": "ui_switch",
+        "z": "9087d93a.9a7648",
+        "name": "",
+        "label": "Lüfter 2",
+        "tooltip": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-2x fa-superpowers",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-2x fa-superpowers",
+        "offcolor": "grey",
+        "x": 500,
+        "y": 220,
         "wires": [
             []
         ]
