@@ -2290,10 +2290,17 @@
             "3d8a32b7.fc6bae",
             "93d8d324.1b8ce",
             "e1f8429f.73efc",
-            "e64bc328.f08bb"
+            "e64bc328.f08bb",
+            "a80891c.70f047",
+            "36f579bf.dcdf36",
+            "a3957880.427a78",
+            "87fbfa69.90fbe8",
+            "c71edc97.25a2d"
         ],
         "x": 194,
-        "y": 19
+        "y": 19,
+        "w": 1302,
+        "h": 782
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2424,9 +2431,7 @@
             "7e702f94.d8d83"
         ],
         "x": 734,
-        "y": 239,
-        "w": 752,
-        "h": 262
+        "y": 239
     },
     {
         "id": "1876b4fb.31fdfb",
@@ -2450,9 +2455,7 @@
             "88529efb.9767f"
         ],
         "x": 2174,
-        "y": 119,
-        "w": 432,
-        "h": 302
+        "y": 119
     },
     {
         "id": "598b40d2.e8268",
@@ -2471,9 +2474,7 @@
             "4957956b.226ebc"
         ],
         "x": 2674,
-        "y": 179,
-        "w": 672,
-        "h": 262
+        "y": 179
     },
     {
         "id": "61242e42.52d0d",
@@ -2496,7 +2497,9 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139
+        "y": 139,
+        "w": 1112,
+        "h": 222
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2635,9 +2638,7 @@
             "1b52b3ef.a9adec"
         ],
         "x": 1574,
-        "y": 171.5,
-        "w": 552,
-        "h": 349.5
+        "y": 171.5
     },
     {
         "id": "88c8327a.46d43",
@@ -2654,9 +2655,7 @@
             "f2e41c73.5c255"
         ],
         "x": 474,
-        "y": 79,
-        "w": 992,
-        "h": 82
+        "y": 79
     },
     {
         "id": "47cc638b.63a52c",
@@ -2674,9 +2673,7 @@
             "bfa81f19.97ad9"
         ],
         "x": 314,
-        "y": 219,
-        "w": 332,
-        "h": 262
+        "y": 219
     },
     {
         "id": "f2ae83b.dc73b8",
@@ -2695,13 +2692,12 @@
             "d284833.a45098",
             "6eba7f.9956a58",
             "b17d79f3.725708",
-            "2a2a2aa2.a2c796",
             "e86d8e3b.0c92f",
             "c91568a6.292ec8"
         ],
         "x": 2248,
         "y": 373,
-        "w": 1068,
+        "w": 1018,
         "h": 308
     },
     {
@@ -2737,7 +2733,8 @@
             "3915d575.b71bba",
             "768b3151.dc177",
             "88d1ada.9ac3f5",
-            "8e2aec84.981da"
+            "8e2aec84.981da",
+            "3758e9ea.b29876"
         ],
         "x": 3474,
         "y": 199,
@@ -4764,6 +4761,8 @@
         "func": "var NewMsg = {};\nNewMsg.payload = {};\nNewMsg.payload.chatId  = 852123642;\nNewMsg.payload.type    = 'message';\nif(  msg.payload !== \"\" && msg.payload !== null )\n{\n    NewMsg.payload.content = msg.payload;\n}\nreturn NewMsg;\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1080,
         "y": 240,
         "wires": [
@@ -9219,7 +9218,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "DICTIONARY",
-        "payload": "{\"NODE_RED_START\":\"Node red application wurde gestartet / Initialisierung eingeleitet\",\"WHON\":\"Werkstätte Heizung ein\",\"WHOFF\":\"Werkstätte Heizung aus\",\"GATEOPEN\":\"Garagentor ist offen\",\"GATECLOSED\":\"Garagentor ist geschlossen\",\"RON\":\"Reklameschield ist eingeschaltet\",\"ROFF\":\"Reklameschield ist ausgeschaltet\",\"WTEMP\":\"Werstätte innen Temperatur: \",\"WHUM\":\"Werkstätte innen Feuchtigkeit: \",\"W_TIMER1_ON\":\"Timer1 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER1_OFF\":\"Timer1 für die Heizung der  Werkstätte hat ausgeschaltet\",\"W_TIMER2_ON\":\"Timer2 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER2_OFF\":\"Timer2 für die Heizung der  Werkstätte hat ausgeschaltet\",\"O_TIMER_ON\":\"Timer für die Reklameleuchte hat eingeschaltet\",\"O_TIMER_OFF\":\"Timer für die Reklameleuchte hat ausgeschaltet\",\"O_TIMESETTINGS\":\"Einstellung für Timer Reklameleuchte :  \",\"W_TIMESETTINGS1\":\"Einstellung für Timer1 Heizung Werkstätte :  \",\"W_TIMESETTINGS2\":\"Einstellung für Timer2 Heizung Werkstätte :  \",\"W_SMOKE_ALERT_ACTIVE\":\"Werkstätte Meldekontakt Rauchmelder ist offen! - Feueralarm ist möglich\",\"W_SMOKE_ALERT_INACTIVE\":\"Werkstätte Meldekontakt Rauchmelder is geschlossen - Ok\",\"W_SMOKE_ALERT_ACTIVE_REPEAET\":\"Rauchmelderüberwachung hat ausgelöst - bitte melder überprüfen!\",\"C_MANUAL_OPERATION_ON\":\"Heizungssteuerung Button HANDBETRIEB EIN GEDRÜCKT\",\"C_MANUAL_OPERATION_OFF\":\"Heizungssteuerung Button HANDBETRIEB AUS GEDRÜCKT\",\"C_ACTIVATE_TIMER\":\"Heizungssteuerung Button ACTIVIERE ZEITSCHALTUHR GEDRÜCKT\"}",
+        "payload": "{\"NODE_RED_START\":\"Node red application wurde gestartet / Initialisierung eingeleitet\",\"WHON\":\"Werkstätte Heizung ein\",\"WHOFF\":\"Werkstätte Heizung aus\",\"GATEOPEN\":\"Garagentor ist offen\",\"GATECLOSED\":\"Garagentor ist geschlossen\",\"RON\":\"Reklameschield ist eingeschaltet\",\"ROFF\":\"Reklameschield ist ausgeschaltet\",\"WTEMP\":\"Werstätte innen Temperatur: \",\"WHUM\":\"Werkstätte innen Feuchtigkeit: \",\"W_TIMER1_ON\":\"Timer1 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER1_OFF\":\"Timer1 für die Heizung der  Werkstätte hat ausgeschaltet\",\"W_TIMER2_ON\":\"Timer2 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER2_OFF\":\"Timer2 für die Heizung der  Werkstätte hat ausgeschaltet\",\"O_TIMER_ON\":\"Timer für die Reklameleuchte hat eingeschaltet\",\"O_TIMER_OFF\":\"Timer für die Reklameleuchte hat ausgeschaltet\",\"O_TIMESETTINGS\":\"Einstellung für Timer Reklameleuchte :  \",\"W_TIMESETTINGS1\":\"Einstellung für Timer1 Heizung Werkstätte :  \",\"W_TIMESETTINGS2\":\"Einstellung für Timer2 Heizung Werkstätte :  \",\"W_SMOKE_ALERT_ACTIVE\":\"Werkstätte Meldekontakt Rauchmelder ist offen! - Feueralarm ist möglich\",\"W_SMOKE_ALERT_INACTIVE\":\"Werkstätte Meldekontakt Rauchmelder is geschlossen - Ok\",\"W_SMOKE_ALERT_ACTIVE_REPEAET\":\"Rauchmelderüberwachung hat ausgelöst - bitte melder überprüfen!\",\"C_MANUAL_OPERATION_ON\":\"Heizungssteuerung Button HANDBETRIEB EIN GEDRÜCKT\",\"C_MANUAL_OPERATION_OFF\":\"Heizungssteuerung Button HANDBETRIEB AUS GEDRÜCKT\",\"C_ACTIVATE_TIMER\":\"Heizungssteuerung Button ACTIVIERE ZEITSCHALTUHR GEDRÜCKT\",\"C_HEATER_CONTROLLER_ON\":\"Schalter REGLER EIN\",\"C_HEATER_CONTROLLER_OFF\":\"Schalter REGLER AUS\"}",
         "payloadType": "json",
         "x": 540,
         "y": 180,
@@ -9348,6 +9347,8 @@
         "func": "console.log(msg.payload.content );\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1290,
         "y": 240,
         "wires": [
@@ -9559,7 +9560,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 990,
         "y": 140,
         "wires": [
             [
@@ -10478,7 +10479,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 980,
         "y": 420,
         "wires": [
             [
@@ -10599,7 +10600,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 980,
         "y": 460,
         "wires": [
             [
@@ -10634,7 +10635,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 980,
         "y": 500,
         "wires": [
             [
@@ -10755,7 +10756,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 980,
         "y": 540,
         "wires": [
             [
@@ -11185,7 +11186,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
+        "x": 980,
         "y": 620,
         "wires": [
             [
@@ -11328,7 +11329,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 979,
+        "x": 990,
         "y": 580,
         "wires": [
             [
@@ -11970,8 +11971,8 @@
         "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
         "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":5000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3}}",
         "payloadType": "json",
-        "x": 550,
-        "y": 860,
+        "x": 530,
+        "y": 820,
         "wires": [
             [
                 "5fb03958.d25de8"
@@ -12121,9 +12122,7 @@
         "x": 3040,
         "y": 460,
         "wires": [
-            [
-                "2a2a2aa2.a2c796"
-            ]
+            []
         ]
     },
     {
@@ -12361,7 +12360,8 @@
                 "9a9f7a81.13b888",
                 "5dc662c3.977a5c",
                 "7f44966d.3b6668",
-                "3915d575.b71bba"
+                "3915d575.b71bba",
+                "3758e9ea.b29876"
             ]
         ]
     },
@@ -13277,8 +13277,7 @@
         "y": 380,
         "wires": [
             [
-                "db4a7d4e.39e4b",
-                "e391f62f.876d48"
+                "db4a7d4e.39e4b"
             ]
         ]
     },
@@ -13323,23 +13322,6 @@
         ],
         "x": 3875,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "e391f62f.876d48",
-        "type": "debug",
-        "z": "bbeaf112.72e1d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 440,
         "wires": []
     },
     {
@@ -13491,30 +13473,6 @@
                 "9d069a7d.8daa78",
                 "5ff7ddb7.43ceb4"
             ]
-        ]
-    },
-    {
-        "id": "2a2a2aa2.a2c796",
-        "type": "switch",
-        "z": "bbeaf112.72e1d",
-        "g": "f2ae83b.dc73b8",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "LowerTemperatureLimit",
-                "vt": "global"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 3240,
-        "y": 460,
-        "wires": [
-            []
         ]
     },
     {
@@ -13892,6 +13850,159 @@
         "y": 220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "3758e9ea.b29876",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "21e80259.d09fde",
+        "name": "HEATER_CONTROLLER_SWITCH_INFO",
+        "links": [
+            "a3957880.427a78"
+        ],
+        "x": 4085,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a80891c.70f047",
+        "type": "change",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "INFO_HEATER_CONTROLLER_ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C_HEATER_CONTROLLER_ON",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GetValueByKey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 720,
+        "wires": [
+            [
+                "30e80668.e1eaaa"
+            ]
+        ]
+    },
+    {
+        "id": "36f579bf.dcdf36",
+        "type": "switch",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "CHECK_ON",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "open",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 720,
+        "wires": [
+            [
+                "a80891c.70f047"
+            ]
+        ]
+    },
+    {
+        "id": "a3957880.427a78",
+        "type": "link in",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "",
+        "links": [
+            "3758e9ea.b29876"
+        ],
+        "x": 245,
+        "y": 720,
+        "wires": [
+            [
+                "36f579bf.dcdf36",
+                "87fbfa69.90fbe8"
+            ]
+        ]
+    },
+    {
+        "id": "87fbfa69.90fbe8",
+        "type": "switch",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "CHECK_OFF",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "close",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 760,
+        "wires": [
+            [
+                "c71edc97.25a2d"
+            ]
+        ]
+    },
+    {
+        "id": "c71edc97.25a2d",
+        "type": "change",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "INFO_HEATER_CONTROLLER_OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C_HEATER_CONTROLLER_OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GetValueByKey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 760,
+        "wires": [
+            [
+                "30e80668.e1eaaa"
+            ]
         ]
     }
 ]
