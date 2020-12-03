@@ -2329,7 +2329,7 @@
             "96001dfa.604c2"
         ],
         "x": 854,
-        "y": 599,
+        "y": 639,
         "w": 902,
         "h": 202
     },
@@ -2349,7 +2349,7 @@
             "5bce249f.ef16cc"
         ],
         "x": 844,
-        "y": 779,
+        "y": 899,
         "w": 642,
         "h": 142
     },
@@ -2371,8 +2371,8 @@
             "7256d62c.d3d6b8",
             "8d0303f9.30f12"
         ],
-        "x": 654,
-        "y": 959,
+        "x": 674,
+        "y": 1099,
         "w": 1342,
         "h": 82
     },
@@ -2392,8 +2392,8 @@
             "fcc873b0.d1809",
             "cdc0d56c.091578"
         ],
-        "x": 654,
-        "y": 1059,
+        "x": 674,
+        "y": 1239,
         "w": 1342,
         "h": 82
     },
@@ -2411,8 +2411,8 @@
             "917b49f5.154458",
             "aea8093e.b6c6c8"
         ],
-        "x": 654,
-        "y": 1179,
+        "x": 994,
+        "y": 1359,
         "w": 372,
         "h": 82
     },
@@ -4829,7 +4829,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1420,
-        "y": 640,
+        "y": 680,
         "wires": []
     },
     {
@@ -6300,8 +6300,8 @@
         "name": "CATCH_TEMP",
         "scope": null,
         "uncaught": true,
-        "x": 760,
-        "y": 1220,
+        "x": 1100,
+        "y": 1400,
         "wires": [
             [
                 "aea8093e.b6c6c8"
@@ -6322,8 +6322,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 930,
-        "y": 1220,
+        "x": 1270,
+        "y": 1400,
         "wires": []
     },
     {
@@ -6387,7 +6387,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "x": 1420,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "fe41b204.fc3bd",
@@ -6403,7 +6403,7 @@
         "name": "SUB_TEMPERATURE",
         "env": [],
         "x": 980,
-        "y": 660,
+        "y": 700,
         "wires": [
             [
                 "bbe87a50.2c50f8",
@@ -6447,7 +6447,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 1380,
-        "y": 880,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -6473,7 +6473,7 @@
         "name": "SUB_HUMIDITY",
         "env": [],
         "x": 960,
-        "y": 820,
+        "y": 940,
         "wires": [
             [
                 "51690636.e5b7f8",
@@ -6591,7 +6591,7 @@
         "format": "{{msg.payload}} %",
         "layout": "row-spread",
         "x": 1370,
-        "y": 820,
+        "y": 940,
         "wires": []
     },
     {
@@ -6831,8 +6831,8 @@
         "g": "2bb5b220.65b7ee",
         "name": "DIGITAL_INPUT_GARAGE_DOOR_LIMIT_SWITCH",
         "env": [],
-        "x": 1320,
-        "y": 1000,
+        "x": 1340,
+        "y": 1140,
         "wires": [
             [
                 "8d0303f9.30f12"
@@ -6849,8 +6849,8 @@
             "dcd2648d.1807a8",
             "191143c7.c0012c"
         ],
-        "x": 1955,
-        "y": 1000,
+        "x": 1975,
+        "y": 1140,
         "wires": []
     },
     {
@@ -8399,8 +8399,8 @@
         "reset": "",
         "bytopic": "all",
         "outputs": 1,
-        "x": 1850,
-        "y": 1000,
+        "x": 1870,
+        "y": 1140,
         "wires": [
             [
                 "386f24db.aff8bc"
@@ -9474,7 +9474,7 @@
             "99df5356.fa39f"
         ],
         "x": 1715,
-        "y": 700,
+        "y": 740,
         "wires": []
     },
     {
@@ -10805,8 +10805,8 @@
         "g": "2ad9f63a.09eb3a",
         "name": "DIGITAL_INPUT_SMOKE_DETECTOR",
         "env": [],
-        "x": 1280,
-        "y": 1100,
+        "x": 1300,
+        "y": 1280,
         "wires": [
             [
                 "1965f715.9f8559"
@@ -10829,8 +10829,8 @@
         "reset": "",
         "bytopic": "all",
         "outputs": 1,
-        "x": 1630,
-        "y": 1100,
+        "x": 1650,
+        "y": 1280,
         "wires": [
             [
                 "fcc873b0.d1809"
@@ -10847,8 +10847,8 @@
             "d86d9a42.e01ba8",
             "2104f72c.8a0208"
         ],
-        "x": 1955,
-        "y": 1100,
+        "x": 1975,
+        "y": 1280,
         "wires": []
     },
     {
@@ -11923,8 +11923,8 @@
         "topic": "TOPIC_CONFIG",
         "payload": "{\"VintHub\":{\"Location\":\"Office\",\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":10000},\"DigitalInput\":{\"IsInitialized\":\"DigInitialized1\",\"HubPort\":1,\"Channel\":0}}",
         "payloadType": "json",
-        "x": 870,
-        "y": 1000,
+        "x": 890,
+        "y": 1140,
         "wires": [
             [
                 "a2c76003.576e6"
@@ -11944,8 +11944,8 @@
         "topic": "TOPIC_CONFIG",
         "payload": "{\"VintHub\":{\"Location\":\"Office\",\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":0},\"DigitalInput\":{\"IsInitialized\":\"DigInitialized2\",\"HubPort\":1,\"Channel\":1}}",
         "payloadType": "json",
-        "x": 870,
-        "y": 1100,
+        "x": 890,
+        "y": 1280,
         "wires": [
             [
                 "3dcab276.037cde"
@@ -11991,8 +11991,8 @@
         "z": "bbeaf112.72e1d",
         "g": "2bb5b220.65b7ee",
         "name": "Invert",
-        "x": 1640,
-        "y": 1000,
+        "x": 1660,
+        "y": 1140,
         "wires": [
             [
                 "cfdaaa3a.1c5f88"
@@ -12469,7 +12469,7 @@
             "6eba7f.9956a58"
         ],
         "x": 1715,
-        "y": 640,
+        "y": 680,
         "wires": []
     },
     {
@@ -13398,7 +13398,7 @@
         "topic": "",
         "name": "TEMP_ERROR",
         "x": 1230,
-        "y": 720,
+        "y": 760,
         "wires": [
             []
         ]
@@ -13420,7 +13420,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1010,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "96001dfa.604c2"
@@ -13448,7 +13448,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "1ea2ab01.950be5"
