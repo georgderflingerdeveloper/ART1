@@ -2140,6 +2140,53 @@
         "out": []
     },
     {
+        "id": "7ddba100.f32e5",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "e46dfc17.5ca39",
+        "type": "subflow",
+        "name": "Subflow 3",
+        "info": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "7b7e1cc6.8649c4"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "7b7e1cc6.8649c4",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "status": {
+            "x": 360,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "7b7e1cc6.8649c4",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "e1303e1e.6f1d1",
         "type": "group",
         "z": "bbeaf112.72e1d",
@@ -2702,7 +2749,7 @@
             "c67be633.48db68",
             "f0d9fecc.7032b",
             "86823a79.1ac728",
-            "7b7e1cc6.8649c4"
+            "53c41989.9d6d98"
         ],
         "x": 2208,
         "y": 253,
@@ -14115,22 +14162,34 @@
         "y": 440,
         "wires": [
             [
-                "7b7e1cc6.8649c4"
+                "53c41989.9d6d98"
             ]
         ]
     },
     {
         "id": "7b7e1cc6.8649c4",
         "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "f2ae83b.dc73b8",
+        "z": "e46dfc17.5ca39",
         "name": "DECREMENT",
         "func": "var NewMsg = {payload : 0};\nif( msg.payload > 1 )\n{\n    NewMsg.payload = msg.payload - 1;\n}\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2440,
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53c41989.9d6d98",
+        "type": "subflow:e46dfc17.5ca39",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "SUB_DECREMENT",
+        "env": [],
+        "x": 2480,
         "y": 620,
         "wires": [
             [
