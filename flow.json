@@ -14355,7 +14355,7 @@
         "name": "UpperTemperatureLimit",
         "rules": [
             {
-                "t": "set",
+                "t": "move",
                 "p": "payload",
                 "pt": "msg",
                 "to": "payload.UpperTemperatureLimit",
@@ -14383,7 +14383,7 @@
         "name": "LowerTemperatureLimit",
         "rules": [
             {
-                "t": "set",
+                "t": "move",
                 "p": "payload",
                 "pt": "msg",
                 "to": "payload.LowerTemperatureLimit",
