@@ -2819,9 +2819,9 @@
             "c946f27c.d5c25"
         ],
         "x": 2208,
-        "y": 239,
+        "y": 273,
         "w": 1298,
-        "h": 542
+        "h": 508
     },
     {
         "id": "21e80259.d09fde",
@@ -12123,7 +12123,7 @@
         "name": "TEMPCONTROLLERSETTINGSMIN",
         "storageNode": "ce67bb73.b10ae8",
         "x": 3050,
-        "y": 500,
+        "y": 540,
         "wires": []
     },
     {
@@ -12193,8 +12193,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "TEMPCONTROLLERSETTINGSMAX",
         "storageNode": "ce67bb73.b10ae8",
-        "x": 3070,
-        "y": 280,
+        "x": 3050,
+        "y": 340,
         "wires": []
     },
     {
@@ -14320,8 +14320,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "SUB_INCREMENT",
         "env": [],
-        "x": 3350,
-        "y": 560,
+        "x": 3230,
+        "y": 580,
         "wires": [
             [
                 "20ad73fc.3eb30c"
@@ -14339,8 +14339,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 3220,
-        "y": 320,
+        "x": 3380,
+        "y": 640,
         "wires": [
             [
                 "c946f27c.d5c25"
@@ -14361,8 +14361,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3400,
-        "y": 320,
+        "x": 3370,
+        "y": 700,
         "wires": []
     }
 ]
