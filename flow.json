@@ -14334,7 +14334,7 @@
         "z": "bbeaf112.72e1d",
         "g": "f2ae83b.dc73b8",
         "name": "JoinLimits",
-        "func": "NewMsg = { payload : {} };\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + msg.payload.UpperTemperatureLimit +  \" °C \" \n                 \"Temperaturregler unteres limit gesetzt auf \" + msg.payload.LowerTemperatureLimit +  \" °C \";\n   \n\nreturn NewMsg;",
+        "func": "NewMsg = { payload : {} };\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + msg.payload.UpperTemperatureLimit +  \" °C \" +\n                 \"Temperaturregler unteres limit gesetzt auf \" + msg.payload.LowerTemperatureLimit +  \" °C \";\n   \n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
