@@ -12167,8 +12167,7 @@
                 "98ab7168.9403b",
                 "35f0bb75.13e6b4",
                 "c67be633.48db68",
-                "86823a79.1ac728",
-                "672a99b9.9148d8"
+                "86823a79.1ac728"
             ]
         ]
     },
@@ -12247,7 +12246,9 @@
         "x": 3380,
         "y": 360,
         "wires": [
-            []
+            [
+                "672a99b9.9148d8"
+            ]
         ]
     },
     {
@@ -12273,7 +12274,9 @@
         "x": 2700,
         "y": 540,
         "wires": [
-            []
+            [
+                "672a99b9.9148d8"
+            ]
         ]
     },
     {
@@ -13597,8 +13600,7 @@
             [
                 "9d069a7d.8daa78",
                 "5ff7ddb7.43ceb4",
-                "1993c542.5e13cb",
-                "672a99b9.9148d8"
+                "1993c542.5e13cb"
             ]
         ]
     },
@@ -14332,7 +14334,7 @@
         "z": "bbeaf112.72e1d",
         "g": "f2ae83b.dc73b8",
         "name": "JoinLimits",
-        "func": "NewMsg = {};\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + global.get('UpperTemperatureLimit') +  \" °C \" +\n                 \"unteres limit gesetzt auf \" + global.LowerTemperatureLimit  +  \" °C \";\n   \n\nreturn NewMsg;",
+        "func": "NewMsg = {};\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + global.get('UpperTemperatureLimit') +  \" °C \" +\n                 \"unteres limit gesetzt auf \" + global.get('LowerTemperatureLimit')   +  \" °C \";\n   \n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
