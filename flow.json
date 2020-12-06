@@ -14332,7 +14332,7 @@
         "z": "bbeaf112.72e1d",
         "g": "f2ae83b.dc73b8",
         "name": "JoinLimits",
-        "func": "NewMsg = {};\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + global.UpperTemperatureLimit +  \" °C \" +\n                 \"unteres limit gesetzt auf \" + global.LowerTemperatureLimit  +  \" °C \";\n   \n\nreturn NewMsg;",
+        "func": "NewMsg = {};\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + global.get('UpperTemperatureLimit') +  \" °C \" +\n                 \"unteres limit gesetzt auf \" + global.LowerTemperatureLimit  +  \" °C \";\n   \n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
