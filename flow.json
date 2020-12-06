@@ -2814,12 +2814,16 @@
             "86823a79.1ac728",
             "53c41989.9d6d98",
             "1993c542.5e13cb",
-            "8baf0df.6a018f"
+            "8baf0df.6a018f",
+            "672a99b9.9148d8",
+            "5d3ae18a.4073a",
+            "f4c0b366.e2abc",
+            "c946f27c.d5c25"
         ],
-        "x": 2228,
-        "y": 213,
+        "x": 2208,
+        "y": 239,
         "w": 1298,
-        "h": 508
+        "h": 542
     },
     {
         "id": "21e80259.d09fde",
@@ -2995,8 +2999,8 @@
             "82f570ad.99b19",
             "8b8c94b1.b17368"
         ],
-        "x": 2254,
-        "y": 359,
+        "x": 2234,
+        "y": 419,
         "w": 632,
         "h": 82
     },
@@ -3013,8 +3017,8 @@
             "c10435d.84120c8",
             "20ad73fc.3eb30c"
         ],
-        "x": 2254,
-        "y": 239,
+        "x": 2234,
+        "y": 299,
         "w": 632,
         "h": 82
     },
@@ -12120,8 +12124,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "TEMPCONTROLLERSETTINGSMIN",
         "storageNode": "ce67bb73.b10ae8",
-        "x": 3070,
-        "y": 440,
+        "x": 3050,
+        "y": 500,
         "wires": []
     },
     {
@@ -12131,8 +12135,8 @@
         "g": "e86d8e3b.0c92f",
         "name": "TEMPCONTROLLERSETTINGSMIN",
         "storageNode": "ce67bb73.b10ae8",
-        "x": 2450,
-        "y": 400,
+        "x": 2430,
+        "y": 460,
         "wires": [
             [
                 "8b8c94b1.b17368"
@@ -12158,14 +12162,15 @@
         "min": 0,
         "max": "30",
         "step": 1,
-        "x": 2760,
-        "y": 280,
+        "x": 2740,
+        "y": 340,
         "wires": [
             [
                 "98ab7168.9403b",
                 "35f0bb75.13e6b4",
                 "c67be633.48db68",
-                "86823a79.1ac728"
+                "86823a79.1ac728",
+                "5d3ae18a.4073a"
             ]
         ]
     },
@@ -12176,8 +12181,8 @@
         "g": "c91568a6.292ec8",
         "name": "TEMPCONTROLLERSETTINGSMAX",
         "storageNode": "ce67bb73.b10ae8",
-        "x": 2450,
-        "y": 280,
+        "x": 2430,
+        "y": 340,
         "wires": [
             [
                 "20ad73fc.3eb30c"
@@ -12191,8 +12196,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "TEMPCONTROLLERSETTINGSMAX",
         "storageNode": "ce67bb73.b10ae8",
-        "x": 3090,
-        "y": 260,
+        "x": 3070,
+        "y": 280,
         "wires": []
     },
     {
@@ -12213,8 +12218,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3000,
-        "y": 620,
+        "x": 2980,
+        "y": 680,
         "wires": [
             [
                 "b17d79f3.725708"
@@ -12241,8 +12246,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3400,
-        "y": 300,
+        "x": 3380,
+        "y": 360,
         "wires": [
             []
         ]
@@ -12267,8 +12272,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2720,
-        "y": 480,
+        "x": 2700,
+        "y": 540,
         "wires": [
             []
         ]
@@ -12291,8 +12296,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3000,
-        "y": 680,
+        "x": 2980,
+        "y": 740,
         "wires": [
             [
                 "b17d79f3.725708"
@@ -12564,8 +12569,8 @@
         "links": [
             "1c13f8d8.14ebd7"
         ],
-        "x": 2795,
-        "y": 640,
+        "x": 2775,
+        "y": 700,
         "wires": [
             [
                 "a5239846.cbaec8",
@@ -12595,8 +12600,8 @@
         "links": [
             "5a91b99f.cbe948"
         ],
-        "x": 3235,
-        "y": 640,
+        "x": 3215,
+        "y": 700,
         "wires": []
     },
     {
@@ -13588,13 +13593,14 @@
         "min": 0,
         "max": "30",
         "step": 1,
-        "x": 2760,
-        "y": 400,
+        "x": 2740,
+        "y": 460,
         "wires": [
             [
                 "9d069a7d.8daa78",
                 "5ff7ddb7.43ceb4",
-                "1993c542.5e13cb"
+                "1993c542.5e13cb",
+                "f4c0b366.e2abc"
             ]
         ]
     },
@@ -14146,8 +14152,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3060,
-        "y": 320,
+        "x": 3040,
+        "y": 380,
         "wires": [
             [
                 "6b00b7b.3f6b848"
@@ -14172,8 +14178,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3060,
-        "y": 360,
+        "x": 3040,
+        "y": 420,
         "wires": [
             [
                 "f0d9fecc.7032b"
@@ -14200,8 +14206,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3380,
-        "y": 360,
+        "x": 3360,
+        "y": 420,
         "wires": [
             [
                 "20ad73fc.3eb30c"
@@ -14226,8 +14232,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3070,
-        "y": 400,
+        "x": 3050,
+        "y": 460,
         "wires": [
             [
                 "53c41989.9d6d98"
@@ -14257,8 +14263,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "SUB_DECREMENT",
         "env": [],
-        "x": 3380,
-        "y": 400,
+        "x": 3360,
+        "y": 460,
         "wires": [
             [
                 "8b8c94b1.b17368"
@@ -14283,8 +14289,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3030,
-        "y": 500,
+        "x": 2990,
+        "y": 580,
         "wires": [
             [
                 "8baf0df.6a018f"
@@ -14314,12 +14320,105 @@
         "g": "f2ae83b.dc73b8",
         "name": "SUB_INCREMENT",
         "env": [],
-        "x": 3370,
-        "y": 500,
+        "x": 3350,
+        "y": 560,
         "wires": [
             [
                 "20ad73fc.3eb30c"
             ]
         ]
+    },
+    {
+        "id": "672a99b9.9148d8",
+        "type": "function",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "JoinLimits",
+        "func": "NewMsg = { payload : {} };\n \nNewMsg.payload = \"Temperaturregler oberes limit gesetzt auf \"  + msg.payload.UpperTemperatureLimit +  \" °C \" \n                 \"Temperaturregler unteres limit gesetzt auf \" + msg.payload.LowerTemperatureLimit +  \" °C \";\n   \n\nreturn NewMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 3220,
+        "y": 320,
+        "wires": [
+            [
+                "c946f27c.d5c25"
+            ]
+        ]
+    },
+    {
+        "id": "5d3ae18a.4073a",
+        "type": "change",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "UpperTemperatureLimit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.UpperTemperatureLimit",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3020,
+        "y": 340,
+        "wires": [
+            [
+                "672a99b9.9148d8"
+            ]
+        ]
+    },
+    {
+        "id": "f4c0b366.e2abc",
+        "type": "change",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "LowerTemperatureLimit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.LowerTemperatureLimit",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3010,
+        "y": 540,
+        "wires": [
+            [
+                "672a99b9.9148d8"
+            ]
+        ]
+    },
+    {
+        "id": "c946f27c.d5c25",
+        "type": "debug",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3400,
+        "y": 320,
+        "wires": []
     }
 ]
