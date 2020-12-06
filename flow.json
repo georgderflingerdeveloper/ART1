@@ -14270,12 +14270,12 @@
         "type": "switch",
         "z": "bbeaf112.72e1d",
         "g": "f2ae83b.dc73b8",
-        "name": "IsEqualWithUpperLimit",
+        "name": "IsGTEqualWithUpperLimit",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
+                "t": "gte",
                 "v": "UpperTemperatureLimit",
                 "vt": "global"
             }
@@ -14283,7 +14283,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3020,
+        "x": 3030,
         "y": 500,
         "wires": [
             [
