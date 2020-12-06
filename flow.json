@@ -2749,7 +2749,9 @@
             "c67be633.48db68",
             "f0d9fecc.7032b",
             "86823a79.1ac728",
-            "53c41989.9d6d98"
+            "53c41989.9d6d98",
+            "1993c542.5e13cb",
+            "e96013b1.cfa59"
         ],
         "x": 2208,
         "y": 253,
@@ -13526,7 +13528,8 @@
         "wires": [
             [
                 "9d069a7d.8daa78",
-                "5ff7ddb7.43ceb4"
+                "5ff7ddb7.43ceb4",
+                "1993c542.5e13cb"
             ]
         ]
     },
@@ -14194,6 +14197,51 @@
         "wires": [
             [
                 "8b8c94b1.b17368"
+            ]
+        ]
+    },
+    {
+        "id": "1993c542.5e13cb",
+        "type": "switch",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "IsEqualWithUpperLimit",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "UpperTemperatureLimit",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 3000,
+        "y": 540,
+        "wires": [
+            [
+                "e96013b1.cfa59"
+            ]
+        ]
+    },
+    {
+        "id": "e96013b1.cfa59",
+        "type": "function",
+        "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
+        "name": "INCREMENT",
+        "func": "var NewMsg = {payload : 0};\nNewMsg.payload = msg.payload + 1;\nreturn NewMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 3230,
+        "y": 540,
+        "wires": [
+            [
+                "20ad73fc.3eb30c"
             ]
         ]
     }
