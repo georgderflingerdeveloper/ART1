@@ -10949,7 +10949,8 @@
         "y": 1280,
         "wires": [
             [
-                "fcc873b0.d1809"
+                "fcc873b0.d1809",
+                "77b1afe4.47357"
             ]
         ]
     },
@@ -10960,8 +10961,8 @@
         "g": "2ad9f63a.09eb3a",
         "name": "TO_SMOKE_DETECTION",
         "links": [
-            "d86d9a42.e01ba8",
-            "2104f72c.8a0208"
+            "2104f72c.8a0208",
+            "d86d9a42.e01ba8"
         ],
         "x": 1975,
         "y": 1280,
@@ -11336,8 +11337,7 @@
         "y": 620,
         "wires": [
             [
-                "998fd096.00f37",
-                "a1a62e6c.014f8"
+                "998fd096.00f37"
             ]
         ]
     },
@@ -14376,9 +14376,9 @@
         "wires": []
     },
     {
-        "id": "a1a62e6c.014f8",
+        "id": "77b1afe4.47357",
         "type": "debug",
-        "z": "2cb9c15e.79fc0e",
+        "z": "bbeaf112.72e1d",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -14387,8 +14387,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 920,
+        "x": 2100,
+        "y": 1460,
         "wires": []
     }
 ]
