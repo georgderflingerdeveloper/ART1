@@ -11277,7 +11277,6 @@
         "id": "3d8a32b7.fc6bae",
         "type": "link in",
         "z": "2cb9c15e.79fc0e",
-        "d": true,
         "g": "efc47727.94b3e8",
         "name": "TO_SMOKE_ALERTER",
         "links": [
