@@ -10949,7 +10949,8 @@
         "y": 1280,
         "wires": [
             [
-                "fcc873b0.d1809"
+                "fcc873b0.d1809",
+                "37bf0abf.288316"
             ]
         ]
     },
@@ -14372,6 +14373,23 @@
         "statusType": "auto",
         "x": 3370,
         "y": 700,
+        "wires": []
+    },
+    {
+        "id": "37bf0abf.288316",
+        "type": "debug",
+        "z": "bbeaf112.72e1d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 1440,
         "wires": []
     }
 ]
