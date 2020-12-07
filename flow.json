@@ -11982,6 +11982,15 @@
         "type": "inject",
         "z": "2a202360.23bf9c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
