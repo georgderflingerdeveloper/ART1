@@ -2870,7 +2870,7 @@
         "z": "bbeaf112.72e1d",
         "name": "HEATER_CONTROL_DOOR_STATE_2",
         "style": {
-            "fill": "#e3f3d3",
+            "fill": "#ffcf3f",
             "fill-opacity": "0.5",
             "label": true
         },
