@@ -3228,7 +3228,7 @@
         "order": 3,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "fcebd620.0e4298",
