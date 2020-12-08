@@ -14229,5 +14229,32 @@
                 "a47daa3b.aafc98"
             ]
         ]
+    },
+    {
+        "id": "fcceb325.0936",
+        "type": "ui_button",
+        "z": "9087d93a.9a7648",
+        "name": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ALLE AUS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "75270371.70b35c",
+                "a47daa3b.aafc98"
+            ]
+        ]
     }
 ]
