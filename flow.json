@@ -3003,7 +3003,7 @@
         ],
         "x": 2234,
         "y": 419,
-        "w": 632,
+        "w": 652,
         "h": 82
     },
     {
@@ -3021,7 +3021,7 @@
         ],
         "x": 2234,
         "y": 299,
-        "w": 632,
+        "w": 652,
         "h": 82
     },
     {
@@ -12022,7 +12022,7 @@
         "z": "bbeaf112.72e1d",
         "g": "c91568a6.292ec8",
         "name": "",
-        "label": "OBERES LIMIT AUS",
+        "label": "MAXIMALTEMPERATUR",
         "tooltip": "Heizung ausschalten bei eingestellter Temperatur",
         "group": "285acbd7.cf69e4",
         "order": 2,
@@ -12035,7 +12035,7 @@
         "min": 0,
         "max": "30",
         "step": 1,
-        "x": 2740,
+        "x": 2750,
         "y": 340,
         "wires": [
             [
@@ -13456,7 +13456,7 @@
         "z": "bbeaf112.72e1d",
         "g": "e86d8e3b.0c92f",
         "name": "",
-        "label": "UNTERES LIMIT EIN",
+        "label": "MINIMALTEMPERATUR",
         "tooltip": "Heizung einschalten bei eingestellter Temperatur",
         "group": "285acbd7.cf69e4",
         "order": 3,
@@ -13469,7 +13469,7 @@
         "min": 0,
         "max": "30",
         "step": 1,
-        "x": 2740,
+        "x": 2750,
         "y": 460,
         "wires": [
             [
