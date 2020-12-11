@@ -70,6 +70,13 @@
         "info": ""
     },
     {
+        "id": "b4c9d9b8.2717a8",
+        "type": "tab",
+        "label": "CONFIGURATION",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "860956db.3e8bf8",
         "type": "subflow",
         "name": "SUB_ON_HOUR_1",
@@ -14256,5 +14263,23 @@
                 "a47daa3b.aafc98"
             ]
         ]
+    },
+    {
+        "id": "3232c81b.959c48",
+        "type": "config",
+        "z": "b4c9d9b8.2717a8",
+        "name": "MESSAGE_COMMANDOS",
+        "properties": [
+            {
+                "p": "CMD_FAN1_ON",
+                "pt": "global",
+                "to": "CMD_FAN1_ON",
+                "tot": "str"
+            }
+        ],
+        "active": true,
+        "x": 550,
+        "y": 140,
+        "wires": []
     }
 ]
