@@ -2334,7 +2334,9 @@
             "ab2254c8.a1a2f8"
         ],
         "x": 98,
-        "y": 59
+        "y": 59,
+        "w": 1678,
+        "h": 482
     },
     {
         "id": "efc47727.94b3e8",
@@ -2414,12 +2416,14 @@
             "1254cce7.042ee3",
             "408a32b5.1e52ec",
             "4826a341.26d21c",
-            "72192662.38f7e8"
+            "72192662.38f7e8",
+            "98f1dced.cfa39",
+            "c98af7b1.928de8"
         ],
         "x": 214,
         "y": -1,
         "w": 1302,
-        "h": 922
+        "h": 962
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2439,12 +2443,13 @@
             "1c13f8d8.14ebd7",
             "1ea2ab01.950be5",
             "502b2821.d151e8",
-            "96001dfa.604c2"
+            "96001dfa.604c2",
+            "67be3fd1.9c51b"
         ],
-        "x": 854,
-        "y": 639,
+        "x": 834,
+        "y": 619,
         "w": 902,
-        "h": 202
+        "h": 222
     },
     {
         "id": "1df63d98.541fb2",
@@ -2654,7 +2659,9 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59
+        "y": 59,
+        "w": 602,
+        "h": 82
     },
     {
         "id": "cd213aec.cccc28",
@@ -2981,7 +2988,9 @@
             "eb42fcd1.96712"
         ],
         "x": 124,
-        "y": 399
+        "y": 399,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "e86d8e3b.0c92f",
@@ -4948,8 +4957,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1420,
-        "y": 680,
+        "x": 1400,
+        "y": 660,
         "wires": []
     },
     {
@@ -6506,8 +6515,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1420,
-        "y": 740,
+        "x": 1400,
+        "y": 720,
         "wires": [
             [
                 "fe41b204.fc3bd",
@@ -6522,8 +6531,8 @@
         "g": "398b2b64.1f06a4",
         "name": "SUB_TEMPERATURE",
         "env": [],
-        "x": 980,
-        "y": 700,
+        "x": 960,
+        "y": 680,
         "wires": [
             [
                 "bbe87a50.2c50f8",
@@ -9346,7 +9355,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "DICTIONARY",
-        "payload": "{\"NODE_RED_START\":\"Node red application wurde gestartet / Initialisierung eingeleitet\",\"WHON\":\"Werkstätte Heizung ein\",\"WHOFF\":\"Werkstätte Heizung aus\",\"GATEOPEN\":\"Garagentor ist offen\",\"GATECLOSED\":\"Garagentor ist geschlossen\",\"RON\":\"Reklameschield ist eingeschaltet\",\"ROFF\":\"Reklameschield ist ausgeschaltet\",\"WTEMP\":\"Werstätte innen Temperatur: \",\"WHUM\":\"Werkstätte innen Feuchtigkeit: \",\"W_TIMER1_ON\":\"Timer1 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER1_OFF\":\"Timer1 für die Heizung der  Werkstätte hat ausgeschaltet\",\"W_TIMER2_ON\":\"Timer2 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER2_OFF\":\"Timer2 für die Heizung der  Werkstätte hat ausgeschaltet\",\"O_TIMER_ON\":\"Timer für die Reklameleuchte hat eingeschaltet\",\"O_TIMER_OFF\":\"Timer für die Reklameleuchte hat ausgeschaltet\",\"O_TIMESETTINGS\":\"Einstellung für Timer Reklameleuchte :  \",\"W_TIMESETTINGS1\":\"Einstellung für Timer1 Heizung Werkstätte :  \",\"W_TIMESETTINGS2\":\"Einstellung für Timer2 Heizung Werkstätte :  \",\"W_SMOKE_ALERT_ACTIVE\":\"Werkstätte Meldekontakt Rauchmelder ist offen! - Feueralarm ist möglich\",\"W_SMOKE_ALERT_INACTIVE\":\"Werkstätte Meldekontakt Rauchmelder is geschlossen - Ok\",\"W_SMOKE_ALERT_ACTIVE_REPEAET\":\"Rauchmelderüberwachung hat ausgelöst - bitte melder überprüfen!\",\"C_MANUAL_OPERATION_ON\":\"Heizungssteuerung Button HANDBETRIEB EIN GEDRÜCKT\",\"C_MANUAL_OPERATION_OFF\":\"Heizungssteuerung Button HANDBETRIEB AUS GEDRÜCKT\",\"C_ACTIVATE_TIMER\":\"Heizungssteuerung Button ACTIVIERE ZEITSCHALTUHR GEDRÜCKT\",\"C_HEATER_CONTROLLER_ON\":\"Schalter REGLER EIN\",\"C_HEATER_CONTROLLER_OFF\":\"Schalter REGLER AUS\",\"CMD_FAN1_ON\":\"Lüfter 1 EIN\",\"CMD_FAN2_ON\":\"Lüfter 2 EIN\",\"CMD_FAN1_OFF\":\"Lüfter 1 AUS\",\"CMD_FAN2_OFF\":\"Lüfter 2 AUS\",\"CMD_CONTROLLLER_SETTINGS\":\"Reglereinstellungen: \"}",
+        "payload": "{\"NODE_RED_START\":\"Node red application wurde gestartet / Initialisierung eingeleitet\",\"WHON\":\"Werkstätte Heizung ein\",\"WHOFF\":\"Werkstätte Heizung aus\",\"GATEOPEN\":\"Garagentor ist offen\",\"GATECLOSED\":\"Garagentor ist geschlossen\",\"RON\":\"Reklameschield ist eingeschaltet\",\"ROFF\":\"Reklameschield ist ausgeschaltet\",\"WTEMP\":\"Werstätte innen Temperatur: \",\"WHUM\":\"Werkstätte innen Feuchtigkeit: \",\"W_TIMER1_ON\":\"Timer1 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER1_OFF\":\"Timer1 für die Heizung der  Werkstätte hat ausgeschaltet\",\"W_TIMER2_ON\":\"Timer2 für die Heizung der Werkstätte hat eingeschaltet\",\"W_TIMER2_OFF\":\"Timer2 für die Heizung der  Werkstätte hat ausgeschaltet\",\"O_TIMER_ON\":\"Timer für die Reklameleuchte hat eingeschaltet\",\"O_TIMER_OFF\":\"Timer für die Reklameleuchte hat ausgeschaltet\",\"O_TIMESETTINGS\":\"Einstellung für Timer Reklameleuchte :  \",\"W_TIMESETTINGS1\":\"Einstellung für Timer1 Heizung Werkstätte :  \",\"W_TIMESETTINGS2\":\"Einstellung für Timer2 Heizung Werkstätte :  \",\"W_SMOKE_ALERT_ACTIVE\":\"Werkstätte Meldekontakt Rauchmelder ist offen! - Feueralarm ist möglich\",\"W_SMOKE_ALERT_INACTIVE\":\"Werkstätte Meldekontakt Rauchmelder is geschlossen - Ok\",\"W_SMOKE_ALERT_ACTIVE_REPEAET\":\"Rauchmelderüberwachung hat ausgelöst - bitte melder überprüfen!\",\"C_MANUAL_OPERATION_ON\":\"Heizungssteuerung Button HANDBETRIEB EIN GEDRÜCKT\",\"C_MANUAL_OPERATION_OFF\":\"Heizungssteuerung Button HANDBETRIEB AUS GEDRÜCKT\",\"C_ACTIVATE_TIMER\":\"Heizungssteuerung Button ACTIVIERE ZEITSCHALTUHR GEDRÜCKT\",\"C_HEATER_CONTROLLER_ON\":\"Schalter REGLER EIN\",\"C_HEATER_CONTROLLER_OFF\":\"Schalter REGLER AUS\",\"CMD_FAN1_ON\":\"Lüfter 1 EIN\",\"CMD_FAN2_ON\":\"Lüfter 2 EIN\",\"CMD_FAN1_OFF\":\"Lüfter 1 AUS\",\"CMD_FAN2_OFF\":\"Lüfter 2 AUS\",\"CMD_CONTROLLLER_SETTINGS\":\"Reglereinstellungen: \",\"ERR_TEMPERATUR_SENSOR1\":\"Sensor / Hardware Fehler:\"}",
         "payloadType": "json",
         "x": 540,
         "y": 180,
@@ -9595,8 +9604,8 @@
         "links": [
             "99df5356.fa39f"
         ],
-        "x": 1715,
-        "y": 740,
+        "x": 1695,
+        "y": 720,
         "wires": []
     },
     {
@@ -12463,8 +12472,8 @@
         "links": [
             "6eba7f.9956a58"
         ],
-        "x": 1715,
-        "y": 680,
+        "x": 1695,
+        "y": 660,
         "wires": []
     },
     {
@@ -13392,8 +13401,8 @@
         "raw": false,
         "topic": "",
         "name": "TEMP_ERROR",
-        "x": 1230,
-        "y": 760,
+        "x": 1210,
+        "y": 740,
         "wires": [
             []
         ]
@@ -13414,8 +13423,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
-        "y": 800,
+        "x": 990,
+        "y": 780,
         "wires": [
             [
                 "96001dfa.604c2"
@@ -13442,11 +13451,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
-        "y": 800,
+        "x": 1170,
+        "y": 780,
         "wires": [
             [
-                "1ea2ab01.950be5"
+                "1ea2ab01.950be5",
+                "67be3fd1.9c51b"
             ]
         ]
     },
@@ -14724,5 +14734,115 @@
         "x": 3405,
         "y": 580,
         "wires": []
+    },
+    {
+        "id": "67be3fd1.9c51b",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "398b2b64.1f06a4",
+        "name": "TEMPSENS1_ERROR",
+        "links": [
+            "c98af7b1.928de8"
+        ],
+        "x": 1365,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "98f1dced.cfa39",
+        "type": "change",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "MAKE msg.ActualValue",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ActualValue",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 920,
+        "wires": [
+            [
+                "6e8d741d.feeb5c"
+            ]
+        ]
+    },
+    {
+        "id": "67ac5a3e.79eeb4",
+        "type": "config",
+        "z": "b4c9d9b8.2717a8",
+        "name": "MESSAGE_HARDWARE_ERROR_SENSORS",
+        "properties": [
+            {
+                "p": "ERR_TEMPERATUR_SENSOR1",
+                "pt": "global",
+                "to": "ERR_TEMPERATUR_SENSOR1",
+                "tot": "str"
+            }
+        ],
+        "active": true,
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6e8d741d.feeb5c",
+        "type": "change",
+        "z": "2cb9c15e.79fc0e",
+        "name": "INFO_ERROR_TEMPERATUR_SENSOR1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ERR_TEMPERATUR_SENSOR1",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GetValueByKey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            [
+                "30e80668.e1eaaa"
+            ]
+        ]
+    },
+    {
+        "id": "c98af7b1.928de8",
+        "type": "link in",
+        "z": "2cb9c15e.79fc0e",
+        "g": "efc47727.94b3e8",
+        "name": "",
+        "links": [
+            "67be3fd1.9c51b"
+        ],
+        "x": 275,
+        "y": 920,
+        "wires": [
+            [
+                "98f1dced.cfa39"
+            ]
+        ]
     }
 ]
