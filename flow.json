@@ -12617,7 +12617,7 @@
         "type": "function",
         "z": "f9c9c4f6.2e9508",
         "name": "IO_CONTROL_HEATER",
-        "func": "var DigitalOutput = global.get(env.get('INSTANCE'));\nvar IsInitialized = global.get(env.get('INIT'));\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
+        "func": "var InstanceName = env.get('INSTANCE');\nvar NameOfInitialized = env.get('INIT');\nvar DigitalOutput = global.get(InstanceName);\nvar IsInitialized = global.get(NameOfInitialized);\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
