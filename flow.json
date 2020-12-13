@@ -2243,6 +2243,59 @@
         }
     },
     {
+        "id": "f9c9c4f6.2e9508",
+        "type": "subflow",
+        "name": "SUB_DIGITAL_OUTPUT",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 0,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b85f231.4eb74e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 400,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b85f231.4eb74e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "INSTANCE",
+                "type": "str",
+                "value": "PublicDigitalOutput0"
+            },
+            {
+                "name": "INIT",
+                "type": "str",
+                "value": "PublicVintHubInit"
+            }
+        ],
+        "color": "#DDAA99",
+        "status": {
+            "x": 400,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "b85f231.4eb74e",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "e1303e1e.6f1d1",
         "type": "group",
         "z": "bbeaf112.72e1d",
@@ -2334,9 +2387,7 @@
             "ab2254c8.a1a2f8"
         ],
         "x": 98,
-        "y": 59,
-        "w": 1678,
-        "h": 482
+        "y": 59
     },
     {
         "id": "efc47727.94b3e8",
@@ -2421,9 +2472,7 @@
             "c98af7b1.928de8"
         ],
         "x": 214,
-        "y": -1,
-        "w": 1302,
-        "h": 962
+        "y": -1
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2621,9 +2670,7 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139,
-        "w": 1112,
-        "h": 222
+        "y": 139
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2659,9 +2706,7 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59,
-        "w": 602,
-        "h": 82
+        "y": 59
     },
     {
         "id": "cd213aec.cccc28",
@@ -2889,7 +2934,6 @@
         },
         "nodes": [
             "cea620a9.01b67",
-            "b85f231.4eb74e",
             "e1c63c49.e9524",
             "a45b74a1.dd7fe8",
             "f1f7e761.b9dba8",
@@ -2911,7 +2955,8 @@
             "a72f74f2.3ff958",
             "69024abe.e8a124",
             "1e7effcd.136c4",
-            "71735533.f9f25c"
+            "71735533.f9f25c",
+            "36bf26e4.7cae8a"
         ],
         "x": 2194,
         "y": 1119,
@@ -2988,9 +3033,7 @@
             "eb42fcd1.96712"
         ],
         "x": 124,
-        "y": 399,
-        "w": 452,
-        "h": 82
+        "y": 399
     },
     {
         "id": "e86d8e3b.0c92f",
@@ -4635,6 +4678,15 @@
         "type": "inject",
         "z": "bbeaf112.72e1d",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -12556,28 +12608,24 @@
         "y": 1300,
         "wires": [
             [
-                "b85f231.4eb74e"
+                "36bf26e4.7cae8a"
             ]
         ]
     },
     {
         "id": "b85f231.4eb74e",
         "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "3d9b3f31.3911d",
-        "name": "IO_CONTROL_HEATER_1",
-        "func": "var DigitalOutput0 = global.get('PublicDigitalOutput0');\nvar IsInitialized = global.get(\"PublicVintHubInit\");\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput0.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput0.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
+        "z": "f9c9c4f6.2e9508",
+        "name": "IO_CONTROL_HEATER",
+        "func": "var DigitalOutput = global.get(env.get('INSTANCE'));\nvar IsInitialized = global.get(env.get('INIT'));\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2560,
-        "y": 1260,
+        "x": 190,
+        "y": 80,
         "wires": [
-            [
-                "c7845612.75d7d8",
-                "af3824db.b85758"
-            ]
+            []
         ]
     },
     {
@@ -12597,7 +12645,7 @@
         "y": 1340,
         "wires": [
             [
-                "b85f231.4eb74e"
+                "36bf26e4.7cae8a"
             ]
         ]
     },
@@ -12825,9 +12873,9 @@
         "y": 1260,
         "wires": [
             [
-                "b85f231.4eb74e",
                 "1ffcaae9.4a83c5",
-                "350a7d67.bd7dc2"
+                "350a7d67.bd7dc2",
+                "36bf26e4.7cae8a"
             ]
         ]
     },
@@ -14842,6 +14890,22 @@
         "wires": [
             [
                 "98f1dced.cfa39"
+            ]
+        ]
+    },
+    {
+        "id": "36bf26e4.7cae8a",
+        "type": "subflow:f9c9c4f6.2e9508",
+        "z": "bbeaf112.72e1d",
+        "g": "3d9b3f31.3911d",
+        "name": "SUB_DIGITAL_OUTPUT",
+        "env": [],
+        "x": 2610,
+        "y": 1260,
+        "wires": [
+            [
+                "c7845612.75d7d8",
+                "af3824db.b85758"
             ]
         ]
     }
