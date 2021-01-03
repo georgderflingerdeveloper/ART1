@@ -2369,6 +2369,102 @@
         }
     },
     {
+        "id": "c5da18b3.729298",
+        "type": "subflow",
+        "name": "Sub_Temp",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 0,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "179a7293.169cad"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 380,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "179a7293.169cad",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Name",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99",
+        "status": {
+            "x": 380,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "179a7293.169cad",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "ca928cc0.03ed2",
+        "type": "subflow",
+        "name": "Sub_Humidity",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 20,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b804db09.2b1618"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b804db09.2b1618",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Name",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "color": "#DDAA99",
+        "status": {
+            "x": 360,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "b804db09.2b1618",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "e1303e1e.6f1d1",
         "type": "group",
         "z": "bbeaf112.72e1d",
@@ -14999,7 +15095,7 @@
         "order": 1,
         "width": "0",
         "height": "0",
-        "label": "Trend Linie1=Temp. [°C] Linie2=Hum [%] ",
+        "label": "",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm",
@@ -15015,7 +15111,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
+            "#b31e1e",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
@@ -15044,7 +15140,7 @@
         "y": 80,
         "wires": [
             [
-                "179a7293.169cad"
+                "37760d20.315622"
             ]
         ]
     },
@@ -15058,7 +15154,7 @@
         "y": 200,
         "wires": [
             [
-                "b804db09.2b1618"
+                "584989b6.dd4968"
             ]
         ]
     },
@@ -15376,7 +15472,7 @@
         "wires": [
             [],
             [
-                "29c15f19.14da"
+                "86d78d5b.f3fab"
             ]
         ]
     },
@@ -15399,8 +15495,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 460,
+        "x": 420,
+        "y": 680,
         "wires": [
             [
                 "a54cb923.d98118",
@@ -15427,39 +15523,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 360,
+        "x": 430,
+        "y": 620,
         "wires": [
             [
                 "a54cb923.d98118",
                 "e04b6533.c644d8"
-            ]
-        ]
-    },
-    {
-        "id": "29c15f19.14da",
-        "type": "change",
-        "z": "52dcbc55.170064",
-        "name": "LINE_TEMPERATURE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Line1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 540,
-        "wires": [
-            [
-                "ec2ae9a8.2dcc28"
             ]
         ]
     },
@@ -15504,49 +15573,22 @@
         "y": 700,
         "wires": [
             [
-                "b632b92.f34fb48"
-            ]
-        ]
-    },
-    {
-        "id": "b632b92.f34fb48",
-        "type": "change",
-        "z": "52dcbc55.170064",
-        "name": "LINE_HUMITIDY",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Line2",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1190,
-        "y": 700,
-        "wires": [
-            [
-                "ec2ae9a8.2dcc28"
+                "e9276c6a.0f443"
             ]
         ]
     },
     {
         "id": "179a7293.169cad",
         "type": "change",
-        "z": "52dcbc55.170064",
+        "z": "c5da18b3.729298",
         "name": "LINE_TEMPERATURE",
         "rules": [
             {
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "Line1",
-                "tot": "str"
+                "to": "Name",
+                "tot": "env"
             }
         ],
         "action": "",
@@ -15554,7 +15596,50 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b804db09.2b1618",
+        "type": "change",
+        "z": "ca928cc0.03ed2",
+        "name": "LINE_HUMITIDY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Name",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37760d20.315622",
+        "type": "subflow:c5da18b3.729298",
+        "z": "52dcbc55.170064",
+        "name": "RealTemp",
+        "env": [
+            {
+                "name": "Name",
+                "value": "Temperature",
+                "type": "str"
+            }
+        ],
+        "x": 960,
         "y": 80,
         "wires": [
             [
@@ -15563,29 +15648,62 @@
         ]
     },
     {
-        "id": "b804db09.2b1618",
-        "type": "change",
+        "id": "86d78d5b.f3fab",
+        "type": "subflow:c5da18b3.729298",
         "z": "52dcbc55.170064",
-        "name": "LINE_HUMITIDY",
-        "rules": [
+        "name": "EmuTemp",
+        "env": [
             {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Line2",
-                "tot": "str"
+                "name": "Name",
+                "value": "Temperature",
+                "type": "str"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 930,
+        "x": 1160,
+        "y": 620,
+        "wires": [
+            [
+                "ec2ae9a8.2dcc28"
+            ]
+        ]
+    },
+    {
+        "id": "584989b6.dd4968",
+        "type": "subflow:ca928cc0.03ed2",
+        "z": "52dcbc55.170064",
+        "name": "RealHumidity",
+        "env": [
+            {
+                "name": "Name",
+                "value": "Humidity",
+                "type": "str"
+            }
+        ],
+        "x": 960,
         "y": 200,
         "wires": [
             [
                 "44109cc5.6e7984"
+            ]
+        ]
+    },
+    {
+        "id": "e9276c6a.0f443",
+        "type": "subflow:ca928cc0.03ed2",
+        "z": "52dcbc55.170064",
+        "name": "EmuHumidity",
+        "env": [
+            {
+                "name": "Name",
+                "value": "Humidity",
+                "type": "str"
+            }
+        ],
+        "x": 1180,
+        "y": 700,
+        "wires": [
+            [
+                "ec2ae9a8.2dcc28"
             ]
         ]
     }
