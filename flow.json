@@ -2637,7 +2637,9 @@
             "c98af7b1.928de8"
         ],
         "x": 214,
-        "y": -1
+        "y": -1,
+        "w": 1302,
+        "h": 962
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2835,7 +2837,9 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139
+        "y": 139,
+        "w": 1112,
+        "h": 222
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2855,9 +2859,7 @@
             "cbc9ccd0.4f35e"
         ],
         "x": 174,
-        "y": 39,
-        "w": 622,
-        "h": 202
+        "y": 39
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -2873,9 +2875,7 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59,
-        "w": 602,
-        "h": 82
+        "y": 59
     },
     {
         "id": "cd213aec.cccc28",
@@ -3097,11 +3097,13 @@
             "14df85a7.f91d2a",
             "8646229e319768e2",
             "fed6f00b2afb96d5",
-            "0741aeb45bb0e510"
+            "0741aeb45bb0e510",
+            "999c100d3509c327",
+            "24e586e448499c3c"
         ],
-        "x": 3104,
+        "x": 3144,
         "y": 259,
-        "w": 1442,
+        "w": 1402,
         "h": 522
     },
     {
@@ -7402,6 +7404,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 200,
         "y": 80,
         "wires": [
@@ -7420,6 +7423,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 880,
         "y": 80,
         "wires": [
@@ -7446,7 +7450,9 @@
         "x": 450,
         "y": 80,
         "wires": [
-            []
+            [
+                "90044b97.cdc948"
+            ]
         ]
     },
     {
@@ -9989,7 +9995,8 @@
         "wires": [
             [
                 "9d17535ed84a6e31",
-                "c741f133ad73cc29"
+                "c741f133ad73cc29",
+                "24e586e448499c3c"
             ]
         ]
     },
@@ -10684,6 +10691,7 @@
         "id": "41a99d5f.d90424",
         "type": "bigtimer",
         "z": "bbeaf112.72e1d",
+        "g": "cd213aec.cccc28",
         "outtopic": "",
         "outpayload1": "",
         "outpayload2": "",
@@ -10791,6 +10799,7 @@
         "id": "4fda9dd4.739754",
         "type": "bigtimer",
         "z": "bbeaf112.72e1d",
+        "g": "cd213aec.cccc28",
         "outtopic": "",
         "outpayload1": "",
         "outpayload2": "",
@@ -10898,6 +10907,7 @@
         "id": "5ff7ddb7.43ceb4",
         "type": "persist in",
         "z": "bbeaf112.72e1d",
+        "g": "f2ae83b.dc73b8",
         "name": "TEMPCONTROLLERSETTINGSMIN",
         "storageNode": "ce67bb73.b10ae8",
         "x": 3970,
@@ -11000,7 +11010,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "from": "COOLING",
-                "fromt": "str",
+                "fromt": "global",
                 "to": "kuehlen",
                 "tot": "str"
             }
@@ -11029,8 +11039,8 @@
                 "t": "change",
                 "p": "payload",
                 "pt": "msg",
-                "from": "HEATING",
-                "fromt": "str",
+                "from": "INFO_HEATING",
+                "fromt": "global",
                 "to": "heizen",
                 "tot": "str"
             }
@@ -11059,8 +11069,8 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "HEATING",
-                "vt": "str"
+                "v": "INFO_HEATING",
+                "vt": "global"
             }
         ],
         "checkall": "true",
@@ -11086,8 +11096,8 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "COOLING",
-                "vt": "str"
+                "v": "INFO_COOLING",
+                "vt": "global"
             }
         ],
         "checkall": "true",
@@ -11151,6 +11161,62 @@
         "wires": [
             [
                 "c9382097.0e90a"
+            ]
+        ]
+    },
+    {
+        "id": "999c100d3509c327",
+        "type": "change",
+        "z": "bbeaf112.72e1d",
+        "g": "21e80259.d09fde",
+        "name": "TEXT_OUT_IDLE",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "INFO_IDLE",
+                "fromt": "global",
+                "to": "inaktiv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4170,
+        "y": 720,
+        "wires": [
+            [
+                "d79909a08fa79ce0"
+            ]
+        ]
+    },
+    {
+        "id": "24e586e448499c3c",
+        "type": "switch",
+        "z": "bbeaf112.72e1d",
+        "g": "21e80259.d09fde",
+        "name": "IDLE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "INFO_IDLE",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 3950,
+        "y": 680,
+        "wires": [
+            [
+                "999c100d3509c327"
             ]
         ]
     },
@@ -11952,6 +12018,7 @@
         "id": "dfef4605.faff28",
         "type": "bigtimer",
         "z": "39802b9f.dfa8c4",
+        "g": "a51a851.9370f78",
         "outtopic": "",
         "outpayload1": "",
         "outpayload2": "",
@@ -15387,6 +15454,23 @@
         "x": 520,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "79b6677eb653752e",
+        "type": "function",
+        "z": "b4c9d9b8.2717a8",
+        "name": "CONSTANTS_AS_GLOBAL_VARIABLES",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Der Code hier wird ausgeführt,\n// wenn der Node gestartet wird\nglobal.set(\"INFO_COOLING\", \"COOLING\");\nglobal.set(\"INFO_HEATING\", \"HEATING\");\nglobal.set(\"INFO_IDLE\",    \"IDLE\");\n\n\n",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "87b944d7.bff118",
