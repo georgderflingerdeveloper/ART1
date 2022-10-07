@@ -84,6 +84,14 @@
         "info": ""
     },
     {
+        "id": "0d198607368cb7c8",
+        "type": "tab",
+        "label": "DASHBOARD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "860956db.3e8bf8",
         "type": "subflow",
         "name": "SUB_ON_HOUR_1",
@@ -2657,9 +2665,7 @@
             "c98af7b1.928de8"
         ],
         "x": 214,
-        "y": -1,
-        "w": 1302,
-        "h": 962
+        "y": -1
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2672,7 +2678,6 @@
             "label": true
         },
         "nodes": [
-            "23cc4d5.fec80b2",
             "bbe87a50.2c50f8",
             "78344866.7c61b8",
             "fe41b204.fc3bd",
@@ -2680,12 +2685,14 @@
             "1ea2ab01.950be5",
             "502b2821.d151e8",
             "96001dfa.604c2",
-            "67be3fd1.9c51b"
+            "67be3fd1.9c51b",
+            "5ab5ca3169286e8e",
+            "925cc2c74324633f"
         ],
-        "x": 434,
-        "y": 619,
+        "x": 414,
+        "y": 579,
         "w": 902,
-        "h": 202
+        "h": 242
     },
     {
         "id": "1df63d98.541fb2",
@@ -2857,9 +2864,7 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139,
-        "w": 1112,
-        "h": 222
+        "y": 139
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2879,9 +2884,7 @@
             "cbc9ccd0.4f35e"
         ],
         "x": 174,
-        "y": 39,
-        "w": 622,
-        "h": 202
+        "y": 39
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -2897,9 +2900,7 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59,
-        "w": 602,
-        "h": 82
+        "y": 59
     },
     {
         "id": "cd213aec.cccc28",
@@ -2979,8 +2980,8 @@
             "f379bd17.26bef",
             "2161980c.d225d8"
         ],
-        "x": 34,
-        "y": 59,
+        "x": 54,
+        "y": 39,
         "w": 1102,
         "h": 522
     },
@@ -3165,10 +3166,10 @@
             "be53331d.926fc",
             "618fbc77.05bbe4",
             "a72f74f2.3ff958",
-            "69024abe.e8a124",
             "1e7effcd.136c4",
             "71735533.f9f25c",
-            "36bf26e4.7cae8a"
+            "36bf26e4.7cae8a",
+            "b325ea99d950960e"
         ],
         "x": 54,
         "y": 1319,
@@ -7973,8 +7974,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 390,
-        "y": 240,
+        "x": 410,
+        "y": 220,
         "wires": [
             [
                 "4792a0ea.3199d"
@@ -8003,8 +8004,8 @@
         "topic": "LOAD",
         "payload": "true",
         "payloadType": "bool",
-        "x": 330,
-        "y": 340,
+        "x": 350,
+        "y": 320,
         "wires": [
             [
                 "927970c2.fcb53",
@@ -8022,8 +8023,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 610,
-        "y": 200,
+        "x": 630,
+        "y": 180,
         "wires": [
             [
                 "9887534c.55873",
@@ -8046,8 +8047,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 130,
-        "y": 240,
+        "x": 150,
+        "y": 220,
         "wires": [
             [
                 "927970c2.fcb53",
@@ -8066,8 +8067,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 370,
-        "y": 160,
+        "x": 390,
+        "y": 140,
         "wires": [
             [
                 "4792a0ea.3199d"
@@ -8087,8 +8088,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 160,
-        "y": 160,
+        "x": 180,
+        "y": 140,
         "wires": [
             [
                 "e907b606.9f1308"
@@ -8104,8 +8105,8 @@
         "func": "var DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 8,\n               MinuteOn  : 8, \n               HourOff   : 8, \n               MinuteOff : 8\n             } \n       \n   };\n\nflow.set('TimeSettingsMemory1',msg) || DefaultSettings;\n\nvar LoadedSettings = flow.get('TimeSettingsMemory1') || DefaultSettings;\nmsg = LoadedSettings;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 930,
-        "y": 100,
+        "x": 950,
+        "y": 80,
         "wires": [
             []
         ]
@@ -8165,8 +8166,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 610,
-        "y": 460,
+        "x": 630,
+        "y": 440,
         "wires": [
             [
                 "2e2038ca.55e1a8",
@@ -8185,8 +8186,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 330,
-        "y": 460,
+        "x": 350,
+        "y": 440,
         "wires": [
             [
                 "6baf27e0.c096a8"
@@ -8295,8 +8296,8 @@
         "func": "var DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 4,\n               MinuteOn  : 5, \n               HourOff   : 6, \n               MinuteOff : 7\n             } \n       \n   };\n\nglobal.set('TimeSettingsMemory2',msg) || DefaultSettings;\n\nvar LoadedSettings = global.get('TimeSettingsMemory2') || DefaultSettings;\nmsg = LoadedSettings;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 930,
-        "y": 540,
+        "x": 950,
+        "y": 520,
         "wires": [
             []
         ]
@@ -8308,40 +8309,13 @@
         "g": "5bd2c3f8.a956ec",
         "name": "SET_TIME1_DASHBOARD",
         "env": [],
-        "x": 740,
-        "y": 300,
+        "x": 760,
+        "y": 280,
         "wires": [
             [
                 "2161980c.d225d8"
             ]
         ]
-    },
-    {
-        "id": "23cc4d5.fec80b2",
-        "type": "ui_gauge",
-        "z": "bbeaf112.72e1d",
-        "g": "398b2b64.1f06a4",
-        "name": "TEMPERATUR",
-        "group": "6d039928.0d6078",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "TEMPERATUR",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": "-20",
-        "max": "50",
-        "colors": [
-            "#0000ff",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1000,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "917b49f5.154458",
@@ -8394,7 +8368,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "outputs": 1,
-        "x": 1000,
+        "x": 980,
         "y": 720,
         "wires": [
             [
@@ -8410,12 +8384,12 @@
         "g": "398b2b64.1f06a4",
         "name": "SUB_TEMPERATURE",
         "env": [],
-        "x": 560,
+        "x": 540,
         "y": 680,
         "wires": [
             [
                 "bbe87a50.2c50f8",
-                "23cc4d5.fec80b2"
+                "5ab5ca3169286e8e"
             ],
             [
                 "502b2821.d151e8"
@@ -8821,8 +8795,8 @@
         "links": [
             "d93a8435.6671f8"
         ],
-        "x": 1095,
-        "y": 420,
+        "x": 1115,
+        "y": 400,
         "wires": [
             [
                 "9fbb180a.4ac318",
@@ -8841,8 +8815,8 @@
         "links": [
             "30dc8eb9.ae32a2"
         ],
-        "x": 775,
-        "y": 420,
+        "x": 795,
+        "y": 400,
         "wires": []
     },
     {
@@ -8905,7 +8879,7 @@
         "links": [
             "99df5356.fa39f"
         ],
-        "x": 1295,
+        "x": 1275,
         "y": 720,
         "wires": []
     },
@@ -9081,8 +9055,8 @@
         "func": "var NewMsg = {};\n\n \nvar DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 9,\n               MinuteOn  : 9, \n               HourOff   : 9, \n               MinuteOff : 9\n             } \n       \n   };\n\nvar TimeSettings=flow.get('TimeSettingsMemory1') || DefaultSettings;\n\n\nswitch( msg.topic)\n{\n    case \"HourOn\":\n         TimeSettings.payload.HourOn = msg.payload;\n         break;\n\n    case \"MinuteOn\":\n         TimeSettings.payload.MinuteOn = msg.payload;\n         break;\n         \n    case \"HourOff\":\n         TimeSettings.payload.HourOff = msg.payload;\n         break;\n\n    case \"MinuteOff\":\n         TimeSettings.payload.MinuteOff = msg.payload;\n         break;     \n         \n}\n\nflow.set('TimeSettingsMemory1',TimeSettings);\n\nNewMsg = TimeSettings;\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 950,
-        "y": 240,
+        "x": 970,
+        "y": 220,
         "wires": [
             [
                 "2d9c7eaa.7a40a2",
@@ -9182,6 +9156,7 @@
         "z": "bbeaf112.72e1d",
         "g": "2bb5b220.65b7ee",
         "name": "Invert",
+        "payloadPropName": "payload",
         "x": 1040,
         "y": 1120,
         "wires": [
@@ -9526,7 +9501,7 @@
             "6eba7f.9956a58",
             "1e982f79.9bfa31"
         ],
-        "x": 1295,
+        "x": 1275,
         "y": 660,
         "wires": []
     },
@@ -9890,7 +9865,7 @@
         "y": 1360,
         "wires": [
             [
-                "69024abe.e8a124"
+                "b325ea99d950960e"
             ]
         ]
     },
@@ -9920,7 +9895,7 @@
         "y": 1420,
         "wires": [
             [
-                "69024abe.e8a124"
+                "b325ea99d950960e"
             ]
         ]
     },
@@ -10061,36 +10036,6 @@
         ]
     },
     {
-        "id": "69024abe.e8a124",
-        "type": "ui_switch",
-        "z": "bbeaf112.72e1d",
-        "g": "3d9b3f31.3911d",
-        "name": "Heater",
-        "label": "Heizstrahler",
-        "tooltip": "",
-        "group": "6d039928.0d6078",
-        "order": 32,
-        "width": "6",
-        "height": "2",
-        "passthru": false,
-        "decouple": "true",
-        "topic": "Heater",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-3x fa-thermometer-full",
-        "oncolor": "yellow",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-3x fa-thermometer-empty",
-        "offcolor": "white",
-        "x": 410,
-        "y": 1380,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1e7effcd.136c4",
         "type": "inject",
         "z": "bbeaf112.72e1d",
@@ -10134,7 +10079,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 570,
+        "x": 450,
         "y": 1680,
         "wires": [
             [
@@ -10366,7 +10311,7 @@
         "raw": false,
         "topic": "",
         "name": "TEMP_ERROR",
-        "x": 810,
+        "x": 790,
         "y": 740,
         "wires": [
             []
@@ -10388,7 +10333,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 590,
+        "x": 570,
         "y": 780,
         "wires": [
             [
@@ -10416,7 +10361,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
+        "x": 750,
         "y": 780,
         "wires": [
             [
@@ -10710,7 +10655,7 @@
         "links": [
             "c98af7b1.928de8"
         ],
-        "x": 1035,
+        "x": 1015,
         "y": 780,
         "wires": []
     },
@@ -11606,6 +11551,45 @@
                 "5cb6f6e2b914d377"
             ]
         ]
+    },
+    {
+        "id": "b325ea99d950960e",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "3d9b3f31.3911d",
+        "name": "SEND_HEATER_STATUS_SYMBOL",
+        "mode": "link",
+        "links": [
+            "0b7d115d977504fa"
+        ],
+        "x": 405,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "5ab5ca3169286e8e",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "398b2b64.1f06a4",
+        "name": "SEND_TEMPERATURE_TO_HMI",
+        "mode": "link",
+        "links": [
+            "c1ba2d5ba28d5b2d"
+        ],
+        "x": 905,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "925cc2c74324633f",
+        "type": "comment",
+        "z": "bbeaf112.72e1d",
+        "g": "398b2b64.1f06a4",
+        "name": "Temperature to Dashboard",
+        "info": "",
+        "x": 930,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "b5e965fa.ea98d8",
@@ -16380,6 +16364,93 @@
         "wires": [
             [
                 "ec2ae9a8.2dcc28"
+            ]
+        ]
+    },
+    {
+        "id": "9b1d261736d73940",
+        "type": "ui_switch",
+        "z": "0d198607368cb7c8",
+        "name": "Heater",
+        "label": "Heizstrahler",
+        "tooltip": "",
+        "group": "6d039928.0d6078",
+        "order": 32,
+        "width": "6",
+        "height": "2",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "Heater",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-3x fa-thermometer-full",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-3x fa-thermometer-empty",
+        "offcolor": "white",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b7d115d977504fa",
+        "type": "link in",
+        "z": "0d198607368cb7c8",
+        "name": "TO_HEATER_STATUS_SYMBOL",
+        "links": [
+            "b325ea99d950960e"
+        ],
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "9b1d261736d73940"
+            ]
+        ]
+    },
+    {
+        "id": "55c06a6107aed4c4",
+        "type": "ui_gauge",
+        "z": "0d198607368cb7c8",
+        "name": "TEMPERATUR",
+        "group": "6d039928.0d6078",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "TEMPERATUR",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "50",
+        "colors": [
+            "#0000ff",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 280,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c1ba2d5ba28d5b2d",
+        "type": "link in",
+        "z": "0d198607368cb7c8",
+        "name": "TO_TEMPERATURE",
+        "links": [
+            "5ab5ca3169286e8e"
+        ],
+        "x": 105,
+        "y": 100,
+        "wires": [
+            [
+                "55c06a6107aed4c4"
             ]
         ]
     }
