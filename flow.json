@@ -1,5 +1,12 @@
 [
     {
+        "id": "b4c9d9b8.2717a8",
+        "type": "tab",
+        "label": "CONFIGURATION",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "bbeaf112.72e1d",
         "type": "tab",
         "label": "WERKSTÄTTE2",
@@ -59,13 +66,6 @@
         "id": "9087d93a.9a7648",
         "type": "tab",
         "label": "WERKSTÄTTE_LÜFTERSTEUERUNG",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "b4c9d9b8.2717a8",
-        "type": "tab",
-        "label": "CONFIGURATION",
         "disabled": false,
         "info": ""
     },
@@ -2665,7 +2665,9 @@
             "c98af7b1.928de8"
         ],
         "x": 214,
-        "y": -1
+        "y": -1,
+        "w": 1302,
+        "h": 962
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2687,11 +2689,12 @@
             "96001dfa.604c2",
             "67be3fd1.9c51b",
             "5ab5ca3169286e8e",
-            "925cc2c74324633f"
+            "925cc2c74324633f",
+            "8ac1c009b5f15771"
         ],
-        "x": 414,
+        "x": 294,
         "y": 579,
-        "w": 902,
+        "w": 1022,
         "h": 242
     },
     {
@@ -2864,7 +2867,9 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139
+        "y": 139,
+        "w": 1112,
+        "h": 222
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2876,15 +2881,17 @@
             "label": true
         },
         "nodes": [
-            "5fc10dfd.4e6e34",
             "42438eaa.e4a54",
             "472cadb1.d45f34",
             "1de54985.7fcc26",
             "cea1b535.357378",
-            "cbc9ccd0.4f35e"
+            "cbc9ccd0.4f35e",
+            "42c9df97d8f79572"
         ],
         "x": 174,
-        "y": 39
+        "y": 39,
+        "w": 622,
+        "h": 202
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -2900,7 +2907,9 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59
+        "y": 59,
+        "w": 602,
+        "h": 82
     },
     {
         "id": "cd213aec.cccc28",
@@ -5653,6 +5662,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 200,
         "y": 80,
         "wires": [
@@ -7694,11 +7704,12 @@
         "type": "function",
         "z": "f9c9c4f6.2e9508",
         "name": "IO_CONTROL_HEATER",
-        "func": "var InstanceName = env.get('INSTANCE');\nvar NameOfInitialized = env.get('INIT');\nvar DigitalOutput = global.get(InstanceName);\nvar IsInitialized = global.get(NameOfInitialized);\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
+        "func": "var InstanceName      = env.get('INSTANCE');\nvar NameOfInitialized = env.get('INIT');\nvar DigitalOutput     = global.get(InstanceName);\nvar IsInitialized     = global.get(NameOfInitialized);\n\nif( IsInitialized )\n{\n    if( msg.payload === 'ON')\n    {\n        DigitalOutput.setDutyCycle(1);\n    }\n\n    if( msg.payload === 'OFF')\n    {\n        DigitalOutput.setDutyCycle(0);\n    }\n}\n    \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 190,
         "y": 80,
         "wires": [
@@ -7945,6 +7956,138 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3232c81b.959c48",
+        "type": "config",
+        "z": "b4c9d9b8.2717a8",
+        "name": "MESSAGE_COMMANDOS_FANS",
+        "properties": [
+            {
+                "p": "CMD_FAN1_ON",
+                "pt": "global",
+                "to": "CMD_FAN1_ON",
+                "tot": "str"
+            },
+            {
+                "p": "CMD_FAN2_ON",
+                "pt": "global",
+                "to": "CMD_FAN2_ON",
+                "tot": "str"
+            },
+            {
+                "p": "CMD_FAN1_OFF",
+                "pt": "global",
+                "to": "CMD_FAN1_OFF",
+                "tot": "str"
+            },
+            {
+                "p": "CMD_FAN2_OFF",
+                "pt": "global",
+                "to": "CMD_FAN2_OFF",
+                "tot": "str"
+            }
+        ],
+        "active": true,
+        "x": 560,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "380f2e18.049d92",
+        "type": "config",
+        "z": "b4c9d9b8.2717a8",
+        "name": "MESSAGE_COMMANDOS_CONTROLLER",
+        "properties": [
+            {
+                "p": "CMD_CONTROLLLER_SETTINGS",
+                "pt": "global",
+                "to": "CMD_CONTROLLLER_SETTINGS",
+                "tot": "str"
+            }
+        ],
+        "active": true,
+        "x": 530,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "67ac5a3e.79eeb4",
+        "type": "config",
+        "z": "b4c9d9b8.2717a8",
+        "name": "MESSAGE_HARDWARE_ERROR_SENSORS",
+        "properties": [
+            {
+                "p": "ERR_TEMPERATUR_SENSOR1",
+                "pt": "global",
+                "to": "ERR_TEMPERATUR_SENSOR1",
+                "tot": "str"
+            }
+        ],
+        "active": true,
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "79b6677eb653752e",
+        "type": "function",
+        "z": "b4c9d9b8.2717a8",
+        "name": "CONSTANTS_AS_GLOBAL_VARIABLES",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Der Code hier wird ausgeführt,\n// wenn der Node gestartet wird\nglobal.set(\"INFO_COOLING\", \"COOLING\");\nglobal.set(\"INFO_HEATING\", \"HEATING\");\nglobal.set(\"INFO_IDLE\",    \"IDLE\");\nglobal.set(\"INFO_CHECK\",   \"CHECK\");\n\n\n",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8be712edb12c1a1",
+        "type": "inject",
+        "z": "b4c9d9b8.2717a8",
+        "name": "CONFIG_VINT_HUB_WORKSHOP_TEMP",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "20",
+        "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
+        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3},\"DigitalOutput0\":{\"port\":5000,\"HubPort\":0}}",
+        "payloadType": "json",
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "69a12f2fdce8b832"
+            ]
+        ]
+    },
+    {
+        "id": "69a12f2fdce8b832",
+        "type": "link out",
+        "z": "b4c9d9b8.2717a8",
+        "name": "SENDER_VINT_CONFIGURATION_WORKSHOP",
+        "mode": "link",
+        "links": [
+            "8ac1c009b5f15771",
+            "42c9df97d8f79572"
+        ],
+        "x": 805,
+        "y": 320,
+        "wires": []
     },
     {
         "id": "e4e6ca0e.2a3698",
@@ -8433,36 +8576,6 @@
             [
                 "51690636.e5b7f8",
                 "5bce249f.ef16cc"
-            ]
-        ]
-    },
-    {
-        "id": "7a371f2b.7c57a",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "name": "CONFIG_VINT_HUB_WORKSHOP_TEMP",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "20",
-        "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
-        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3}}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 680,
-        "wires": [
-            [
-                "78344866.7c61b8",
-                "5fb03958.d25de8"
             ]
         ]
     },
@@ -11592,6 +11705,23 @@
         "wires": []
     },
     {
+        "id": "8ac1c009b5f15771",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "398b2b64.1f06a4",
+        "name": "RECEIVER_VINT_CONFIG_WORKSHOP",
+        "links": [
+            "69a12f2fdce8b832"
+        ],
+        "x": 335,
+        "y": 680,
+        "wires": [
+            [
+                "78344866.7c61b8"
+            ]
+        ]
+    },
+    {
         "id": "b5e965fa.ea98d8",
         "type": "subflow:a2002a18.940d98",
         "z": "39802b9f.dfa8c4",
@@ -14494,42 +14624,12 @@
         "wires": []
     },
     {
-        "id": "5fc10dfd.4e6e34",
-        "type": "inject",
-        "z": "e5b0b209.26cfe",
-        "g": "e6272.4212ed8e8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "30",
-        "topic": "INIT",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 280,
-        "y": 80,
-        "wires": [
-            [
-                "42438eaa.e4a54"
-            ]
-        ]
-    },
-    {
         "id": "42438eaa.e4a54",
         "type": "function",
         "z": "e5b0b209.26cfe",
         "g": "e6272.4212ed8e8",
         "name": "INIT_PHIDGETS_VINT_HUB1_WORKSHOP_HALL",
-        "func": "var NewMsg         = { payload : ''};\nvar phidget22      = global.get('phidget22')\nvar conn           = new phidget22.Connection(5661,'192.168.1.100');\nvar Initialized    = context.get('init') || 0;\nvar digitalOutput0 = new phidget22.DigitalOutput();\n\nvar SerialNumber = 726538;\nvar PortNumber   = 5000;\n\ndigitalOutput0.onAttach = function onDigitalOutput0_Error() {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = function onDigitalOutput0_Error() {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(PortNumber).then(function () \n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n}\n\nconn.connect().then(Start).catch(function(err) {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nreturn NewMsg;",
+        "func": "var NewMsg               = { payload : ''};\nvar phidget22            = global.get('phidget22')\nvar IPAdress             = msg.payload.VintHub.ipadress;\nvar ServerPort           = msg.payload.VintHub.port;\nvar SerialNumber         = msg.payload.VintHub.serialnumber;\nvar conn                 = new phidget22.Connection(ServerPort,IPAdress);\nvar Initialized          = context.get('init') || 0;\nvar HubPortDigitalOutput = msg.payload.DigitalOutput0.HubPort;\nvar digitalOutput0       = new phidget22.DigitalOutput();\n\n\ndigitalOutput0.onAttach = ()=> {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = ()=> {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(HubPortDigitalOutput).then( () =>\n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n}\n\nconn.connect().then(Start).catch( (err)=> {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nNewMsg = msg;\n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14538,7 +14638,9 @@
         "x": 570,
         "y": 80,
         "wires": [
-            []
+            [
+                "0a2baaaee66b38b0"
+            ]
         ]
     },
     {
@@ -14616,6 +14718,39 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "42c9df97d8f79572",
+        "type": "link in",
+        "z": "e5b0b209.26cfe",
+        "g": "e6272.4212ed8e8",
+        "name": "RECEIVER_VINT_CONFIGURATION_WORKSHOP",
+        "links": [
+            "69a12f2fdce8b832"
+        ],
+        "x": 295,
+        "y": 80,
+        "wires": [
+            [
+                "42438eaa.e4a54"
+            ]
+        ]
+    },
+    {
+        "id": "0a2baaaee66b38b0",
+        "type": "debug",
+        "z": "e5b0b209.26cfe",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 80,
+        "wires": []
     },
     {
         "id": "3a563e50.6f1152",
@@ -15771,95 +15906,6 @@
         "x": 635,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "3232c81b.959c48",
-        "type": "config",
-        "z": "b4c9d9b8.2717a8",
-        "name": "MESSAGE_COMMANDOS_FANS",
-        "properties": [
-            {
-                "p": "CMD_FAN1_ON",
-                "pt": "global",
-                "to": "CMD_FAN1_ON",
-                "tot": "str"
-            },
-            {
-                "p": "CMD_FAN2_ON",
-                "pt": "global",
-                "to": "CMD_FAN2_ON",
-                "tot": "str"
-            },
-            {
-                "p": "CMD_FAN1_OFF",
-                "pt": "global",
-                "to": "CMD_FAN1_OFF",
-                "tot": "str"
-            },
-            {
-                "p": "CMD_FAN2_OFF",
-                "pt": "global",
-                "to": "CMD_FAN2_OFF",
-                "tot": "str"
-            }
-        ],
-        "active": true,
-        "x": 560,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "380f2e18.049d92",
-        "type": "config",
-        "z": "b4c9d9b8.2717a8",
-        "name": "MESSAGE_COMMANDOS_CONTROLLER",
-        "properties": [
-            {
-                "p": "CMD_CONTROLLLER_SETTINGS",
-                "pt": "global",
-                "to": "CMD_CONTROLLLER_SETTINGS",
-                "tot": "str"
-            }
-        ],
-        "active": true,
-        "x": 530,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "67ac5a3e.79eeb4",
-        "type": "config",
-        "z": "b4c9d9b8.2717a8",
-        "name": "MESSAGE_HARDWARE_ERROR_SENSORS",
-        "properties": [
-            {
-                "p": "ERR_TEMPERATUR_SENSOR1",
-                "pt": "global",
-                "to": "ERR_TEMPERATUR_SENSOR1",
-                "tot": "str"
-            }
-        ],
-        "active": true,
-        "x": 520,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "79b6677eb653752e",
-        "type": "function",
-        "z": "b4c9d9b8.2717a8",
-        "name": "CONSTANTS_AS_GLOBAL_VARIABLES",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Der Code hier wird ausgeführt,\n// wenn der Node gestartet wird\nglobal.set(\"INFO_COOLING\", \"COOLING\");\nglobal.set(\"INFO_HEATING\", \"HEATING\");\nglobal.set(\"INFO_IDLE\",    \"IDLE\");\nglobal.set(\"INFO_CHECK\",   \"CHECK\");\n\n\n",
-        "finalize": "",
-        "libs": [],
-        "x": 540,
-        "y": 260,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "87b944d7.bff118",
