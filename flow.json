@@ -92,6 +92,22 @@
         "env": []
     },
     {
+        "id": "ddcb478e1e0bdd61",
+        "type": "tab",
+        "label": "UNIT_TEST_ROUND",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "664b9874448c4d1a",
+        "type": "tab",
+        "label": "REMOTE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "860956db.3e8bf8",
         "type": "subflow",
         "name": "SUB_ON_HOUR_1",
@@ -2665,9 +2681,7 @@
             "c98af7b1.928de8"
         ],
         "x": 214,
-        "y": -1,
-        "w": 1302,
-        "h": 962
+        "y": -1
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2684,7 +2698,6 @@
             "78344866.7c61b8",
             "fe41b204.fc3bd",
             "1c13f8d8.14ebd7",
-            "1ea2ab01.950be5",
             "502b2821.d151e8",
             "96001dfa.604c2",
             "67be3fd1.9c51b",
@@ -2710,11 +2723,12 @@
         "nodes": [
             "51690636.e5b7f8",
             "5fb03958.d25de8",
-            "5bce249f.ef16cc"
+            "5bce249f.ef16cc",
+            "29a8f6c68d619403"
         ],
-        "x": 444,
+        "x": 324,
         "y": 859,
-        "w": 642,
+        "w": 762,
         "h": 142
     },
     {
@@ -2867,9 +2881,7 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139,
-        "w": 1112,
-        "h": 222
+        "y": 139
     },
     {
         "id": "e6272.4212ed8e8",
@@ -3141,7 +3153,7 @@
         ],
         "x": 24,
         "y": 2379,
-        "w": 1962,
+        "w": 2022,
         "h": 702
     },
     {
@@ -3163,7 +3175,6 @@
             "50fd47f.d5ba6b8",
             "c7845612.75d7d8",
             "af3824db.b85758",
-            "c1c5ea16.5b47c8",
             "191143c7.c0012c",
             "2b9327c1.cdd778",
             "5990290f.7aa738",
@@ -3178,7 +3189,8 @@
             "1e7effcd.136c4",
             "71735533.f9f25c",
             "36bf26e4.7cae8a",
-            "b325ea99d950960e"
+            "b325ea99d950960e",
+            "860e709e397805c8"
         ],
         "x": 54,
         "y": 1319,
@@ -3214,7 +3226,9 @@
             "9a8416cb.ae79e8"
         ],
         "x": 334,
-        "y": 39
+        "y": 39,
+        "w": 1012,
+        "h": 562
     },
     {
         "id": "cf2bb747.271778",
@@ -3237,7 +3251,9 @@
             "fc182d89.2e52f"
         ],
         "x": 514,
-        "y": 719
+        "y": 719,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3293,9 +3309,9 @@
             "c10435d.84120c8"
         ],
         "x": 94,
-        "y": 1919,
+        "y": 1799,
         "w": 632,
-        "h": 82
+        "h": 202
     },
     {
         "id": "3665de025bdb8994",
@@ -3648,6 +3664,18 @@
         "verboselogging": false
     },
     {
+        "id": "f9bb067f6b323bf1",
+        "type": "remote-config",
+        "name": "ART_LAUNCHER",
+        "host": "localhost",
+        "protocol": "https",
+        "port": "1880",
+        "baseurl": "https://127.0.0.1:1880/ui/#!/0?socketid=4DR21En7YvMauKYYAAAI",
+        "instancehash": "7eiwhxc0ithvnk7hcbfiu3pyjny7n1xqzc1cf6t6up33ua375iy8udwhg4hw3yn4",
+        "server": "nodered04.remote-red.com",
+        "region": "de"
+    },
+    {
         "id": "b0e29cad.544b6",
         "type": "ui_numeric",
         "z": "860956db.3e8bf8",
@@ -3972,7 +4000,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "x": 670,
+        "x": 550,
         "y": 460,
         "wires": [
             [
@@ -5560,10 +5588,13 @@
         "type": "function",
         "z": "5b1572f6.76334c",
         "name": "ROUND",
-        "func": "NewMsg = { 'payload' : 0 }\n\nfunction roundNumber(num, dec) {\n  return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);\n}\n\nNewMsg.payload = roundNumber( msg.payload, msg.DecimalPlaces );\n\nreturn NewMsg;",
+        "func": "var NewMsg = { 'payload' : 0 };\n\n/**\n* @param {number} num\n* @param {number} dec\n*/\nfunction roundNumber(num, dec) {\n  return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);\n}\n\nNewMsg.payload = roundNumber( msg.payload, msg.DecimalPlaces );\n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 190,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
         "y": 80,
         "wires": [
             []
@@ -5579,6 +5610,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 340,
         "y": 60,
         "wires": [
@@ -8083,7 +8115,9 @@
         "mode": "link",
         "links": [
             "8ac1c009b5f15771",
-            "42c9df97d8f79572"
+            "42c9df97d8f79572",
+            "cd55544ff0336da7",
+            "29a8f6c68d619403"
         ],
         "x": 805,
         "y": 320,
@@ -8272,8 +8306,7 @@
                 "c1fcccdc.e979c"
             ],
             [
-                "72343b35344db620",
-                "6ee8f1dbfeb24470"
+                "72343b35344db620"
             ],
             [
                 "72343b35344db620"
@@ -9231,39 +9264,6 @@
         ]
     },
     {
-        "id": "bc9d1406.59f458",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "d": true,
-        "name": "CONFIG_VINT_HUB_WORKSHOP_HUM",
-        "props": [
-            {
-                "p": "payload",
-                "v": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":5000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3}}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "v": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
-        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":5000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3}}",
-        "payloadType": "json",
-        "x": 250,
-        "y": 900,
-        "wires": [
-            [
-                "5fb03958.d25de8"
-            ]
-        ]
-    },
-    {
         "id": "8d0303f9.30f12",
         "type": "InvertUltimate",
         "z": "bbeaf112.72e1d",
@@ -9298,7 +9298,7 @@
         "max": "30",
         "step": 1,
         "x": 590,
-        "y": 1960,
+        "y": 1840,
         "wires": [
             [
                 "15a5f43209b6efac"
@@ -9593,7 +9593,8 @@
         "g": "f2ae83b.dc73b8",
         "name": "RECEIVE_TEMPERATURE",
         "links": [
-            "1c13f8d8.14ebd7"
+            "1c13f8d8.14ebd7",
+            "6d0bc22f94d377c9"
         ],
         "x": 775,
         "y": 2260,
@@ -9867,23 +9868,6 @@
         ]
     },
     {
-        "id": "c1c5ea16.5b47c8",
-        "type": "ui_text",
-        "z": "bbeaf112.72e1d",
-        "g": "3d9b3f31.3911d",
-        "group": "6d039928.0d6078",
-        "order": 33,
-        "width": 0,
-        "height": 0,
-        "name": "GARAGENTOOR",
-        "label": "GARAGENTOOR",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1150,
-        "y": 1640,
-        "wires": []
-    },
-    {
         "id": "191143c7.c0012c",
         "type": "link in",
         "z": "bbeaf112.72e1d",
@@ -9914,7 +9898,7 @@
         "y": 1600,
         "wires": [
             [
-                "c1c5ea16.5b47c8"
+                "860e709e397805c8"
             ]
         ]
     },
@@ -9929,7 +9913,7 @@
         "y": 1660,
         "wires": [
             [
-                "c1c5ea16.5b47c8"
+                "860e709e397805c8"
             ]
         ]
     },
@@ -10410,27 +10394,6 @@
         ]
     },
     {
-        "id": "1ea2ab01.950be5",
-        "type": "ui_toast",
-        "z": "bbeaf112.72e1d",
-        "g": "398b2b64.1f06a4",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "topic": "",
-        "name": "TEMP_ERROR",
-        "x": 790,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "502b2821.d151e8",
         "type": "switch",
         "z": "bbeaf112.72e1d",
@@ -10478,7 +10441,6 @@
         "y": 780,
         "wires": [
             [
-                "1ea2ab01.950be5",
                 "67be3fd1.9c51b"
             ]
         ]
@@ -10766,7 +10728,8 @@
         "g": "398b2b64.1f06a4",
         "name": "TEMPSENS1_ERROR",
         "links": [
-            "c98af7b1.928de8"
+            "c98af7b1.928de8",
+            "3340b2fb05af7efb"
         ],
         "x": 1015,
         "y": 780,
@@ -11203,7 +11166,7 @@
         "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1910,
+        "x": 1970,
         "y": 2880,
         "wires": []
     },
@@ -11581,23 +11544,6 @@
         ]
     },
     {
-        "id": "6ee8f1dbfeb24470",
-        "type": "debug",
-        "z": "bbeaf112.72e1d",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1800,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "d14e5e5d530e2a97",
         "type": "gate",
         "z": "bbeaf112.72e1d",
@@ -11718,6 +11664,37 @@
         "wires": [
             [
                 "78344866.7c61b8"
+            ]
+        ]
+    },
+    {
+        "id": "860e709e397805c8",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "3d9b3f31.3911d",
+        "name": "SEND_INFO_GARAGE_GATE_STATE",
+        "mode": "link",
+        "links": [
+            "58adfdf1ce003325"
+        ],
+        "x": 1005,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "29a8f6c68d619403",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "1df63d98.541fb2",
+        "name": "RECEIVER_FROM_VINT_HUB_WORKSHOP",
+        "links": [
+            "69a12f2fdce8b832"
+        ],
+        "x": 365,
+        "y": 900,
+        "wires": [
+            [
+                "5fb03958.d25de8"
             ]
         ]
     },
@@ -12708,7 +12685,8 @@
         "g": "efc47727.94b3e8",
         "name": "FROM_TEMPERATURE",
         "links": [
-            "fe41b204.fc3bd"
+            "fe41b204.fc3bd",
+            "8c776243d96ad980"
         ],
         "x": 255,
         "y": 80,
@@ -14421,7 +14399,8 @@
         "g": "efc47727.94b3e8",
         "name": "",
         "links": [
-            "67be3fd1.9c51b"
+            "67be3fd1.9c51b",
+            "2527ee1c81595d2a"
         ],
         "x": 255,
         "y": 920,
@@ -16080,7 +16059,8 @@
         "z": "52dcbc55.170064",
         "name": "FROM_TEMPERATURE",
         "links": [
-            "1c13f8d8.14ebd7"
+            "1c13f8d8.14ebd7",
+            "6d0bc22f94d377c9"
         ],
         "x": 775,
         "y": 80,
@@ -16480,7 +16460,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 280,
+        "x": 340,
         "y": 100,
         "wires": []
     },
@@ -16490,7 +16470,8 @@
         "z": "0d198607368cb7c8",
         "name": "TO_TEMPERATURE",
         "links": [
-            "5ab5ca3169286e8e"
+            "5ab5ca3169286e8e",
+            "27059a8c87b14a14"
         ],
         "x": 105,
         "y": 100,
@@ -16499,5 +16480,535 @@
                 "55c06a6107aed4c4"
             ]
         ]
+    },
+    {
+        "id": "3340b2fb05af7efb",
+        "type": "link in",
+        "z": "0d198607368cb7c8",
+        "name": "FROM_TEMP_SENSOR_ERROR",
+        "links": [
+            "67be3fd1.9c51b",
+            "2527ee1c81595d2a"
+        ],
+        "x": 105,
+        "y": 260,
+        "wires": [
+            [
+                "214d3d4f3ea4d657"
+            ]
+        ]
+    },
+    {
+        "id": "214d3d4f3ea4d657",
+        "type": "ui_toast",
+        "z": "0d198607368cb7c8",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "TEMP_ERROR",
+        "x": 340,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58adfdf1ce003325",
+        "type": "link in",
+        "z": "0d198607368cb7c8",
+        "name": "RECEIVE_INFO_GARAGE_GATE_STATE",
+        "links": [
+            "860e709e397805c8"
+        ],
+        "x": 105,
+        "y": 340,
+        "wires": [
+            [
+                "0f2b8a756e25f3c0"
+            ]
+        ]
+    },
+    {
+        "id": "0f2b8a756e25f3c0",
+        "type": "ui_text",
+        "z": "0d198607368cb7c8",
+        "group": "6d039928.0d6078",
+        "order": 33,
+        "width": 0,
+        "height": 0,
+        "name": "GARAGENTOOR",
+        "label": "GARAGENTOOR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 350,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "90f9ecbdbf98a9e2",
+        "type": "assert",
+        "z": "ddcb478e1e0bdd61",
+        "name": "CheckRound_01",
+        "rules": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "type": "btwn",
+                "value": "0.4999",
+                "valueType": "num",
+                "value2": "0.5111",
+                "value2Type": "num",
+                "failMsg": "Value out of range"
+            }
+        ],
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [
+                "77144f1517cd4665"
+            ]
+        ]
+    },
+    {
+        "id": "e4483738fc03685d",
+        "type": "subflow:5b1572f6.76334c",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "90f9ecbdbf98a9e2"
+            ]
+        ]
+    },
+    {
+        "id": "0ef3c58dd44ae6d4",
+        "type": "inject",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "DecimalPlaces",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.51",
+        "payloadType": "num",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "e4483738fc03685d"
+            ]
+        ]
+    },
+    {
+        "id": "e223ad777abba7cb",
+        "type": "assert",
+        "z": "ddcb478e1e0bdd61",
+        "name": "CheckRound_02",
+        "rules": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "type": "btwn",
+                "value": "0.9",
+                "valueType": "num",
+                "value2": "1.1",
+                "value2Type": "num",
+                "failMsg": "Value out of range"
+            }
+        ],
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "2241ee6d5c4a0d42"
+            ]
+        ]
+    },
+    {
+        "id": "ca75e7a33659d143",
+        "type": "subflow:5b1572f6.76334c",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "e223ad777abba7cb"
+            ]
+        ]
+    },
+    {
+        "id": "4a26b679bb681be3",
+        "type": "inject",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "DecimalPlaces",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "ca75e7a33659d143"
+            ]
+        ]
+    },
+    {
+        "id": "6ce1c7c52a41a272",
+        "type": "function",
+        "z": "ddcb478e1e0bdd61",
+        "name": "ROUND",
+        "func": "var NewMsg = { 'payload' : 0 };\n\n/**\n* @param {number} num\n* @param {number} dec\n*/\nfunction roundNumber(num, dec) {\n  return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);\n}\n\nNewMsg.payload = roundNumber( msg.payload, msg.DecimalPlaces );\n\nreturn NewMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "f83974a42a0b9c53"
+            ]
+        ]
+    },
+    {
+        "id": "b1e0340cb3e44b7c",
+        "type": "inject",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "DecimalPlaces",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.51",
+        "payloadType": "num",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "6ce1c7c52a41a272"
+            ]
+        ]
+    },
+    {
+        "id": "f83974a42a0b9c53",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "debugRound100",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "21172b8120b61914",
+        "type": "assert",
+        "z": "ddcb478e1e0bdd61",
+        "name": "CheckRound_03",
+        "rules": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "type": "btwn",
+                "value": "0.519",
+                "valueType": "num",
+                "value2": "0.521",
+                "value2Type": "num",
+                "failMsg": "Value out of range"
+            }
+        ],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "ef0b47e4feed08f1"
+            ]
+        ]
+    },
+    {
+        "id": "94261efc24fc3607",
+        "type": "subflow:5b1572f6.76334c",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "21172b8120b61914"
+            ]
+        ]
+    },
+    {
+        "id": "2918d50d0e2215db",
+        "type": "inject",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "DecimalPlaces",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.515",
+        "payloadType": "num",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "94261efc24fc3607"
+            ]
+        ]
+    },
+    {
+        "id": "77144f1517cd4665",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "Debug_Round1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2241ee6d5c4a0d42",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "Debug_Round2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ef0b47e4feed08f1",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "Debug_Round3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ba2130c9c24a3483",
+        "type": "assert",
+        "z": "ddcb478e1e0bdd61",
+        "name": "CheckRound_04",
+        "rules": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "type": "gt",
+                "value": "9999.99",
+                "valueType": "str",
+                "failMsg": "Value out of range"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "type": "lt",
+                "value": "10000.01",
+                "valueType": "str",
+                "failMsg": ""
+            }
+        ],
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "2d32db3206093d88"
+            ]
+        ]
+    },
+    {
+        "id": "cd7bccc59368e6f3",
+        "type": "subflow:5b1572f6.76334c",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "ba2130c9c24a3483",
+                "ab9b6a47cd0e2520"
+            ]
+        ]
+    },
+    {
+        "id": "c934ba475954402a",
+        "type": "inject",
+        "z": "ddcb478e1e0bdd61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "DecimalPlaces",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "9999.99",
+        "payloadType": "num",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "cd7bccc59368e6f3"
+            ]
+        ]
+    },
+    {
+        "id": "2d32db3206093d88",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "Debug_Round4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ab9b6a47cd0e2520",
+        "type": "debug",
+        "z": "ddcb478e1e0bdd61",
+        "name": "Debug_Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "96e44a8eec920cc9",
+        "type": "remote-access",
+        "z": "664b9874448c4d1a",
+        "confignode": "f9bb067f6b323bf1",
+        "name": "ART_REMOTE",
+        "verbose": 0,
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "4264d1fb3e142bc4"
+            ]
+        ]
+    },
+    {
+        "id": "4264d1fb3e142bc4",
+        "type": "debug",
+        "z": "664b9874448c4d1a",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 60,
+        "wires": []
     }
 ]
