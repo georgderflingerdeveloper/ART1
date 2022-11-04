@@ -2524,7 +2524,7 @@
                 "y": 100,
                 "wires": [
                     {
-                        "id": "4a9e054cd5803b7a"
+                        "id": "991c605fcad4f6b8"
                     }
                 ]
             }
@@ -2535,7 +2535,7 @@
                 "y": 100,
                 "wires": [
                     {
-                        "id": "f94dc62b2d38efcb",
+                        "id": "088d105747279a9e",
                         "port": 0
                     }
                 ]
@@ -8019,12 +8019,10 @@
         "upper": "",
         "mode": "increment",
         "outputs": "1",
-        "x": 380,
+        "x": 540,
         "y": 100,
         "wires": [
-            [
-                "f94dc62b2d38efcb"
-            ]
+            []
         ]
     },
     {
@@ -8046,7 +8044,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
+        "x": 370,
         "y": 100,
         "wires": [
             [
@@ -8055,20 +8053,28 @@
         ]
     },
     {
-        "id": "f94dc62b2d38efcb",
-        "type": "function",
+        "id": "991c605fcad4f6b8",
+        "type": "switch",
         "z": "1bf71edbfed49b3f",
-        "name": "MakeTopic",
-        "func": "msg.topic = env.get(\"Count\");\nreturn msg;",
+        "name": "DoesTopicMatch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Count",
+                "vt": "env"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
         "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
+        "x": 180,
         "y": 100,
         "wires": [
-            []
+            [
+                "4a9e054cd5803b7a"
+            ]
         ]
     },
     {
@@ -17550,5 +17556,216 @@
                 "4ac5665bc8e0e621"
             ]
         ]
+    },
+    {
+        "id": "a5b3f2745b17f176",
+        "type": "function",
+        "z": "21a3ab7701b50a63",
+        "name": "GetCountDataFromDictionary",
+        "func": "var DataDictionary = flow.get(\"DataDictionary\")||{};\nvar key = msg.topic;\n\nif ( DataDictionary[key] != null)\n{\n    msg.payload = DataDictionary[key];\n}\nelse\n{\n    node.error(\"Key \" + key + \" not found\", key);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 740,
+        "wires": [
+            [
+                "7a1e8ec73274db54"
+            ]
+        ]
+    },
+    {
+        "id": "7a1e8ec73274db54",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "fc473ee1a19d24d0",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count1",
+        "x": 270,
+        "y": 740,
+        "wires": [
+            [
+                "a5b3f2745b17f176"
+            ]
+        ]
+    },
+    {
+        "id": "f05149eb33e33d8e",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count2",
+        "x": 270,
+        "y": 780,
+        "wires": [
+            [
+                "a5b3f2745b17f176"
+            ]
+        ]
+    },
+    {
+        "id": "74d62ff39972f920",
+        "type": "function",
+        "z": "21a3ab7701b50a63",
+        "name": "GetCompleteDictionary",
+        "func": "var DataDictionary = flow.get(\"DataDictionary\")||{};\nmsg.payload = DataDictionary;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "931b844b1c4f4282"
+            ]
+        ]
+    },
+    {
+        "id": "931b844b1c4f4282",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b835bd223336e7b3",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "74d62ff39972f920"
+            ]
+        ]
+    },
+    {
+        "id": "51166bbee42d364d",
+        "type": "subflow:1bf71edbfed49b3f",
+        "z": "21a3ab7701b50a63",
+        "name": "COUNTER1",
+        "env": [
+            {
+                "name": "Count",
+                "value": "count1",
+                "type": "str"
+            }
+        ],
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "14fc9e55a7d58e74"
+            ]
+        ]
+    },
+    {
+        "id": "1ffe8fb6c5d3de83",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "777",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "count1",
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "51166bbee42d364d"
+            ]
+        ]
+    },
+    {
+        "id": "14fc9e55a7d58e74",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 900,
+        "wires": []
     }
 ]
