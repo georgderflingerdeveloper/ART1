@@ -3625,12 +3625,16 @@
             "37868fb47616f9b6",
             "c268dc832dd586a3",
             "363cf58bb5a2ee22",
-            "c69f819552b3e3cd"
+            "c69f819552b3e3cd",
+            "1162e3e98604ce76",
+            "dc9fdd1614a6b5db",
+            "f2f912280748db67",
+            "fbf38ba8a5a8e3e8"
         ],
-        "x": 134,
-        "y": 1439,
+        "x": 94,
+        "y": 1419,
         "w": 792,
-        "h": 282
+        "h": 402
     },
     {
         "id": "8646229e319768e2",
@@ -18446,11 +18450,13 @@
                 "type": "str"
             }
         ],
-        "x": 600,
-        "y": 1500,
+        "x": 560,
+        "y": 1520,
         "wires": [
             [
-                "1286b97a24fa0cc6"
+                "1286b97a24fa0cc6",
+                "1162e3e98604ce76",
+                "dc9fdd1614a6b5db"
             ]
         ]
     },
@@ -18473,11 +18479,11 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "Count1",
-        "x": 230,
-        "y": 1480,
+        "x": 200,
+        "y": 1500,
         "wires": [
             [
                 "3de3cfd6d923757d"
@@ -18503,11 +18509,11 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "Count2",
-        "x": 230,
-        "y": 1540,
+        "x": 200,
+        "y": 1560,
         "wires": [
             [
                 "3de3cfd6d923757d"
@@ -18527,8 +18533,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 1500,
+        "x": 760,
+        "y": 1460,
         "wires": []
     },
     {
@@ -18545,8 +18551,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1600,
+        "x": 780,
+        "y": 1620,
         "wires": []
     },
     {
@@ -18563,8 +18569,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 1660,
+        "x": 760,
+        "y": 1740,
         "wires": []
     },
     {
@@ -18576,11 +18582,11 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "0.2",
         "topic": "",
-        "x": 230,
-        "y": 1600,
+        "x": 190,
+        "y": 1620,
         "wires": [
             [
                 "b47c4773f36a56ba"
@@ -18593,20 +18599,14 @@
         "z": "21a3ab7701b50a63",
         "g": "b305f7ea4564d362",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
+        "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "0.2",
         "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 230,
-        "y": 1660,
+        "x": 190,
+        "y": 1680,
         "wires": [
             [
                 "5909b57a7535e0a7"
@@ -18619,8 +18619,8 @@
         "z": "21a3ab7701b50a63",
         "g": "b305f7ea4564d362",
         "name": "",
-        "x": 420,
-        "y": 1500,
+        "x": 380,
+        "y": 1520,
         "wires": [
             [
                 "730f2a3691ac26a0"
@@ -18633,8 +18633,8 @@
         "z": "21a3ab7701b50a63",
         "g": "b305f7ea4564d362",
         "name": "",
-        "x": 380,
-        "y": 1600,
+        "x": 340,
+        "y": 1620,
         "wires": [
             [
                 "37868fb47616f9b6",
@@ -18648,8 +18648,8 @@
         "z": "21a3ab7701b50a63",
         "g": "b305f7ea4564d362",
         "name": "",
-        "x": 380,
-        "y": 1660,
+        "x": 340,
+        "y": 1680,
         "wires": [
             [
                 "363cf58bb5a2ee22",
@@ -18670,8 +18670,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 1560,
+        "x": 520,
+        "y": 1580,
         "wires": []
     },
     {
@@ -18687,11 +18687,12 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1600,
+        "x": 550,
+        "y": 1620,
         "wires": [
             [
-                "2a43391ef6f73bb0"
+                "2a43391ef6f73bb0",
+                "f2f912280748db67"
             ]
         ]
     },
@@ -18709,8 +18710,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 1640,
+        "x": 520,
+        "y": 1660,
         "wires": []
     },
     {
@@ -18731,12 +18732,101 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1680,
+        "x": 550,
+        "y": 1700,
         "wires": [
             [
-                "148bc1824a82dbbe"
+                "148bc1824a82dbbe",
+                "fbf38ba8a5a8e3e8"
             ]
+        ]
+    },
+    {
+        "id": "1162e3e98604ce76",
+        "type": "assert",
+        "z": "21a3ab7701b50a63",
+        "g": "b305f7ea4564d362",
+        "name": "",
+        "rules": [
+            {
+                "property": "payload.Count1",
+                "propertyType": "msg",
+                "type": "eq",
+                "value": "123",
+                "valueType": "num",
+                "failMsg": "Count 1 expexed to be 123"
+            }
+        ],
+        "x": 750,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc9fdd1614a6b5db",
+        "type": "assert",
+        "z": "21a3ab7701b50a63",
+        "g": "b305f7ea4564d362",
+        "name": "",
+        "rules": [
+            {
+                "property": "payload.Count2",
+                "propertyType": "msg",
+                "type": "eq",
+                "value": "678",
+                "valueType": "num",
+                "failMsg": "Count 1 expexed to be 678"
+            }
+        ],
+        "x": 750,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2f912280748db67",
+        "type": "assert",
+        "z": "21a3ab7701b50a63",
+        "g": "b305f7ea4564d362",
+        "name": "",
+        "rules": [
+            {
+                "property": "count",
+                "propertyType": "msg",
+                "type": "eq",
+                "value": "123",
+                "valueType": "num",
+                "failMsg": "Count 1 expexed to be 123"
+            }
+        ],
+        "x": 750,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbf38ba8a5a8e3e8",
+        "type": "assert",
+        "z": "21a3ab7701b50a63",
+        "g": "b305f7ea4564d362",
+        "name": "",
+        "rules": [
+            {
+                "property": "count",
+                "propertyType": "msg",
+                "type": "eq",
+                "value": "678",
+                "valueType": "num",
+                "failMsg": "Count 2 expexed to be 678"
+            }
+        ],
+        "x": 750,
+        "y": 1780,
+        "wires": [
+            []
         ]
     }
 ]
