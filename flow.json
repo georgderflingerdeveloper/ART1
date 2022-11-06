@@ -2531,7 +2531,7 @@
         ],
         "out": [
             {
-                "x": 800,
+                "x": 1060,
                 "y": 100,
                 "wires": [
                     {
@@ -2545,7 +2545,7 @@
         "meta": {},
         "color": "#DDAA99",
         "status": {
-            "x": 800,
+            "x": 1060,
             "y": 160,
             "wires": [
                 {
@@ -2554,6 +2554,89 @@
                 }
             ]
         }
+    },
+    {
+        "id": "61e031999d993209",
+        "type": "subflow",
+        "name": "GetCountDataFromDicByKey",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "56295b3c7ddf7dc9"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 620,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "56295b3c7ddf7dc9",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "EnvKey",
+                "type": "str",
+                "value": "Count1"
+            },
+            {
+                "name": "Dictionary",
+                "type": "str",
+                "value": "CounterDict"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "0c862cd0af74c4c1",
+        "type": "subflow",
+        "name": "FeedDictionary",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 200,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "bde4ccf47a299529"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "bde4ccf47a299529",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Dictionary",
+                "type": "str",
+                "value": "CounterDict"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "e1303e1e.6f1d1",
@@ -2920,9 +3003,7 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139,
-        "w": 1112,
-        "h": 222
+        "y": 139
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2942,7 +3023,9 @@
             "42c9df97d8f79572"
         ],
         "x": 174,
-        "y": 39
+        "y": 39,
+        "w": 622,
+        "h": 202
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -2958,7 +3041,9 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59
+        "y": 59,
+        "w": 602,
+        "h": 82
     },
     {
         "id": "cd213aec.cccc28",
@@ -3380,6 +3465,81 @@
         "y": 2699
     },
     {
+        "id": "71c1a4a6a573a7cd",
+        "type": "group",
+        "z": "21a3ab7701b50a63",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3192efbd4d2aee48",
+            "4ac5665bc8e0e621",
+            "bab97e10badd4a88",
+            "61ebfcd9be84bb24",
+            "a5b3f2745b17f176",
+            "7a1e8ec73274db54",
+            "fc473ee1a19d24d0",
+            "f05149eb33e33d8e",
+            "74d62ff39972f920",
+            "931b844b1c4f4282",
+            "b835bd223336e7b3",
+            "51166bbee42d364d",
+            "1ffe8fb6c5d3de83",
+            "14fc9e55a7d58e74",
+            "4a4e18d3151ad54a"
+        ],
+        "x": 54,
+        "y": 519,
+        "w": 732,
+        "h": 382
+    },
+    {
+        "id": "2fe851a62c7f2b21",
+        "type": "group",
+        "z": "21a3ab7701b50a63",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "51b2b4c0c3cae948",
+            "ad16becb9c0f8d19",
+            "b680d6342eacd5d0",
+            "60b1b5ea9611575b",
+            "344a63a7a95199af",
+            "806bdb25f7a90f2f",
+            "86e0b5506c538891",
+            "a394077d3edd58d4",
+            "17bde5f224fb818d",
+            "e6e373be054c11bf",
+            "664fc471f63505a0",
+            "3ecba8fd10ebadb1",
+            "3c4c61676cf52055",
+            "c04e331b2773f981",
+            "a4aae24429759e90",
+            "853cfcfbd1013f4b",
+            "5fea4a55a036baa0",
+            "b09918f9d95023bb",
+            "d64b9891c8ade07e",
+            "5f27293680f57cb4"
+        ],
+        "x": 14,
+        "y": 1019,
+        "w": 1292,
+        "h": 342
+    },
+    {
         "id": "8646229e319768e2",
         "type": "junction",
         "z": "bbeaf112.72e1d",
@@ -3692,6 +3852,12 @@
         "id": "dd07a57036780dad",
         "type": "persist-store",
         "filename": "CounterStorageMulti.json",
+        "interval": "1"
+    },
+    {
+        "id": "87d69358e5db362a",
+        "type": "persist-store",
+        "filename": "persistenceCounter2.json",
         "interval": "1"
     },
     {
@@ -8019,7 +8185,7 @@
         "upper": "",
         "mode": "increment",
         "outputs": "1",
-        "x": 540,
+        "x": 920,
         "y": 100,
         "wires": [
             []
@@ -8044,7 +8210,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 710,
         "y": 100,
         "wires": [
             [
@@ -8073,8 +8239,93 @@
         "y": 100,
         "wires": [
             [
+                "e911c24a6bf2d137",
+                "a446027b1a3f80c2"
+            ]
+        ]
+    },
+    {
+        "id": "e911c24a6bf2d137",
+        "type": "switch",
+        "z": "1bf71edbfed49b3f",
+        "name": "DoesTopicMatch",
+        "property": "command",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "count",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "088d105747279a9e"
+            ]
+        ]
+    },
+    {
+        "id": "a446027b1a3f80c2",
+        "type": "switch",
+        "z": "1bf71edbfed49b3f",
+        "name": "DoesTopicMatch",
+        "property": "command",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "preset",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
                 "4a9e054cd5803b7a"
             ]
+        ]
+    },
+    {
+        "id": "56295b3c7ddf7dc9",
+        "type": "function",
+        "z": "61e031999d993209",
+        "name": "GetCountDataFromDictionaryByKey",
+        "func": "var NewMsg = { topic : \"\", count : 0 };\nvar DataDictionary = msg.payload;\n\nglobal.set(env.get(\"Dictionary\"))||{};\n\nvar key = env.get(\"EnvKey\");\nNewMsg.topic = key;\n\nif ( DataDictionary[key] != null)\n{\n    NewMsg.count = DataDictionary[key];\n}\nelse\n{\n    node.error(\"Key \" + key + \" not found\", key);\n}\n\nNewMsg.command = \"preset\";\n\nreturn NewMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bde4ccf47a299529",
+        "type": "function",
+        "z": "0c862cd0af74c4c1",
+        "name": "FeedCountDataDictionary",
+        "func": "var DataDictionary = global.get(env.get(\"Dictionary\"))||{};\nvar key   = msg.topic;\nvar value = msg.count;\n\nif (msg.command === \"delete\") {\n   global.set(env.get(\"Dictionary\"), {});\n   DataDictionary = {};\n}else\n{\n  DataDictionary[key] = value;\n  global.set(env.get(\"Dictionary\"), DataDictionary );\n}\nmsg.payload = global.get(env.get(\"Dictionary\")) ;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 100,
+        "wires": [
+            []
         ]
     },
     {
@@ -17405,7 +17656,7 @@
         "type": "debug",
         "z": "21a3ab7701b50a63",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17467,6 +17718,7 @@
         "id": "3192efbd4d2aee48",
         "type": "inject",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "",
         "props": [
             {
@@ -17484,8 +17736,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "Count1",
-        "x": 270,
-        "y": 640,
+        "x": 150,
+        "y": 560,
         "wires": [
             [
                 "4ac5665bc8e0e621"
@@ -17496,6 +17748,7 @@
         "id": "4ac5665bc8e0e621",
         "type": "function",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "FeedCountDataDictionary",
         "func": "var DataDictionary = flow.get(\"DataDictionary\")||{};\nvar key   = msg.topic;\nvar value = msg.count;\n DataDictionary[key] = value;\nflow.set(\"DataDictionary\", DataDictionary );\nmsg.payload = flow.get(\"DataDictionary\") || {};\nreturn msg;",
         "outputs": 1,
@@ -17503,8 +17756,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 640,
+        "x": 410,
+        "y": 560,
         "wires": [
             [
                 "bab97e10badd4a88"
@@ -17515,8 +17768,9 @@
         "id": "bab97e10badd4a88",
         "type": "debug",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17524,14 +17778,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 640,
+        "x": 680,
+        "y": 560,
         "wires": []
     },
     {
         "id": "61ebfcd9be84bb24",
         "type": "inject",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "",
         "props": [
             {
@@ -17549,8 +17804,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "Count2",
-        "x": 270,
-        "y": 680,
+        "x": 150,
+        "y": 600,
         "wires": [
             [
                 "4ac5665bc8e0e621"
@@ -17561,6 +17816,7 @@
         "id": "a5b3f2745b17f176",
         "type": "function",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "GetCountDataFromDictionary",
         "func": "var DataDictionary = flow.get(\"DataDictionary\")||{};\nvar key = msg.topic;\n\nif ( DataDictionary[key] != null)\n{\n    msg.payload = DataDictionary[key];\n}\nelse\n{\n    node.error(\"Key \" + key + \" not found\", key);\n}\n\nreturn msg;",
         "outputs": 1,
@@ -17568,8 +17824,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 740,
+        "x": 430,
+        "y": 660,
         "wires": [
             [
                 "7a1e8ec73274db54"
@@ -17580,8 +17836,9 @@
         "id": "7a1e8ec73274db54",
         "type": "debug",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "debug 12",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17589,14 +17846,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 740,
+        "x": 680,
+        "y": 660,
         "wires": []
     },
     {
         "id": "fc473ee1a19d24d0",
         "type": "inject",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "",
         "props": [
             {
@@ -17609,8 +17867,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "Count1",
-        "x": 270,
-        "y": 740,
+        "x": 150,
+        "y": 660,
         "wires": [
             [
                 "a5b3f2745b17f176"
@@ -17621,6 +17879,7 @@
         "id": "f05149eb33e33d8e",
         "type": "inject",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "",
         "props": [
             {
@@ -17633,8 +17892,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "Count2",
-        "x": 270,
-        "y": 780,
+        "x": 150,
+        "y": 700,
         "wires": [
             [
                 "a5b3f2745b17f176"
@@ -17645,6 +17904,7 @@
         "id": "74d62ff39972f920",
         "type": "function",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "GetCompleteDictionary",
         "func": "var DataDictionary = flow.get(\"DataDictionary\")||{};\nmsg.payload = DataDictionary;\nreturn msg;",
         "outputs": 1,
@@ -17652,8 +17912,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 840,
+        "x": 410,
+        "y": 760,
         "wires": [
             [
                 "931b844b1c4f4282"
@@ -17664,8 +17924,9 @@
         "id": "931b844b1c4f4282",
         "type": "debug",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "debug 13",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17673,14 +17934,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 840,
+        "x": 680,
+        "y": 760,
         "wires": []
     },
     {
         "id": "b835bd223336e7b3",
         "type": "inject",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "",
         "props": [
             {
@@ -17694,8 +17956,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 290,
-        "y": 840,
+        "x": 170,
+        "y": 760,
         "wires": [
             [
                 "74d62ff39972f920"
@@ -17706,6 +17968,7 @@
         "id": "51166bbee42d364d",
         "type": "subflow:1bf71edbfed49b3f",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "COUNTER1",
         "env": [
             {
@@ -17714,8 +17977,8 @@
                 "type": "str"
             }
         ],
-        "x": 490,
-        "y": 900,
+        "x": 370,
+        "y": 820,
         "wires": [
             [
                 "14fc9e55a7d58e74"
@@ -17726,7 +17989,8 @@
         "id": "1ffe8fb6c5d3de83",
         "type": "inject",
         "z": "21a3ab7701b50a63",
-        "name": "",
+        "g": "71c1a4a6a573a7cd",
+        "name": "PRESET",
         "props": [
             {
                 "p": "topic",
@@ -17736,6 +18000,11 @@
                 "p": "count",
                 "v": "777",
                 "vt": "num"
+            },
+            {
+                "p": "command",
+                "v": "preset",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -17743,8 +18012,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "count1",
-        "x": 290,
-        "y": 900,
+        "x": 180,
+        "y": 820,
         "wires": [
             [
                 "51166bbee42d364d"
@@ -17755,6 +18024,7 @@
         "id": "14fc9e55a7d58e74",
         "type": "debug",
         "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
         "name": "debug 14",
         "active": true,
         "tosidebar": true,
@@ -17764,8 +18034,675 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 900,
+        "x": 680,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "51b2b4c0c3cae948",
+        "type": "persist in",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "CounterStorage",
+        "storageNode": "87d69358e5db362a",
+        "x": 1140,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "3c4c61676cf52055",
+        "type": "persist out",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "CounterStorage",
+        "storageNode": "87d69358e5db362a",
+        "x": 140,
+        "y": 1180,
+        "wires": [
+            [
+                "853cfcfbd1013f4b",
+                "c04e331b2773f981",
+                "a4aae24429759e90"
+            ]
+        ]
+    },
+    {
+        "id": "c04e331b2773f981",
+        "type": "subflow:61e031999d993209",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "GetCountData1",
+        "x": 460,
+        "y": 1100,
+        "wires": [
+            [
+                "5fea4a55a036baa0",
+                "806bdb25f7a90f2f"
+            ]
+        ]
+    },
+    {
+        "id": "5fea4a55a036baa0",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG GET COUNTER1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "730f2a3691ac26a0",
+        "type": "subflow:0c862cd0af74c4c1",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "x": 380,
+        "y": 1580,
+        "wires": [
+            [
+                "1286b97a24fa0cc6"
+            ]
+        ]
+    },
+    {
+        "id": "216b1d5fc6d3fca7",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "123",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count1",
+        "x": 210,
+        "y": 1580,
+        "wires": [
+            [
+                "730f2a3691ac26a0"
+            ]
+        ]
+    },
+    {
+        "id": "583cd57a0d54a47c",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "678",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count2",
+        "x": 210,
+        "y": 1620,
+        "wires": [
+            [
+                "730f2a3691ac26a0"
+            ]
+        ]
+    },
+    {
+        "id": "1286b97a24fa0cc6",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "25e5b534a7edfa07",
+        "type": "subflow:61e031999d993209",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "x": 420,
+        "y": 1700,
+        "wires": [
+            [
+                "2a43391ef6f73bb0"
+            ]
+        ]
+    },
+    {
+        "id": "2a43391ef6f73bb0",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "2ad2fcb9bc82bd5e",
+        "type": "subflow:61e031999d993209",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "env": [
+            {
+                "name": "EnvKey",
+                "value": "Count2",
+                "type": "str"
+            }
+        ],
+        "x": 420,
+        "y": 1760,
+        "wires": [
+            [
+                "148bc1824a82dbbe"
+            ]
+        ]
+    },
+    {
+        "id": "148bc1824a82dbbe",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "a180378f81f7a361",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 1700,
+        "wires": [
+            [
+                "25e5b534a7edfa07"
+            ]
+        ]
+    },
+    {
+        "id": "0419d809626f0a47",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 1760,
+        "wires": [
+            [
+                "2ad2fcb9bc82bd5e"
+            ]
+        ]
+    },
+    {
+        "id": "ad16becb9c0f8d19",
+        "type": "subflow:0c862cd0af74c4c1",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "",
+        "x": 940,
+        "y": 1180,
+        "wires": [
+            [
+                "51b2b4c0c3cae948",
+                "b680d6342eacd5d0"
+            ]
+        ]
+    },
+    {
+        "id": "d64b9891c8ade07e",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 1080,
+        "wires": [
+            [
+                "3c4c61676cf52055"
+            ]
+        ]
+    },
+    {
+        "id": "853cfcfbd1013f4b",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG GET STORAGE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 170,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "b680d6342eacd5d0",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG DICTIONARY",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "4a4e18d3151ad54a",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "71c1a4a6a573a7cd",
+        "name": "DOCOUNT",
+        "props": [
+            {
+                "p": "command",
+                "v": "count",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "count1",
+        "x": 190,
+        "y": 860,
+        "wires": [
+            [
+                "51166bbee42d364d"
+            ]
+        ]
+    },
+    {
+        "id": "60b1b5ea9611575b",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DOCOUNT",
+        "props": [
+            {
+                "p": "command",
+                "v": "count",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count1",
+        "x": 430,
+        "y": 1180,
+        "wires": [
+            [
+                "806bdb25f7a90f2f"
+            ]
+        ]
+    },
+    {
+        "id": "344a63a7a95199af",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "PRESET",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "777",
+                "vt": "num"
+            },
+            {
+                "p": "command",
+                "v": "preset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count1",
+        "x": 420,
+        "y": 1140,
+        "wires": [
+            [
+                "806bdb25f7a90f2f",
+                "5f27293680f57cb4"
+            ]
+        ]
+    },
+    {
+        "id": "806bdb25f7a90f2f",
+        "type": "subflow:1bf71edbfed49b3f",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "COUNTER1",
+        "env": [
+            {
+                "name": "Count",
+                "value": "Count1",
+                "type": "str"
+            }
+        ],
+        "x": 630,
+        "y": 1140,
+        "wires": [
+            [
+                "86e0b5506c538891",
+                "ad16becb9c0f8d19"
+            ]
+        ]
+    },
+    {
+        "id": "86e0b5506c538891",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG COUNTER 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "a394077d3edd58d4",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DOCOUNT",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "command",
+                "v": "count",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count2",
+        "x": 430,
+        "y": 1260,
+        "wires": [
+            [
+                "e6e373be054c11bf"
+            ]
+        ]
+    },
+    {
+        "id": "17bde5f224fb818d",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "PRESET",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "555",
+                "vt": "num"
+            },
+            {
+                "p": "command",
+                "v": "preset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Count2",
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "e6e373be054c11bf"
+            ]
+        ]
+    },
+    {
+        "id": "e6e373be054c11bf",
+        "type": "subflow:1bf71edbfed49b3f",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "COUNTER2",
+        "env": [
+            {
+                "name": "Count",
+                "value": "Count2",
+                "type": "str"
+            }
+        ],
+        "x": 630,
+        "y": 1220,
+        "wires": [
+            [
+                "664fc471f63505a0",
+                "ad16becb9c0f8d19"
+            ]
+        ]
+    },
+    {
+        "id": "664fc471f63505a0",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG COUNTER 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "3ecba8fd10ebadb1",
+        "type": "inject",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DELETE DICT",
+        "props": [
+            {
+                "p": "command",
+                "v": "delete",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 700,
+        "y": 1180,
+        "wires": [
+            [
+                "ad16becb9c0f8d19"
+            ]
+        ]
+    },
+    {
+        "id": "a4aae24429759e90",
+        "type": "subflow:61e031999d993209",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "GetCountData2",
+        "env": [
+            {
+                "name": "EnvKey",
+                "value": "Count2",
+                "type": "str"
+            }
+        ],
+        "x": 480,
+        "y": 1320,
+        "wires": [
+            [
+                "b09918f9d95023bb",
+                "e6e373be054c11bf"
+            ]
+        ]
+    },
+    {
+        "id": "b09918f9d95023bb",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG GET COUNTER 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "5f27293680f57cb4",
+        "type": "debug",
+        "z": "21a3ab7701b50a63",
+        "g": "2fe851a62c7f2b21",
+        "name": "DEBUG PRESET",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1060,
         "wires": []
     }
 ]
