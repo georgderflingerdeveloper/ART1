@@ -2984,12 +2984,15 @@
             "7ee98240a63839c4",
             "428b17153bf948db",
             "efdc833bb41b642d",
-            "80e5eb74b4460301"
+            "80e5eb74b4460301",
+            "b33603258ab682aa",
+            "fb55a2c14d1ae5b6",
+            "d184062b9fa99840"
         ],
         "x": 414,
-        "y": 99,
+        "y": 39,
         "w": 682,
-        "h": 242
+        "h": 362
     },
     {
         "id": "a51a851.9370f78",
@@ -3291,10 +3294,13 @@
             "7dd98212893b5a76",
             "31912db3026c81d1",
             "8bd3090f0dca9f31",
-            "6ddc5d7c28393ca6"
+            "6ddc5d7c28393ca6",
+            "9ba06b417721406d"
         ],
         "x": 14,
-        "y": 119
+        "y": 119,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "21e80259.d09fde",
@@ -8189,7 +8195,7 @@
         "g": "6af13e39.fca7a",
         "name": "",
         "env": [],
-        "x": 820,
+        "x": 840,
         "y": 300,
         "wires": [
             [
@@ -10951,7 +10957,7 @@
         "g": "21e80259.d09fde",
         "name": "ALL_OFF_RECEIVE",
         "links": [
-            "5cf4ace4ac625be3"
+            "735368a12858031a"
         ],
         "x": 75,
         "y": 3420,
@@ -11049,7 +11055,8 @@
         "g": "21e80259.d09fde",
         "name": "TIMER_OFF_REVEIVED",
         "links": [
-            "6455ef13cbe2f5ed"
+            "6455ef13cbe2f5ed",
+            "8644de04ce6a52dc"
         ],
         "x": 115,
         "y": 3320,
@@ -11149,7 +11156,7 @@
         "type": "gate",
         "z": "bbeaf112.72e1d",
         "g": "6af13e39.fca7a",
-        "name": "",
+        "name": "SCHEDULER",
         "controlTopic": "control",
         "defaultState": "open",
         "openCmd": "open",
@@ -11159,7 +11166,7 @@
         "statusCmd": "status",
         "persist": true,
         "storeName": "memory",
-        "x": 630,
+        "x": 660,
         "y": 220,
         "wires": [
             [
@@ -11216,6 +11223,79 @@
             [
                 "7ee98240a63839c4"
             ]
+        ]
+    },
+    {
+        "id": "b33603258ab682aa",
+        "type": "inject",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "TEST_TIMER_ON",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "7ee98240a63839c4"
+            ]
+        ]
+    },
+    {
+        "id": "fb55a2c14d1ae5b6",
+        "type": "inject",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "TEST_TIMER_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "68662989.c423d8"
+            ]
+        ]
+    },
+    {
+        "id": "d184062b9fa99840",
+        "type": "gate",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "OPEN_BY_SCHEDULER",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 650,
+        "y": 360,
+        "wires": [
+            []
         ]
     },
     {
@@ -15896,7 +15976,8 @@
         "wires": [
             [
                 "975bee44c65fe0e8",
-                "7305cc5dad32f405"
+                "7305cc5dad32f405",
+                "4898426204eaee54"
             ]
         ]
     },
@@ -15925,7 +16006,8 @@
         "wires": [
             [
                 "735368a12858031a",
-                "7305cc5dad32f405"
+                "7305cc5dad32f405",
+                "b2d02bf93e2ba5fd"
             ]
         ]
     },
@@ -15949,12 +16031,13 @@
         "payloadType": "bool",
         "topic": "Start",
         "topicType": "str",
-        "x": 370,
+        "x": 390,
         "y": 560,
         "wires": [
             [
                 "8644de04ce6a52dc",
-                "85e5b8f75c62e74f"
+                "85e5b8f75c62e74f",
+                "2290b873ccc49e69"
             ]
         ]
     },
@@ -15970,8 +16053,8 @@
         "label": "Befehl",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 410,
-        "y": 600,
+        "x": 930,
+        "y": 520,
         "wires": []
     },
     {
@@ -15996,25 +16079,12 @@
         "mode": "link",
         "links": [
             "6304732902dfc4c2",
-            "ccd452443baa2fcb"
+            "ccd452443baa2fcb",
+            "c54bc298eca569d0"
         ],
         "x": 615,
         "y": 500,
         "wires": []
-    },
-    {
-        "id": "4161ec366f54fadd",
-        "type": "link in",
-        "z": "0d198607368cb7c8",
-        "name": "RECEIVE_DASHBOARD_COMMAND",
-        "links": [],
-        "x": 105,
-        "y": 600,
-        "wires": [
-            [
-                "1c89ad07569bff18"
-            ]
-        ]
     },
     {
         "id": "75a63ff39d520118",
@@ -16094,7 +16164,9 @@
         "z": "0d198607368cb7c8",
         "name": "SEND_BUTTON_ATVIVATE_SCHEDULER",
         "mode": "link",
-        "links": [],
+        "links": [
+            "1fe1a0c8d4c13ca5"
+        ],
         "x": 615,
         "y": 560,
         "wires": []
@@ -16190,6 +16262,87 @@
         "wires": [
             [
                 "91134f6da1c50993"
+            ]
+        ]
+    },
+    {
+        "id": "4898426204eaee54",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "name": "MANUAL ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "MANUEL EIN",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 360,
+        "wires": [
+            [
+                "1c89ad07569bff18"
+            ]
+        ]
+    },
+    {
+        "id": "b2d02bf93e2ba5fd",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "name": "ALL OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ALLES AUS",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "1c89ad07569bff18"
+            ]
+        ]
+    },
+    {
+        "id": "2290b873ccc49e69",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "name": "SCHEDULER ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ZEITSCHALTUHR LÄUFT...",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 520,
+        "wires": [
+            [
+                "1c89ad07569bff18"
             ]
         ]
     },
@@ -18492,11 +18645,12 @@
         "links": [
             "ce510abf5cbda6db"
         ],
-        "x": 535,
+        "x": 385,
         "y": 160,
         "wires": [
             [
-                "31912db3026c81d1"
+                "1fdabf815e057676",
+                "9ba06b417721406d"
             ]
         ]
     },
@@ -18614,5 +18768,47 @@
         "x": 1285,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "1fdabf815e057676",
+        "type": "debug",
+        "z": "08bc1f9f85d8ce8c",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9ba06b417721406d",
+        "type": "switch",
+        "z": "08bc1f9f85d8ce8c",
+        "g": "6e2396589a73f28f",
+        "name": "ISON",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "WHON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "31912db3026c81d1"
+            ]
+        ]
     }
 ]
