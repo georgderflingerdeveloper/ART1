@@ -2968,7 +2968,7 @@
         "id": "6af13e39.fca7a",
         "type": "group",
         "z": "bbeaf112.72e1d",
-        "name": "STORE & CONVERT",
+        "name": "",
         "style": {
             "fill": "#dbcbe7",
             "label": true
@@ -2978,12 +2978,18 @@
             "5237646c.01363c",
             "7570737d.bad2cc",
             "5610f98ff41a65da",
-            "6455ef13cbe2f5ed"
+            "6455ef13cbe2f5ed",
+            "235da24ed942aabf",
+            "6304732902dfc4c2",
+            "7ee98240a63839c4",
+            "428b17153bf948db",
+            "efdc833bb41b642d",
+            "80e5eb74b4460301"
         ],
-        "x": 694,
-        "y": 139,
-        "w": 402,
-        "h": 202
+        "x": 414,
+        "y": 99,
+        "w": 682,
+        "h": 242
     },
     {
         "id": "a51a851.9370f78",
@@ -11108,12 +11114,13 @@
         "id": "235da24ed942aabf",
         "type": "link in",
         "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
         "name": "RECEIVE_BUTTON_MANUAL_ON",
         "links": [
             "975bee44c65fe0e8"
         ],
-        "x": 515,
-        "y": 300,
+        "x": 455,
+        "y": 260,
         "wires": [
             [
                 "68662989.c423d8"
@@ -11124,35 +11131,92 @@
         "id": "6304732902dfc4c2",
         "type": "link in",
         "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
         "name": "RECEIVE_BUTTON_ALL_OFF",
         "links": [
             "735368a12858031a"
         ],
-        "x": 515,
-        "y": 360,
+        "x": 455,
+        "y": 300,
         "wires": [
             [
-                "68662989.c423d8",
-                "7701787a3f8c7320"
+                "68662989.c423d8"
             ]
         ]
     },
     {
-        "id": "7701787a3f8c7320",
-        "type": "debug",
+        "id": "7ee98240a63839c4",
+        "type": "gate",
         "z": "bbeaf112.72e1d",
-        "name": "debug 25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 380,
-        "wires": []
+        "g": "6af13e39.fca7a",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "68662989.c423d8"
+            ]
+        ]
+    },
+    {
+        "id": "428b17153bf948db",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "RECEIVE_SCHEDULER",
+        "links": [
+            "bef6b4b4ceebeace"
+        ],
+        "x": 455,
+        "y": 220,
+        "wires": [
+            [
+                "7ee98240a63839c4"
+            ]
+        ]
+    },
+    {
+        "id": "efdc833bb41b642d",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "RECEIVE_OPEN",
+        "links": [
+            "f5d1697f39f9ff60"
+        ],
+        "x": 455,
+        "y": 140,
+        "wires": [
+            [
+                "7ee98240a63839c4"
+            ]
+        ]
+    },
+    {
+        "id": "80e5eb74b4460301",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "6af13e39.fca7a",
+        "name": "RECEIVE_CLOSED",
+        "links": [
+            "91134f6da1c50993"
+        ],
+        "x": 455,
+        "y": 180,
+        "wires": [
+            [
+                "7ee98240a63839c4"
+            ]
+        ]
     },
     {
         "id": "b5e965fa.ea98d8",
@@ -15828,10 +15892,11 @@
         "topic": "ManualOn",
         "topicType": "str",
         "x": 360,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
-                "975bee44c65fe0e8"
+                "975bee44c65fe0e8",
+                "7305cc5dad32f405"
             ]
         ]
     },
@@ -15856,10 +15921,11 @@
         "topic": "ManualOff",
         "topicType": "str",
         "x": 360,
-        "y": 520,
+        "y": 500,
         "wires": [
             [
-                "735368a12858031a"
+                "735368a12858031a",
+                "7305cc5dad32f405"
             ]
         ]
     },
@@ -15883,10 +15949,13 @@
         "payloadType": "bool",
         "topic": "Start",
         "topicType": "str",
-        "x": 377.0130310058594,
-        "y": 1103.0104370117188,
+        "x": 370,
+        "y": 560,
         "wires": [
-            []
+            [
+                "8644de04ce6a52dc",
+                "85e5b8f75c62e74f"
+            ]
         ]
     },
     {
@@ -15916,7 +15985,7 @@
             "ccd452443baa2fcb"
         ],
         "x": 615,
-        "y": 460,
+        "y": 440,
         "wires": []
     },
     {
@@ -15930,7 +15999,7 @@
             "ccd452443baa2fcb"
         ],
         "x": 615,
-        "y": 520,
+        "y": 500,
         "wires": []
     },
     {
@@ -15939,7 +16008,7 @@
         "z": "0d198607368cb7c8",
         "name": "RECEIVE_DASHBOARD_COMMAND",
         "links": [],
-        "x": 255,
+        "x": 105,
         "y": 600,
         "wires": [
             [
@@ -16012,10 +16081,117 @@
         "z": "0d198607368cb7c8",
         "name": "SEND_SCHEDULER",
         "mode": "link",
-        "links": [],
+        "links": [
+            "428b17153bf948db"
+        ],
         "x": 575,
         "y": 760,
         "wires": []
+    },
+    {
+        "id": "8644de04ce6a52dc",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_BUTTON_ATVIVATE_SCHEDULER",
+        "mode": "link",
+        "links": [],
+        "x": 615,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "91134f6da1c50993",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_CLOSE",
+        "mode": "link",
+        "links": [
+            "80e5eb74b4460301"
+        ],
+        "x": 665,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f5d1697f39f9ff60",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_OPEN",
+        "mode": "link",
+        "links": [
+            "efdc833bb41b642d"
+        ],
+        "x": 695,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "85e5b8f75c62e74f",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "name": "OPEN",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "open",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "f5d1697f39f9ff60"
+            ]
+        ]
+    },
+    {
+        "id": "7305cc5dad32f405",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "name": "CLOSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "91134f6da1c50993"
+            ]
+        ]
     },
     {
         "id": "90f9ecbdbf98a9e2",
