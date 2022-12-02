@@ -49,13 +49,6 @@
         "info": ""
     },
     {
-        "id": "44cdc4db.fedd6c",
-        "type": "tab",
-        "label": "SET_TIME_2",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "c14b4a92.f3afe8",
         "type": "tab",
         "label": "SMOKE_ALERT",
@@ -313,133 +306,6 @@
         ],
         "env": [],
         "color": "#DDAA99"
-    },
-    {
-        "id": "1ec665eb.b278ca",
-        "type": "subflow",
-        "name": "SUB_CONTROL",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 200,
-                "y": 440,
-                "wires": [
-                    {
-                        "id": "868d9197.79d6d"
-                    },
-                    {
-                        "id": "e720a593.ff1128"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 1520,
-                "y": 80,
-                "wires": [
-                    {
-                        "id": "1cf51b20.59e085",
-                        "port": 0
-                    },
-                    {
-                        "id": "60b56f5d.eeb72",
-                        "port": 0
-                    },
-                    {
-                        "id": "bd752582.ad6ac8",
-                        "port": 0
-                    },
-                    {
-                        "id": "72e1f476.a40ddc",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 1300,
-                "y": 800,
-                "wires": [
-                    {
-                        "id": "1abc2ce5.bbd9a3",
-                        "port": 0
-                    },
-                    {
-                        "id": "22541297.3df04e",
-                        "port": 0
-                    },
-                    {
-                        "id": "412e1f52.e4cf7",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 1520,
-                "y": 220,
-                "wires": [
-                    {
-                        "id": "12cf6a8a.fab805",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 1520,
-                "y": 300,
-                "wires": [
-                    {
-                        "id": "fcebd620.0e4298",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 1520,
-                "y": 360,
-                "wires": [
-                    {
-                        "id": "12cf6a8a.fab805",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 1520,
-                "y": 440,
-                "wires": [
-                    {
-                        "id": "d2e7a503.300f38",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "color": "#DDAA99",
-        "status": {
-            "x": 1520,
-            "y": 140,
-            "wires": [
-                {
-                    "id": "bd752582.ad6ac8",
-                    "port": 0
-                },
-                {
-                    "id": "60b56f5d.eeb72",
-                    "port": 0
-                },
-                {
-                    "id": "72e1f476.a40ddc",
-                    "port": 0
-                },
-                {
-                    "id": "1cf51b20.59e085",
-                    "port": 0
-                }
-            ]
-        }
     },
     {
         "id": "2fd20ed4.3b3042",
@@ -1894,10 +1760,10 @@
                 "y": 100,
                 "wires": [
                     {
-                        "id": "bab03bbc.a46288"
+                        "id": "a67430386130fc05"
                     },
                     {
-                        "id": "7b6e2aea.a99a74"
+                        "id": "75e509467a22810b"
                     }
                 ]
             }
@@ -1908,7 +1774,7 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "bab03bbc.a46288",
+                        "id": "a67430386130fc05",
                         "port": 0
                     }
                 ]
@@ -1918,7 +1784,7 @@
                 "y": 120,
                 "wires": [
                     {
-                        "id": "7b6e2aea.a99a74",
+                        "id": "75e509467a22810b",
                         "port": 0
                     }
                 ]
@@ -2729,32 +2595,9 @@
             "102d4c0e.28df74"
         ],
         "x": 2214,
-        "y": 159
-    },
-    {
-        "id": "1be5258f.80b0ca",
-        "type": "group",
-        "z": "44cdc4db.fedd6c",
-        "name": "TIME_CONTROL_2",
-        "style": {
-            "fill": "#ffefbf",
-            "label": true
-        },
-        "nodes": [
-            "b7fc5c3f.33449",
-            "65ded8d5.a6efb8",
-            "4bf94934.6b5058",
-            "f2c215b9.d86498",
-            "59903fc1.fcef9",
-            "1659657a.ffdc0b",
-            "53aea239.7c101c",
-            "e73e1f45.acb7b",
-            "9fca8257.15003",
-            "30dc8eb9.ae32a2",
-            "d93a8435.6671f8"
-        ],
-        "x": 174,
-        "y": 59
+        "y": 159,
+        "w": 1202,
+        "h": 202
     },
     {
         "id": "67e35083.d2ceb",
@@ -2905,7 +2748,9 @@
             "8ac1c009b5f15771"
         ],
         "x": 54,
-        "y": 599
+        "y": 599,
+        "w": 1022,
+        "h": 242
     },
     {
         "id": "1df63d98.541fb2",
@@ -2924,7 +2769,9 @@
             "29a8f6c68d619403"
         ],
         "x": 44,
-        "y": 859
+        "y": 859,
+        "w": 762,
+        "h": 142
     },
     {
         "id": "2bb5b220.65b7ee",
@@ -2948,7 +2795,9 @@
             "14a070bd060162c6"
         ],
         "x": 34,
-        "y": 1019
+        "y": 1019,
+        "w": 1342,
+        "h": 222
     },
     {
         "id": "2ad9f63a.09eb3a",
@@ -2967,7 +2816,9 @@
             "cdc0d56c.091578"
         ],
         "x": 34,
-        "y": 1259
+        "y": 1259,
+        "w": 1342,
+        "h": 82
     },
     {
         "id": "4d8e889a.780978",
@@ -2984,7 +2835,9 @@
             "aea8093e.b6c6c8"
         ],
         "x": 3834,
-        "y": 59
+        "y": 59,
+        "w": 372,
+        "h": 82
     },
     {
         "id": "28dd349f.ec15cc",
@@ -3112,37 +2965,6 @@
         "y": 59
     },
     {
-        "id": "cd213aec.cccc28",
-        "type": "group",
-        "z": "bbeaf112.72e1d",
-        "name": "TIMERCONTROL",
-        "style": {
-            "fill": "#ffefbf",
-            "label": true
-        },
-        "nodes": [
-            "41a99d5f.d90424",
-            "4fda9dd4.739754",
-            "db4a7d4e.39e4b",
-            "c95f447c.411fe8",
-            "e1044cb1.ce3e",
-            "70fe2d32.bfa8c4",
-            "30edc333.218fcc",
-            "2d9c7eaa.7a40a2",
-            "48af6f2f.5fbcf",
-            "d4625562.ce8a78",
-            "1d5db904.043c77",
-            "5da1c028.06ef5",
-            "da56313.f8ed9d",
-            "c1fcccdc.e979c",
-            "72343b35344db620",
-            "5cf4ace4ac625be3",
-            "cf8134f4271cd4c6"
-        ],
-        "x": 1174,
-        "y": 79
-    },
-    {
         "id": "6af13e39.fca7a",
         "type": "group",
         "z": "bbeaf112.72e1d",
@@ -3152,45 +2974,16 @@
             "label": true
         },
         "nodes": [
-            "e4e6ca0e.2a3698",
-            "9fbb180a.4ac318",
             "68662989.c423d8",
             "5237646c.01363c",
             "7570737d.bad2cc",
             "5610f98ff41a65da",
             "6455ef13cbe2f5ed"
         ],
-        "x": 1774,
-        "y": 139
-    },
-    {
-        "id": "5bd2c3f8.a956ec",
-        "type": "group",
-        "z": "bbeaf112.72e1d",
-        "name": "DATA LOADER AND CONVERTERS",
-        "style": {
-            "fill": "#dbcbe7",
-            "fill-opacity": "0.36",
-            "label": true
-        },
-        "nodes": [
-            "927970c2.fcb53",
-            "a1575faf.f064b",
-            "4792a0ea.3199d",
-            "dd0ec5de.0a11b8",
-            "e907b606.9f1308",
-            "4891fc81.585324",
-            "9887534c.55873",
-            "6baf27e0.c096a8",
-            "87d6f56e.993b48",
-            "2e2038ca.55e1a8",
-            "57a73b11.5f8d34",
-            "b8a4e423.cbb218",
-            "f379bd17.26bef",
-            "2161980c.d225d8"
-        ],
-        "x": 54,
-        "y": 39
+        "x": 694,
+        "y": 139,
+        "w": 402,
+        "h": 202
     },
     {
         "id": "a51a851.9370f78",
@@ -3285,7 +3078,9 @@
             "5e38461bc6d2d36a"
         ],
         "x": 48,
-        "y": 1853
+        "y": 1853,
+        "w": 1398,
+        "h": 608
     },
     {
         "id": "3d9b3f31.3911d",
@@ -3326,61 +3121,9 @@
             "6cb206500f29e8bd"
         ],
         "x": 34,
-        "y": 1379
-    },
-    {
-        "id": "9ac34d81.c06d4",
-        "type": "group",
-        "z": "1ec665eb.b278ca",
-        "name": "TIMER AND MANUAL HEATER CONTROL ",
-        "style": {
-            "fill": "#e3f3d3",
-            "label": true
-        },
-        "nodes": [
-            "fcebd620.0e4298",
-            "12cf6a8a.fab805",
-            "d2e7a503.300f38",
-            "1cf51b20.59e085",
-            "60b56f5d.eeb72",
-            "bd752582.ad6ac8",
-            "5b155d0e.4fdcd4",
-            "72e1f476.a40ddc",
-            "758f1f32.357cd",
-            "30671a43.23e986",
-            "b3b1cf5c.3a142",
-            "8e2c901c.65dcf",
-            "868d9197.79d6d",
-            "e720a593.ff1128",
-            "2046a19e.dad38e",
-            "2e5a5549.e204ba",
-            "9a8416cb.ae79e8"
-        ],
-        "x": 334,
-        "y": 39
-    },
-    {
-        "id": "cf2bb747.271778",
-        "type": "group",
-        "z": "1ec665eb.b278ca",
-        "name": "MESSAGES_TIMER_MANUAL_HEATER_CONTROL",
-        "style": {
-            "fill": "#ffffbf",
-            "label": true
-        },
-        "nodes": [
-            "1abc2ce5.bbd9a3",
-            "316a65f0.27f2ea",
-            "b02711c1.bb556",
-            "22541297.3df04e",
-            "5eb3da27.519704",
-            "84acfff1.11654",
-            "412e1f52.e4cf7",
-            "79a31b15.e9bc84",
-            "fc182d89.2e52f"
-        ],
-        "x": 514,
-        "y": 719
+        "y": 1379,
+        "w": 1542,
+        "h": 422
     },
     {
         "id": "71c1a4a6a573a7cd",
@@ -3612,7 +3355,9 @@
             "5b672315f417427f"
         ],
         "x": 24,
-        "y": 2619
+        "y": 2619,
+        "w": 2022,
+        "h": 962
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3648,7 +3393,9 @@
             "82f570ad.99b19"
         ],
         "x": 74,
-        "y": 2179
+        "y": 2179,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "c91568a6.292ec8",
@@ -3666,7 +3413,9 @@
             "c10435d.84120c8"
         ],
         "x": 74,
-        "y": 1879
+        "y": 1879,
+        "w": 632,
+        "h": 202
     },
     {
         "id": "3665de025bdb8994",
@@ -3686,7 +3435,9 @@
             "98ab7168.9403b"
         ],
         "x": 854,
-        "y": 1899
+        "y": 1899,
+        "w": 352,
+        "h": 82
     },
     {
         "id": "821acb7ac1484511",
@@ -3716,7 +3467,9 @@
             "1afe63fcebe75bc9"
         ],
         "x": 1354,
-        "y": 2939
+        "y": 2939,
+        "w": 532,
+        "h": 422
     },
     {
         "id": "15a5f43209b6efac",
@@ -4064,6 +3817,18 @@
         "collapse": false
     },
     {
+        "id": "de16b78ec731b2b0",
+        "type": "persist-store",
+        "filename": "scheduler.json",
+        "interval": "60"
+    },
+    {
+        "id": "4770220960363acc",
+        "type": "persist-store",
+        "filename": "scheduler.json",
+        "interval": "60"
+    },
+    {
         "id": "b0e29cad.544b6",
         "type": "ui_numeric",
         "z": "860956db.3e8bf8",
@@ -4310,653 +4075,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "fcebd620.0e4298",
-        "type": "ui_button",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "",
-        "group": "6d039928.0d6078",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "HANDBETRIEB EIN",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "ManualOn",
-        "x": 500,
-        "y": 120,
-        "wires": [
-            [
-                "1cf51b20.59e085",
-                "8e2c901c.65dcf",
-                "2046a19e.dad38e"
-            ]
-        ]
-    },
-    {
-        "id": "12cf6a8a.fab805",
-        "type": "ui_button",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "",
-        "group": "6d039928.0d6078",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "label": "HANDBETRIEB AUS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "ManualOff",
-        "topicType": "str",
-        "x": 500,
-        "y": 260,
-        "wires": [
-            [
-                "72e1f476.a40ddc",
-                "30671a43.23e986",
-                "2e5a5549.e204ba"
-            ]
-        ]
-    },
-    {
-        "id": "d2e7a503.300f38",
-        "type": "ui_button",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "",
-        "group": "6d039928.0d6078",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "label": "AKTIVIERE ZEITSCHALTUHR ",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "Start",
-        "topicType": "str",
-        "x": 550,
-        "y": 460,
-        "wires": [
-            [
-                "bd752582.ad6ac8",
-                "b3b1cf5c.3a142",
-                "9a8416cb.ae79e8"
-            ]
-        ]
-    },
-    {
-        "id": "1cf51b20.59e085",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "OnOverride",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "on",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "60b56f5d.eeb72",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "OffOverride",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bd752582.ad6ac8",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "Auto",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "auto",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5b155d0e.4fdcd4",
-        "type": "ui_text",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "group": "6d039928.0d6078",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Befehl",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1270,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "72e1f476.a40ddc",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "Manual",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "manual",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "758f1f32.357cd",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "All OFF",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "Alles Aus",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 400,
-        "wires": [
-            [
-                "5b155d0e.4fdcd4"
-            ]
-        ]
-    },
-    {
-        "id": "30671a43.23e986",
-        "type": "delay",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "200",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 740,
-        "y": 340,
-        "wires": [
-            [
-                "60b56f5d.eeb72",
-                "758f1f32.357cd"
-            ]
-        ]
-    },
-    {
-        "id": "b3b1cf5c.3a142",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "Commando timer",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "Zeitschaltuhr ein ...",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1050,
-        "y": 480,
-        "wires": [
-            [
-                "5b155d0e.4fdcd4"
-            ]
-        ]
-    },
-    {
-        "id": "8e2c901c.65dcf",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "ON",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "EIN",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 140,
-        "wires": [
-            [
-                "5b155d0e.4fdcd4"
-            ]
-        ]
-    },
-    {
-        "id": "868d9197.79d6d",
-        "type": "switch",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "IsOFF",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "OFF",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 420,
-        "y": 400,
-        "wires": [
-            [
-                "12cf6a8a.fab805"
-            ]
-        ]
-    },
-    {
-        "id": "e720a593.ff1128",
-        "type": "switch",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "ACTIVATE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 560,
-        "wires": [
-            [
-                "d2e7a503.300f38"
-            ]
-        ]
-    },
-    {
-        "id": "1abc2ce5.bbd9a3",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "MESSAGE_MANUAL_ON",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "C_MANUAL_OPERATION_ON",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "GetValueByKey",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "316a65f0.27f2ea",
-        "type": "switch",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "IsPressed",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 760,
-        "wires": [
-            [
-                "1abc2ce5.bbd9a3"
-            ]
-        ]
-    },
-    {
-        "id": "b02711c1.bb556",
-        "type": "link in",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "MANUAL_ON",
-        "links": [
-            "2046a19e.dad38e"
-        ],
-        "x": 555,
-        "y": 760,
-        "wires": [
-            [
-                "316a65f0.27f2ea"
-            ]
-        ]
-    },
-    {
-        "id": "2046a19e.dad38e",
-        "type": "link out",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "TO_MESSAGE_MANUAL_ON",
-        "links": [
-            "b02711c1.bb556"
-        ],
-        "x": 645,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "22541297.3df04e",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "MESSAGE_MANUAL_OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "C_MANUAL_OPERATION_OFF",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "GetValueByKey",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5eb3da27.519704",
-        "type": "switch",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "IsPressed",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 820,
-        "wires": [
-            [
-                "22541297.3df04e"
-            ]
-        ]
-    },
-    {
-        "id": "84acfff1.11654",
-        "type": "link in",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "MANUAL_OFF",
-        "links": [
-            "2e5a5549.e204ba"
-        ],
-        "x": 555,
-        "y": 820,
-        "wires": [
-            [
-                "5eb3da27.519704"
-            ]
-        ]
-    },
-    {
-        "id": "2e5a5549.e204ba",
-        "type": "link out",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "TO_MANUAL_OFF",
-        "links": [
-            "84acfff1.11654"
-        ],
-        "x": 715,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "412e1f52.e4cf7",
-        "type": "change",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "MESSAGE_ACTIVATE_TIMER",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "C_ACTIVATE_TIMER",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "GetValueByKey",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 970,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "79a31b15.e9bc84",
-        "type": "switch",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "IsPressed",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 880,
-        "wires": [
-            [
-                "412e1f52.e4cf7"
-            ]
-        ]
-    },
-    {
-        "id": "fc182d89.2e52f",
-        "type": "link in",
-        "z": "1ec665eb.b278ca",
-        "g": "cf2bb747.271778",
-        "name": "ACTIVATE_TIMER",
-        "links": [
-            "9a8416cb.ae79e8"
-        ],
-        "x": 555,
-        "y": 880,
-        "wires": [
-            [
-                "79a31b15.e9bc84"
-            ]
-        ]
-    },
-    {
-        "id": "9a8416cb.ae79e8",
-        "type": "link out",
-        "z": "1ec665eb.b278ca",
-        "g": "9ac34d81.c06d4",
-        "name": "TO_MESSAGE_ACTIVATE_TIMER",
-        "links": [
-            "fc182d89.2e52f"
-        ],
-        "x": 815,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "ff6212b3.50f3f",
@@ -7661,54 +6779,42 @@
         ]
     },
     {
-        "id": "bab03bbc.a46288",
-        "type": "change",
+        "id": "a67430386130fc05",
+        "type": "switch",
         "z": "fa7d4f87.c0471",
-        "name": "ConvertOn",
+        "name": "TRUE",
+        "property": "payload",
+        "propertyType": "msg",
         "rules": [
             {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "1",
-                "fromt": "num",
-                "to": "true",
-                "tot": "bool"
+                "t": "true"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 80,
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 60,
         "wires": [
             []
         ]
     },
     {
-        "id": "7b6e2aea.a99a74",
-        "type": "change",
+        "id": "75e509467a22810b",
+        "type": "switch",
         "z": "fa7d4f87.c0471",
-        "name": "ConvertOff",
+        "name": "FALSE",
+        "property": "payload",
+        "propertyType": "msg",
         "rules": [
             {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "0",
-                "fromt": "num",
-                "to": "false",
-                "tot": "bool"
+                "t": "false"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 320,
         "y": 120,
         "wires": [
             []
@@ -8690,203 +7796,6 @@
         "wires": []
     },
     {
-        "id": "e4e6ca0e.2a3698",
-        "type": "file",
-        "z": "bbeaf112.72e1d",
-        "g": "6af13e39.fca7a",
-        "name": "StoreTimeSettings1",
-        "filename": "timesettings1",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1890,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "927970c2.fcb53",
-        "type": "file in",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "LoadTimeSettings1",
-        "filename": "timesettings1",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 410,
-        "y": 220,
-        "wires": [
-            [
-                "4792a0ea.3199d"
-            ]
-        ]
-    },
-    {
-        "id": "a1575faf.f064b",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "LOAD",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 350,
-        "y": 320,
-        "wires": [
-            [
-                "927970c2.fcb53",
-                "87d6f56e.993b48",
-                "db4a7d4e.39e4b"
-            ]
-        ]
-    },
-    {
-        "id": "4792a0ea.3199d",
-        "type": "json",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "CONVERT_SETTINGS_1",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 630,
-        "y": 180,
-        "wires": [
-            [
-                "9887534c.55873",
-                "c95f447c.411fe8",
-                "e1044cb1.ce3e",
-                "57a73b11.5f8d34"
-            ]
-        ]
-    },
-    {
-        "id": "dd0ec5de.0a11b8",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "Reload",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 220,
-        "wires": [
-            [
-                "927970c2.fcb53",
-                "87d6f56e.993b48"
-            ]
-        ]
-    },
-    {
-        "id": "e907b606.9f1308",
-        "type": "file in",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "LoadBackupTimeSettings",
-        "filename": "backuptimesettings",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 390,
-        "y": 140,
-        "wires": [
-            [
-                "4792a0ea.3199d"
-            ]
-        ]
-    },
-    {
-        "id": "4891fc81.585324",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "RestoreBackup",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 180,
-        "y": 140,
-        "wires": [
-            [
-                "e907b606.9f1308"
-            ]
-        ]
-    },
-    {
-        "id": "9887534c.55873",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "StoreLoadedDataIntoContext1",
-        "func": "var DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 8,\n               MinuteOn  : 8, \n               HourOff   : 8, \n               MinuteOff : 8\n             } \n       \n   };\n\nflow.set('TimeSettingsMemory1',msg) || DefaultSettings;\n\nvar LoadedSettings = flow.get('TimeSettingsMemory1') || DefaultSettings;\nmsg = LoadedSettings;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "db4a7d4e.39e4b",
-        "type": "subflow:1ec665eb.b278ca",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "CONTROL_DASHBOARD",
-        "env": [],
-        "x": 1320,
-        "y": 340,
-        "wires": [
-            [
-                "41a99d5f.d90424",
-                "4fda9dd4.739754"
-            ],
-            [
-                "c1fcccdc.e979c"
-            ],
-            [
-                "72343b35344db620"
-            ],
-            [
-                "72343b35344db620"
-            ],
-            [
-                "5cf4ace4ac625be3"
-            ],
-            [
-                "cf8134f4271cd4c6"
-            ]
-        ]
-    },
-    {
         "id": "11395493.924e1b",
         "type": "ui_template",
         "z": "bbeaf112.72e1d",
@@ -8905,166 +7814,6 @@
             []
         ],
         "icon": "node-red/timer.svg"
-    },
-    {
-        "id": "6baf27e0.c096a8",
-        "type": "json",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "CONVERT_SETTINGS_2",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 630,
-        "y": 440,
-        "wires": [
-            [
-                "2e2038ca.55e1a8",
-                "f379bd17.26bef"
-            ]
-        ]
-    },
-    {
-        "id": "87d6f56e.993b48",
-        "type": "file in",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "LoadTimeSettings2",
-        "filename": "timesettings2",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 350,
-        "y": 440,
-        "wires": [
-            [
-                "6baf27e0.c096a8"
-            ]
-        ]
-    },
-    {
-        "id": "c95f447c.411fe8",
-        "type": "subflow:b83b7e18.2fd7c",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "OVERRIDE_OFF1",
-        "env": [],
-        "x": 1290,
-        "y": 120,
-        "wires": [
-            [
-                "41a99d5f.d90424"
-            ]
-        ]
-    },
-    {
-        "id": "e1044cb1.ce3e",
-        "type": "subflow:fa5ffe9d.9f3e4",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "OVERRIDE_ON_1",
-        "env": [],
-        "x": 1290,
-        "y": 180,
-        "wires": [
-            [
-                "41a99d5f.d90424"
-            ]
-        ]
-    },
-    {
-        "id": "4d1fd5c5.ef609c",
-        "type": "inject",
-        "z": "bbeaf112.72e1d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "MAKE_DEFAULT_CONFIGS",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 1330,
-        "y": 40,
-        "wires": [
-            [
-                "d651bf44.2649f"
-            ]
-        ]
-    },
-    {
-        "id": "d651bf44.2649f",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "name": "PREPARE_DEFAULT_SETTINGS",
-        "func": "DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 4,\n               MinuteOn  : 0, \n               HourOff   : 12, \n               MinuteOff : 0\n             } \n       \n   };\n   \nmsg = DefaultSettings;\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1640,
-        "y": 40,
-        "wires": [
-            [
-                "e4e6ca0e.2a3698",
-                "9fbb180a.4ac318"
-            ]
-        ]
-    },
-    {
-        "id": "9fbb180a.4ac318",
-        "type": "file",
-        "z": "bbeaf112.72e1d",
-        "g": "6af13e39.fca7a",
-        "name": "StoreTimeSettings2",
-        "filename": "timesettings2",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1890,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2e2038ca.55e1a8",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "StoreLoadedDataIntoContext2",
-        "func": "var DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 4,\n               MinuteOn  : 5, \n               HourOff   : 6, \n               MinuteOff : 7\n             } \n       \n   };\n\nglobal.set('TimeSettingsMemory2',msg) || DefaultSettings;\n\nvar LoadedSettings = global.get('TimeSettingsMemory2') || DefaultSettings;\nmsg = LoadedSettings;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "57a73b11.5f8d34",
-        "type": "subflow:65ae268c.dde4e8",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "SET_TIME1_DASHBOARD",
-        "env": [],
-        "x": 760,
-        "y": 280,
-        "wires": [
-            [
-                "2161980c.d225d8"
-            ]
-        ]
     },
     {
         "id": "917b49f5.154458",
@@ -9434,7 +8183,7 @@
         "g": "6af13e39.fca7a",
         "name": "",
         "env": [],
-        "x": 1900,
+        "x": 820,
         "y": 300,
         "wires": [
             [
@@ -9511,76 +8260,6 @@
         ]
     },
     {
-        "id": "b8a4e423.cbb218",
-        "type": "link in",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "FROM_DASHBOARD_SETTIME_2",
-        "links": [
-            "d93a8435.6671f8"
-        ],
-        "x": 1115,
-        "y": 400,
-        "wires": [
-            [
-                "9fbb180a.4ac318",
-                "70fe2d32.bfa8c4",
-                "30edc333.218fcc",
-                "d4625562.ce8a78"
-            ]
-        ]
-    },
-    {
-        "id": "f379bd17.26bef",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "TO_DASHBOARD_TIMESETTINGS_2",
-        "links": [
-            "30dc8eb9.ae32a2"
-        ],
-        "x": 795,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "70fe2d32.bfa8c4",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "ProvideOverrideOnTime",
-        "func": "var NewMsg = {payload : 0};\n\nvar DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 0,\n               MinuteOn  : 0, \n               HourOff   : 0, \n               MinuteOff : 0\n             } \n       \n   };\n   \n\nvar TimeSettings=global.get('TimeSettingsMemory2') || DefaultSettings;\nvar OnOverride = \"On_Override \";\n\nNewMsg.payload = OnOverride + TimeSettings.payload.HourOn + \":\" + TimeSettings.payload.MinuteOn;\n\n\nreturn NewMsg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1310,
-        "y": 480,
-        "wires": [
-            [
-                "4fda9dd4.739754"
-            ]
-        ]
-    },
-    {
-        "id": "30edc333.218fcc",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "ProvideOverrideOffTime",
-        "func": "var NewMsg = {payload : 0};\n\nvar DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 0,\n               MinuteOn  : 0, \n               HourOff   : 0, \n               MinuteOff : 0\n             } \n       \n   };\n   \n\nvar TimeSettings=global.get('TimeSettingsMemory2') || DefaultSettings;\nvar OffOverride = \"Off_Override \";\n\nNewMsg.payload = OffOverride + TimeSettings.payload.HourOff + \":\" + TimeSettings.payload.MinuteOff;\n\n\nreturn NewMsg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1310,
-        "y": 540,
-        "wires": [
-            [
-                "4fda9dd4.739754"
-            ]
-        ]
-    },
-    {
         "id": "1ee25abe.c44715",
         "type": "subflow:74ecbe6.1a00e4",
         "z": "bbeaf112.72e1d",
@@ -9617,7 +8296,7 @@
             "eb5e7798.4787e8",
             "2104f72c.8a0208"
         ],
-        "x": 2135,
+        "x": 1055,
         "y": 260,
         "wires": []
     },
@@ -9630,90 +8309,8 @@
         "links": [
             "428addf9.a61654"
         ],
-        "x": 2135,
+        "x": 1055,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "2d9c7eaa.7a40a2",
-        "type": "subflow:82d97777.c5c3d8",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "JoinTimeElements",
-        "env": [],
-        "x": 1290,
-        "y": 260,
-        "wires": [
-            [
-                "48af6f2f.5fbcf"
-            ]
-        ]
-    },
-    {
-        "id": "48af6f2f.5fbcf",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "TO_WORKSHOP_TIMESETTINGS1",
-        "links": [
-            "bec67af0.351da8"
-        ],
-        "x": 1635,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "d4625562.ce8a78",
-        "type": "subflow:82d97777.c5c3d8",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "JoinTimeElements",
-        "env": [],
-        "x": 1290,
-        "y": 420,
-        "wires": [
-            [
-                "1d5db904.043c77"
-            ]
-        ]
-    },
-    {
-        "id": "1d5db904.043c77",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "TO_WORKSHOP_TIMESETTINGS2",
-        "links": [
-            "140672b9.2e0eed"
-        ],
-        "x": 1415,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "5da1c028.06ef5",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "TO_WORKSHOP_TIMER1",
-        "links": [
-            "d0a517b5.516a18"
-        ],
-        "x": 1655,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "da56313.f8ed9d",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "TO_WORKSHOP_TIMER2",
-        "links": [
-            "ec91d9c3.a65be8"
-        ],
-        "x": 1655,
-        "y": 480,
         "wires": []
     },
     {
@@ -9769,26 +8366,6 @@
         "x": 1335,
         "y": 1300,
         "wires": []
-    },
-    {
-        "id": "2161980c.d225d8",
-        "type": "function",
-        "z": "bbeaf112.72e1d",
-        "g": "5bd2c3f8.a956ec",
-        "name": "PrepareTimeData1",
-        "func": "var NewMsg = {};\n\n \nvar DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 9,\n               MinuteOn  : 9, \n               HourOff   : 9, \n               MinuteOff : 9\n             } \n       \n   };\n\nvar TimeSettings=flow.get('TimeSettingsMemory1') || DefaultSettings;\n\n\nswitch( msg.topic)\n{\n    case \"HourOn\":\n         TimeSettings.payload.HourOn = msg.payload;\n         break;\n\n    case \"MinuteOn\":\n         TimeSettings.payload.MinuteOn = msg.payload;\n         break;\n         \n    case \"HourOff\":\n         TimeSettings.payload.HourOff = msg.payload;\n         break;\n\n    case \"MinuteOff\":\n         TimeSettings.payload.MinuteOff = msg.payload;\n         break;     \n         \n}\n\nflow.set('TimeSettingsMemory1',TimeSettings);\n\nNewMsg = TimeSettings;\nreturn NewMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 970,
-        "y": 220,
-        "wires": [
-            [
-                "2d9c7eaa.7a40a2",
-                "e1044cb1.ce3e",
-                "c95f447c.411fe8",
-                "e4e6ca0e.2a3698"
-            ]
-        ]
     },
     {
         "id": "7256d62c.d3d6b8",
@@ -10634,19 +9211,6 @@
         "wires": []
     },
     {
-        "id": "c1fcccdc.e979c",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "INFO_HEATER_COMMANDER",
-        "links": [
-            "eb4f02b2.5bbf1"
-        ],
-        "x": 1635,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "35f0bb75.13e6b4",
         "type": "switch",
         "z": "bbeaf112.72e1d",
@@ -10980,222 +9544,6 @@
         ]
     },
     {
-        "id": "41a99d5f.d90424",
-        "type": "bigtimer",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "outtopic": "",
-        "outpayload1": "",
-        "outpayload2": "",
-        "name": "TIMER1",
-        "comment": "",
-        "lat": "48.22908",
-        "lon": "13.0208",
-        "starttime": "0",
-        "endtime": "0",
-        "starttime2": 0,
-        "endtime2": 0,
-        "startoff": 0,
-        "endoff": 0,
-        "startoff2": 0,
-        "endoff2": 0,
-        "offs": 0,
-        "outtext1": "on",
-        "outtext2": "off",
-        "timeout": 1440,
-        "sun": true,
-        "mon": true,
-        "tue": true,
-        "wed": true,
-        "thu": true,
-        "fri": true,
-        "sat": true,
-        "jan": true,
-        "feb": true,
-        "mar": true,
-        "apr": true,
-        "may": true,
-        "jun": true,
-        "jul": true,
-        "aug": true,
-        "sep": true,
-        "oct": true,
-        "nov": true,
-        "dec": true,
-        "day1": 0,
-        "month1": 0,
-        "day2": 0,
-        "month2": 0,
-        "day3": 0,
-        "month3": 0,
-        "day4": 0,
-        "month4": 0,
-        "day5": 0,
-        "month5": 0,
-        "day6": 0,
-        "month6": 0,
-        "d1": 0,
-        "w1": 0,
-        "d2": 0,
-        "w2": 0,
-        "d3": 0,
-        "w3": 0,
-        "d4": 0,
-        "w4": 0,
-        "d5": 0,
-        "w5": 0,
-        "d6": 0,
-        "w6": 0,
-        "xday1": 0,
-        "xmonth1": 0,
-        "xday2": 0,
-        "xmonth2": 0,
-        "xday3": 0,
-        "xmonth3": 0,
-        "xday4": 0,
-        "xmonth4": 0,
-        "xday5": 0,
-        "xmonth5": 0,
-        "xday6": 0,
-        "xmonth6": 0,
-        "xd1": 0,
-        "xw1": 0,
-        "xd2": 0,
-        "xw2": 0,
-        "xd3": 0,
-        "xw3": 0,
-        "xd4": 0,
-        "xw4": 0,
-        "xd5": 0,
-        "xw5": 0,
-        "xd6": 0,
-        "xw6": 0,
-        "suspend": false,
-        "random": false,
-        "repeat": false,
-        "atstart": true,
-        "odd": false,
-        "even": false,
-        "x": 1520,
-        "y": 160,
-        "wires": [
-            [],
-            [
-                "68662989.c423d8",
-                "5da1c028.06ef5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "4fda9dd4.739754",
-        "type": "bigtimer",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "outtopic": "",
-        "outpayload1": "",
-        "outpayload2": "",
-        "name": "TIMER2",
-        "comment": "",
-        "lat": "48.22908",
-        "lon": "13.0208",
-        "starttime": "0",
-        "endtime": "0",
-        "starttime2": 0,
-        "endtime2": 0,
-        "startoff": 0,
-        "endoff": 0,
-        "startoff2": 0,
-        "endoff2": 0,
-        "offs": 0,
-        "outtext1": "on",
-        "outtext2": "off",
-        "timeout": 1440,
-        "sun": true,
-        "mon": true,
-        "tue": true,
-        "wed": true,
-        "thu": true,
-        "fri": true,
-        "sat": true,
-        "jan": true,
-        "feb": true,
-        "mar": true,
-        "apr": true,
-        "may": true,
-        "jun": true,
-        "jul": true,
-        "aug": true,
-        "sep": true,
-        "oct": true,
-        "nov": true,
-        "dec": true,
-        "day1": 0,
-        "month1": 0,
-        "day2": 0,
-        "month2": 0,
-        "day3": 0,
-        "month3": 0,
-        "day4": 0,
-        "month4": 0,
-        "day5": 0,
-        "month5": 0,
-        "day6": 0,
-        "month6": 0,
-        "d1": 0,
-        "w1": 0,
-        "d2": 0,
-        "w2": 0,
-        "d3": 0,
-        "w3": 0,
-        "d4": 0,
-        "w4": 0,
-        "d5": 0,
-        "w5": 0,
-        "d6": 0,
-        "w6": 0,
-        "xday1": 0,
-        "xmonth1": 0,
-        "xday2": 0,
-        "xmonth2": 0,
-        "xday3": 0,
-        "xmonth3": 0,
-        "xday4": 0,
-        "xmonth4": 0,
-        "xday5": 0,
-        "xmonth5": 0,
-        "xday6": 0,
-        "xmonth6": 0,
-        "xd1": 0,
-        "xw1": 0,
-        "xd2": 0,
-        "xw2": 0,
-        "xd3": 0,
-        "xw3": 0,
-        "xd4": 0,
-        "xw4": 0,
-        "xd5": 0,
-        "xw5": 0,
-        "xd6": 0,
-        "xw6": 0,
-        "suspend": false,
-        "random": false,
-        "repeat": false,
-        "atstart": true,
-        "odd": false,
-        "even": false,
-        "x": 1520,
-        "y": 480,
-        "wires": [
-            [],
-            [
-                "68662989.c423d8",
-                "da56313.f8ed9d"
-            ],
-            []
-        ]
-    },
-    {
         "id": "5ff7ddb7.43ceb4",
         "type": "persist in",
         "z": "bbeaf112.72e1d",
@@ -11246,20 +9594,6 @@
                 "20ad73fc.3eb30c"
             ]
         ]
-    },
-    {
-        "id": "72343b35344db620",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "DASHBOARD_MANUAL",
-        "mode": "link",
-        "links": [
-            "ccd452443baa2fcb"
-        ],
-        "x": 1635,
-        "y": 340,
-        "wires": []
     },
     {
         "id": "b325ea99d950960e",
@@ -11457,20 +9791,6 @@
         ],
         "x": 855,
         "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "5cf4ace4ac625be3",
-        "type": "link out",
-        "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "ALL_OFF_SEND",
-        "mode": "link",
-        "links": [
-            "c54bc298eca569d0"
-        ],
-        "x": 1635,
-        "y": 380,
         "wires": []
     },
     {
@@ -11978,7 +10298,8 @@
         "g": "21e80259.d09fde",
         "name": "FROM_DASHBOARD_MANUAL",
         "links": [
-            "72343b35344db620"
+            "735368a12858031a",
+            "975bee44c65fe0e8"
         ],
         "x": 75,
         "y": 2680,
@@ -12697,7 +11018,7 @@
         "links": [
             "8591e9d939da1bfb"
         ],
-        "x": 2135,
+        "x": 1055,
         "y": 180,
         "wires": []
     },
@@ -12711,7 +11032,7 @@
         "links": [
             "1fe1a0c8d4c13ca5"
         ],
-        "x": 2135,
+        "x": 1055,
         "y": 220,
         "wires": []
     },
@@ -12784,18 +11105,53 @@
         ]
     },
     {
-        "id": "cf8134f4271cd4c6",
-        "type": "link out",
+        "id": "235da24ed942aabf",
+        "type": "link in",
         "z": "bbeaf112.72e1d",
-        "g": "cd213aec.cccc28",
-        "name": "ACTIVATE_TIMER_SEND",
-        "mode": "link",
+        "name": "RECEIVE_BUTTON_MANUAL_ON",
         "links": [
-            "5b672315f417427f",
-            "dcd2648d.1807a8"
+            "975bee44c65fe0e8"
         ],
-        "x": 1595,
-        "y": 420,
+        "x": 515,
+        "y": 300,
+        "wires": [
+            [
+                "68662989.c423d8"
+            ]
+        ]
+    },
+    {
+        "id": "6304732902dfc4c2",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "name": "RECEIVE_BUTTON_ALL_OFF",
+        "links": [
+            "735368a12858031a"
+        ],
+        "x": 515,
+        "y": 360,
+        "wires": [
+            [
+                "68662989.c423d8",
+                "7701787a3f8c7320"
+            ]
+        ]
+    },
+    {
+        "id": "7701787a3f8c7320",
+        "type": "debug",
+        "z": "bbeaf112.72e1d",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 380,
         "wires": []
     },
     {
@@ -15879,272 +14235,6 @@
         ]
     },
     {
-        "id": "b7fc5c3f.33449",
-        "type": "function",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "PrepareTimeData2",
-        "func": "var NewMsg = {};\n\n \nvar DefaultSettings =   { \n       payload: \n             {\n               HourOn    : 0,\n               MinuteOn  : 0, \n               HourOff   : 0, \n               MinuteOff : 0\n             } \n       \n   };\n   \n\nvar TimeSettings=global.get('TimeSettingsMemory2') || DefaultSettings;\n\n\nswitch( msg.topic)\n{\n    case \"HourOn\":\n         TimeSettings.payload.HourOn = msg.payload;\n         break;\n\n    case \"MinuteOn\":\n         TimeSettings.payload.MinuteOn = msg.payload;\n         break;\n         \n    case \"HourOff\":\n         TimeSettings.payload.HourOff = msg.payload;\n         break;\n\n    case \"MinuteOff\":\n         TimeSettings.payload.MinuteOff = msg.payload;\n         break;     \n         \n}\n\nglobal.set('TimeSettingsMemory2',TimeSettings);\n\nNewMsg = TimeSettings;\nreturn NewMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 180,
-        "wires": [
-            [
-                "d93a8435.6671f8"
-            ]
-        ]
-    },
-    {
-        "id": "65ded8d5.a6efb8",
-        "type": "ui_numeric",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "OnHour2",
-        "label": "2. Einschalten Stunde",
-        "tooltip": "",
-        "group": "6d039928.0d6078",
-        "order": 22,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "topic": "HourOn",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "24",
-        "step": 1,
-        "x": 660,
-        "y": 100,
-        "wires": [
-            [
-                "b7fc5c3f.33449"
-            ]
-        ]
-    },
-    {
-        "id": "4bf94934.6b5058",
-        "type": "change",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "GetHourOnAsValue",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.HourOn",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 100,
-        "wires": [
-            [
-                "65ded8d5.a6efb8"
-            ]
-        ]
-    },
-    {
-        "id": "f2c215b9.d86498",
-        "type": "change",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "GetMinuteOnAsValue",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.MinuteOn",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 160,
-        "wires": [
-            [
-                "59903fc1.fcef9"
-            ]
-        ]
-    },
-    {
-        "id": "59903fc1.fcef9",
-        "type": "ui_numeric",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "OnMinute2",
-        "label": "2. Einschalten Minute",
-        "tooltip": "",
-        "group": "6d039928.0d6078",
-        "order": 25,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "topic": "MinuteOn",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "59",
-        "step": 1,
-        "x": 670,
-        "y": 160,
-        "wires": [
-            [
-                "b7fc5c3f.33449"
-            ]
-        ]
-    },
-    {
-        "id": "1659657a.ffdc0b",
-        "type": "change",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "GetHourOffAsValue",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.HourOff",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 220,
-        "wires": [
-            [
-                "53aea239.7c101c"
-            ]
-        ]
-    },
-    {
-        "id": "53aea239.7c101c",
-        "type": "ui_numeric",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "OffHour2",
-        "label": "2. Ausschalten Stunde",
-        "tooltip": "",
-        "group": "6d039928.0d6078",
-        "order": 28,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "topic": "HourOff",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "24",
-        "step": 1,
-        "x": 660,
-        "y": 220,
-        "wires": [
-            [
-                "b7fc5c3f.33449"
-            ]
-        ]
-    },
-    {
-        "id": "e73e1f45.acb7b",
-        "type": "change",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "GetMinuteOffAsValue",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.MinuteOff",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 280,
-        "wires": [
-            [
-                "9fca8257.15003"
-            ]
-        ]
-    },
-    {
-        "id": "9fca8257.15003",
-        "type": "ui_numeric",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "OffMinute2",
-        "label": "2. Ausschalten Minute",
-        "tooltip": "",
-        "group": "6d039928.0d6078",
-        "order": 31,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "topic": "MinuteOff",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "59",
-        "step": 1,
-        "x": 670,
-        "y": 280,
-        "wires": [
-            [
-                "b7fc5c3f.33449"
-            ]
-        ]
-    },
-    {
-        "id": "30dc8eb9.ae32a2",
-        "type": "link in",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "DASHBOARD_FEED_TIMESETTINGS2",
-        "links": [
-            "f379bd17.26bef"
-        ],
-        "x": 215,
-        "y": 180,
-        "wires": [
-            [
-                "4bf94934.6b5058",
-                "f2c215b9.d86498",
-                "1659657a.ffdc0b",
-                "e73e1f45.acb7b"
-            ]
-        ]
-    },
-    {
-        "id": "d93a8435.6671f8",
-        "type": "link out",
-        "z": "44cdc4db.fedd6c",
-        "g": "1be5258f.80b0ca",
-        "name": "FROM_DASHBOARD_FEED_TIMER2",
-        "links": [
-            "b8a4e423.cbb218"
-        ],
-        "x": 1160,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "d8503a7c.234828",
         "type": "finite-state-machine",
         "z": "c14b4a92.f3afe8",
@@ -17716,6 +15806,216 @@
                 "c026e25c4c458144"
             ]
         ]
+    },
+    {
+        "id": "02e37b20e9329873",
+        "type": "ui_button",
+        "z": "0d198607368cb7c8",
+        "name": "",
+        "group": "6d039928.0d6078",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "HANDBETRIEB EIN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "ManualOn",
+        "topicType": "str",
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "975bee44c65fe0e8"
+            ]
+        ]
+    },
+    {
+        "id": "2b576e4909b4cf88",
+        "type": "ui_button",
+        "z": "0d198607368cb7c8",
+        "name": "",
+        "group": "6d039928.0d6078",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "HANDBETRIEB AUS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "ManualOff",
+        "topicType": "str",
+        "x": 360,
+        "y": 520,
+        "wires": [
+            [
+                "735368a12858031a"
+            ]
+        ]
+    },
+    {
+        "id": "a37b16f35b552365",
+        "type": "ui_button",
+        "z": "0d198607368cb7c8",
+        "name": "",
+        "group": "6d039928.0d6078",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "AKTIVIERE ZEITSCHALTUHR ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "Start",
+        "topicType": "str",
+        "x": 377.0130310058594,
+        "y": 1103.0104370117188,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c89ad07569bff18",
+        "type": "ui_text",
+        "z": "0d198607368cb7c8",
+        "group": "6d039928.0d6078",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Befehl",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 410,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "975bee44c65fe0e8",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_BUTTON_MANUAL",
+        "mode": "link",
+        "links": [
+            "235da24ed942aabf",
+            "ccd452443baa2fcb"
+        ],
+        "x": 615,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "735368a12858031a",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_BUTTON_ALL_OFF",
+        "mode": "link",
+        "links": [
+            "6304732902dfc4c2",
+            "ccd452443baa2fcb"
+        ],
+        "x": 615,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4161ec366f54fadd",
+        "type": "link in",
+        "z": "0d198607368cb7c8",
+        "name": "RECEIVE_DASHBOARD_COMMAND",
+        "links": [],
+        "x": 255,
+        "y": 600,
+        "wires": [
+            [
+                "1c89ad07569bff18"
+            ]
+        ]
+    },
+    {
+        "id": "75a63ff39d520118",
+        "type": "ui_time_scheduler",
+        "z": "0d198607368cb7c8",
+        "group": "6d039928.0d6078",
+        "name": "",
+        "startDay": 0,
+        "refresh": 60,
+        "devices": [
+            "Heater"
+        ],
+        "singleOff": true,
+        "onlySendChange": false,
+        "customPayload": false,
+        "eventMode": false,
+        "eventOptions": [],
+        "sendTopic": true,
+        "lat": "",
+        "lon": "",
+        "customContextStore": "",
+        "outputs": 2,
+        "order": 29,
+        "width": 0,
+        "height": 0,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "270ae26ad0a9f0ed"
+            ],
+            [
+                "bef6b4b4ceebeace"
+            ]
+        ]
+    },
+    {
+        "id": "270ae26ad0a9f0ed",
+        "type": "persist in",
+        "z": "0d198607368cb7c8",
+        "name": "StoreScheduler",
+        "storageNode": "4770220960363acc",
+        "x": 640,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d29267511301f687",
+        "type": "persist out",
+        "z": "0d198607368cb7c8",
+        "name": "StoreScheduler",
+        "storageNode": "de16b78ec731b2b0",
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "75a63ff39d520118"
+            ]
+        ]
+    },
+    {
+        "id": "bef6b4b4ceebeace",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "name": "SEND_SCHEDULER",
+        "mode": "link",
+        "links": [],
+        "x": 575,
+        "y": 760,
+        "wires": []
     },
     {
         "id": "90f9ecbdbf98a9e2",
