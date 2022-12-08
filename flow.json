@@ -7814,7 +7814,7 @@
         "once": true,
         "onceDelay": "20",
         "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
-        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3},\"DigitalOutput0\":{\"port\":5000,\"HubPort\":0}}",
+        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3},\"DigitalOutput0\":{\"port\":5000,\"HubPort\":0},\"DigitalOutput1\":{\"port\":5000,\"HubPort\":1}}",
         "payloadType": "json",
         "x": 530,
         "y": 320,
@@ -7837,7 +7837,7 @@
             "29a8f6c68d619403"
         ],
         "x": 885,
-        "y": 280,
+        "y": 320,
         "wires": []
     },
     {
@@ -14303,7 +14303,7 @@
         "z": "e5b0b209.26cfe",
         "g": "e6272.4212ed8e8",
         "name": "INIT_PHIDGETS_VINT_HUB1_WORKSHOP_HALL",
-        "func": "var NewMsg               = { payload : ''};\nvar phidget22            = global.get('phidget22')\nvar IPAdress             = msg.payload.VintHub.ipadress;\nvar ServerPort           = msg.payload.VintHub.port;\nvar SerialNumber         = msg.payload.VintHub.serialnumber;\nvar conn                 = new phidget22.Connection(ServerPort,IPAdress);\nvar Initialized          = context.get('init') || 0;\nvar HubPortDigitalOutput = msg.payload.DigitalOutput0.HubPort;\nvar digitalOutput0       = new phidget22.DigitalOutput();\n\n\ndigitalOutput0.onAttach = ()=> {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = ()=> {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(HubPortDigitalOutput).then( () =>\n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n}\n\nconn.connect().then(Start).catch( (err)=> {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nNewMsg = msg;\n\nreturn NewMsg;",
+        "func": "var NewMsg               = { payload : ''};\nvar phidget22            = global.get('phidget22')\nvar IPAdress             = msg.payload.VintHub.ipadress;\nvar ServerPort           = msg.payload.VintHub.port;\nvar SerialNumber         = msg.payload.VintHub.serialnumber;\nvar conn                 = new phidget22.Connection(ServerPort,IPAdress);\nvar Initialized          = context.get('init') || 0;\nvar HubPortDigitalOutput0 = msg.payload.DigitalOutput0.HubPort;\nvar HubPortDigitalOutput1 = msg.payload.DigitalOutput1.HubPort;\n\nvar digitalOutput0       = new phidget22.DigitalOutput();\nvar digitalOutput1       = new phidget22.DigitalOutput();\n\n\ndigitalOutput0.onAttach = ()=> {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = ()=> {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput1.onAttach = () => {\n        global.set(\"PublicVintHubInit\", 1);\n        console.log('Vinthub1 with digital output 1 attached!, Serial number is:' + SerialNumber)\n};\n\ndigitalOutput1.onDetach = () => {\n        global.set(\"PublicVintHubInit\", 0);\n        console.log('Vinthub1 with digital output 1 detached! Serial number is:' + SerialNumber)\n};\n\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(HubPortDigitalOutput0).then( () =>\n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n\n    digitalOutput1.setIsHubPortDevice(true);\n    digitalOutput1.setHubPort(1);\n    digitalOutput1.setDeviceSerialNumber(SerialNumber);\n    digitalOutput1.open(HubPortDigitalOutput1).then(() => {\n        global.set(\"PublicDigitalOutput1\", digitalOutput1);\n    });\n\n}\n\nconn.connect().then(Start).catch( (err)=> {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nNewMsg = msg;\n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15172,6 +15172,24 @@
         "x": 910,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "024c6765c4ab3579",
+        "type": "subflow:f9c9c4f6.2e9508",
+        "z": "9087d93a.9a7648",
+        "name": "SUB_DIGITAL_OUTPUT",
+        "env": [
+            {
+                "name": "INSTANCE",
+                "value": "PublicDigitalOutput1",
+                "type": "str"
+            }
+        ],
+        "x": 530,
+        "y": 100,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "87b944d7.bff118",
