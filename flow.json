@@ -2930,9 +2930,7 @@
             "eb4f02b2.5bbf1"
         ],
         "x": 414,
-        "y": 139,
-        "w": 1112,
-        "h": 222
+        "y": 139
     },
     {
         "id": "e6272.4212ed8e8",
@@ -2952,7 +2950,9 @@
             "42c9df97d8f79572"
         ],
         "x": 174,
-        "y": 39
+        "y": 39,
+        "w": 622,
+        "h": 202
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -3304,9 +3304,7 @@
             "9ba06b417721406d"
         ],
         "x": 14,
-        "y": 119,
-        "w": 1552,
-        "h": 402
+        "y": 119
     },
     {
         "id": "21e80259.d09fde",
@@ -3488,6 +3486,27 @@
         "y": 2939,
         "w": 532,
         "h": 422
+    },
+    {
+        "id": "517a0dc17882fa44",
+        "type": "group",
+        "z": "0d198607368cb7c8",
+        "name": "FAN_CONTROL_DASHBOARD",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3a8bfd3ff61a10cc",
+            "91165e422fcb6727",
+            "0808854b896fbd71",
+            "066ca565c34efaa7",
+            "fcbd02673ec0af89",
+            "035a85b3c55d92c8"
+        ],
+        "x": 154,
+        "y": 859,
+        "w": 482,
+        "h": 322
     },
     {
         "id": "15a5f43209b6efac",
@@ -3845,6 +3864,14 @@
         "type": "persist-store",
         "filename": "scheduler.json",
         "interval": "60"
+    },
+    {
+        "id": "64be35cd.7831bc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "b0e29cad.544b6",
@@ -13659,7 +13686,8 @@
         "g": "efc47727.94b3e8",
         "name": "MSG_FAN1",
         "links": [
-            "b350e236.84c47"
+            "b350e236.84c47",
+            "066ca565c34efaa7"
         ],
         "x": 215,
         "y": 760,
@@ -15146,148 +15174,6 @@
         "wires": []
     },
     {
-        "id": "75270371.70b35c",
-        "type": "ui_switch",
-        "z": "9087d93a.9a7648",
-        "name": "",
-        "label": "Lüfter 1",
-        "tooltip": "",
-        "group": "6d0c3e2.dd286c",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-2x fa-superpowers",
-        "oncolor": "yellow",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-2x fa-superpowers",
-        "offcolor": "grey",
-        "x": 500,
-        "y": 120,
-        "wires": [
-            [
-                "b350e236.84c47"
-            ]
-        ]
-    },
-    {
-        "id": "a47daa3b.aafc98",
-        "type": "ui_switch",
-        "z": "9087d93a.9a7648",
-        "name": "",
-        "label": "Lüfter 2",
-        "tooltip": "",
-        "group": "6d0c3e2.dd286c",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-2x fa-superpowers",
-        "oncolor": "yellow",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-2x fa-superpowers",
-        "offcolor": "grey",
-        "x": 500,
-        "y": 220,
-        "wires": [
-            [
-                "31f7f6b9.1875ca"
-            ]
-        ]
-    },
-    {
-        "id": "358bd74b.5eca08",
-        "type": "ui_button",
-        "z": "9087d93a.9a7648",
-        "name": "",
-        "group": "6d0c3e2.dd286c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "ALLE EIN",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 290,
-        "y": 120,
-        "wires": [
-            [
-                "75270371.70b35c",
-                "a47daa3b.aafc98"
-            ]
-        ]
-    },
-    {
-        "id": "fcceb325.0936",
-        "type": "ui_button",
-        "z": "9087d93a.9a7648",
-        "name": "",
-        "group": "6d0c3e2.dd286c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "ALLE AUS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 290,
-        "y": 220,
-        "wires": [
-            [
-                "75270371.70b35c",
-                "a47daa3b.aafc98"
-            ]
-        ]
-    },
-    {
-        "id": "b350e236.84c47",
-        "type": "link out",
-        "z": "9087d93a.9a7648",
-        "name": "TO_MSG_FAN1",
-        "links": [
-            "b2994c92.b2886",
-            "aa29d793.28a7c8"
-        ],
-        "x": 635,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "31f7f6b9.1875ca",
-        "type": "link out",
-        "z": "9087d93a.9a7648",
-        "name": "TO_MSG_FAN2",
-        "links": [
-            "aa29d793.28a7c8",
-            "4d5d2751.35a8d8"
-        ],
-        "x": 635,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "87b944d7.bff118",
         "type": "inject",
         "z": "2a202360.23bf9c",
@@ -15966,6 +15852,7 @@
         "label": "ZÄHLER HEIZUNG",
         "format": "{{msg.count}}",
         "layout": "row-spread",
+        "className": "",
         "x": 350,
         "y": 320,
         "wires": []
@@ -16458,6 +16345,170 @@
         "x": 620,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "3a8bfd3ff61a10cc",
+        "type": "ui_switch",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "",
+        "label": "Lüfter 1",
+        "tooltip": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-2x fa-superpowers",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-2x fa-superpowers",
+        "offcolor": "grey",
+        "animate": true,
+        "className": "",
+        "x": 460,
+        "y": 900,
+        "wires": [
+            [
+                "066ca565c34efaa7"
+            ]
+        ]
+    },
+    {
+        "id": "91165e422fcb6727",
+        "type": "ui_button",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ALLE EIN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 250,
+        "y": 900,
+        "wires": [
+            [
+                "3a8bfd3ff61a10cc"
+            ]
+        ]
+    },
+    {
+        "id": "0808854b896fbd71",
+        "type": "ui_button",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "",
+        "group": "6d0c3e2.dd286c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ALLE AUS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 250,
+        "y": 1000,
+        "wires": [
+            [
+                "3a8bfd3ff61a10cc"
+            ]
+        ]
+    },
+    {
+        "id": "066ca565c34efaa7",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "TO_MSG_FAN1",
+        "links": [
+            "b2994c92.b2886",
+            "aa29d793.28a7c8"
+        ],
+        "x": 595,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "fcbd02673ec0af89",
+        "type": "ui_button_state",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "group": "6d0c3e2.dd286c",
+        "name": "FanControl",
+        "order": 30,
+        "onClass": "",
+        "offClass": "",
+        "width": "6",
+        "height": "3",
+        "options": [
+            {
+                "label": "Mit Heizung ",
+                "value": "FanWithHeater",
+                "onColor": "#0aae9a",
+                "offColor": "#c8c8c8"
+            },
+            {
+                "label": "Mit Heizung Pause Verzögert",
+                "value": "FanDelayedHeaterOff",
+                "onColor": "#0aae9a",
+                "offColor": "#c8c8c8"
+            },
+            {
+                "label": "OptionAus",
+                "value": "FanOptionOff",
+                "onColor": "#0aae9a",
+                "offColor": "#c8c8c8"
+            }
+        ],
+        "x": 290,
+        "y": 1140,
+        "wires": [
+            [
+                "035a85b3c55d92c8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "035a85b3c55d92c8",
+        "type": "function",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "Pass",
+        "func": "return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "fcbd02673ec0af89"
+            ]
+        ]
     },
     {
         "id": "90f9ecbdbf98a9e2",
