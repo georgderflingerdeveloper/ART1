@@ -2862,8 +2862,10 @@
             "c2f95591.8f0898",
             "7e702f94.d8d83"
         ],
-        "x": 724,
-        "y": 239
+        "x": 734,
+        "y": 239,
+        "w": 752,
+        "h": 262
     },
     {
         "id": "1876b4fb.31fdfb",
@@ -2886,8 +2888,10 @@
             "e48b156e.cb0fc8",
             "88529efb.9767f"
         ],
-        "x": 2164,
-        "y": 119
+        "x": 2174,
+        "y": 119,
+        "w": 432,
+        "h": 302
     },
     {
         "id": "598b40d2.e8268",
@@ -2906,7 +2910,9 @@
             "4957956b.226ebc"
         ],
         "x": 2674,
-        "y": 179
+        "y": 179,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "61242e42.52d0d",
@@ -3015,7 +3021,9 @@
             "1b52b3ef.a9adec"
         ],
         "x": 1574,
-        "y": 171.5
+        "y": 171.5,
+        "w": 552,
+        "h": 349.5
     },
     {
         "id": "88c8327a.46d43",
@@ -3032,7 +3040,9 @@
             "f2e41c73.5c255"
         ],
         "x": 474,
-        "y": 79
+        "y": 79,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "47cc638b.63a52c",
@@ -3049,8 +3059,10 @@
             "fdafbe9a.ea07a",
             "bfa81f19.97ad9"
         ],
-        "x": 304,
-        "y": 219
+        "x": 314,
+        "y": 219,
+        "w": 332,
+        "h": 262
     },
     {
         "id": "f2ae83b.dc73b8",
@@ -3169,9 +3181,7 @@
             "4a4e18d3151ad54a"
         ],
         "x": 54,
-        "y": 519,
-        "w": 732,
-        "h": 382
+        "y": 519
     },
     {
         "id": "2fe851a62c7f2b21",
@@ -3204,9 +3214,7 @@
             "5f27293680f57cb4"
         ],
         "x": 14,
-        "y": 1019,
-        "w": 1292,
-        "h": 342
+        "y": 1019
     },
     {
         "id": "f0e001ad3ee9feaf",
@@ -3229,9 +3237,7 @@
             "dc58eb8bd3d0a0aa"
         ],
         "x": 54,
-        "y": 199,
-        "w": 892,
-        "h": 202
+        "y": 199
     },
     {
         "id": "b305f7ea4564d362",
@@ -3268,9 +3274,7 @@
             "fbf38ba8a5a8e3e8"
         ],
         "x": 54,
-        "y": 1439,
-        "w": 732,
-        "h": 402
+        "y": 1439
     },
     {
         "id": "6e2396589a73f28f",
@@ -3396,12 +3400,116 @@
             "0808854b896fbd71",
             "066ca565c34efaa7",
             "fcbd02673ec0af89",
-            "035a85b3c55d92c8"
+            "035a85b3c55d92c8",
+            "21638667da50a162",
+            "cfdf868e3df03972",
+            "47f17de7234d7f65",
+            "2d3eb5db9602fdd2",
+            "4ac0ebf24ca306f2"
+        ],
+        "x": 94,
+        "y": 859,
+        "w": 872,
+        "h": 322
+    },
+    {
+        "id": "7f164fd15897d15f",
+        "type": "group",
+        "z": "0d198607368cb7c8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "6472714f6fc5cfd5",
+            "c026e25c4c458144",
+            "4aaf9c26ea5b384f",
+            "f985179aa70ee562"
+        ],
+        "x": 1164,
+        "y": 59,
+        "w": 442,
+        "h": 142
+    },
+    {
+        "id": "bbf8275e22c3daf5",
+        "type": "group",
+        "z": "0d198607368cb7c8",
+        "name": "",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "02e37b20e9329873",
+            "2b576e4909b4cf88",
+            "a37b16f35b552365",
+            "1c89ad07569bff18",
+            "975bee44c65fe0e8",
+            "735368a12858031a",
+            "75a63ff39d520118",
+            "270ae26ad0a9f0ed",
+            "d29267511301f687",
+            "bef6b4b4ceebeace",
+            "8644de04ce6a52dc",
+            "91134f6da1c50993",
+            "f5d1697f39f9ff60",
+            "85e5b8f75c62e74f",
+            "7305cc5dad32f405",
+            "4898426204eaee54",
+            "b2d02bf93e2ba5fd",
+            "2290b873ccc49e69",
+            "eb1784d608df175c"
         ],
         "x": 74,
-        "y": 859,
-        "w": 482,
-        "h": 322
+        "y": 319,
+        "w": 932,
+        "h": 482
+    },
+    {
+        "id": "98551c8d6c479968",
+        "type": "group",
+        "z": "0d198607368cb7c8",
+        "name": "",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "9b1d261736d73940",
+            "0b7d115d977504fa",
+            "55c06a6107aed4c4",
+            "c1ba2d5ba28d5b2d",
+            "58adfdf1ce003325",
+            "0f2b8a756e25f3c0"
+        ],
+        "x": 64,
+        "y": 59,
+        "w": 402,
+        "h": 182
+    },
+    {
+        "id": "68da8d5d080e84a2",
+        "type": "group",
+        "z": "0d198607368cb7c8",
+        "name": "FAN_CONTROL_DASHBOARD",
+        "style": {
+            "label": true,
+            "fill": "#dbcbe7"
+        },
+        "nodes": [
+            "217529c37285f991",
+            "6835fb1e55aa1e17"
+        ],
+        "x": 1094,
+        "y": 399,
+        "w": 208,
+        "h": 162
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3514,105 +3622,6 @@
         "y": 3479,
         "w": 532,
         "h": 422
-    },
-    {
-        "id": "7f164fd15897d15f",
-        "type": "group",
-        "z": "0d198607368cb7c8",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "6472714f6fc5cfd5",
-            "c026e25c4c458144",
-            "4aaf9c26ea5b384f",
-            "f985179aa70ee562"
-        ],
-        "x": 1164,
-        "y": 59,
-        "w": 442,
-        "h": 142
-    },
-    {
-        "id": "bbf8275e22c3daf5",
-        "type": "group",
-        "z": "0d198607368cb7c8",
-        "name": "",
-        "style": {
-            "fill": "#ffffbf",
-            "label": true
-        },
-        "nodes": [
-            "02e37b20e9329873",
-            "2b576e4909b4cf88",
-            "a37b16f35b552365",
-            "1c89ad07569bff18",
-            "975bee44c65fe0e8",
-            "735368a12858031a",
-            "75a63ff39d520118",
-            "270ae26ad0a9f0ed",
-            "d29267511301f687",
-            "bef6b4b4ceebeace",
-            "8644de04ce6a52dc",
-            "91134f6da1c50993",
-            "f5d1697f39f9ff60",
-            "85e5b8f75c62e74f",
-            "7305cc5dad32f405",
-            "4898426204eaee54",
-            "b2d02bf93e2ba5fd",
-            "2290b873ccc49e69",
-            "eb1784d608df175c"
-        ],
-        "x": 74,
-        "y": 319,
-        "w": 932,
-        "h": 482
-    },
-    {
-        "id": "98551c8d6c479968",
-        "type": "group",
-        "z": "0d198607368cb7c8",
-        "name": "",
-        "style": {
-            "fill": "#ffefbf",
-            "label": true
-        },
-        "nodes": [
-            "9b1d261736d73940",
-            "0b7d115d977504fa",
-            "55c06a6107aed4c4",
-            "c1ba2d5ba28d5b2d",
-            "58adfdf1ce003325",
-            "0f2b8a756e25f3c0"
-        ],
-        "x": 64,
-        "y": 59,
-        "w": 402,
-        "h": 182
-    },
-    {
-        "id": "68da8d5d080e84a2",
-        "type": "group",
-        "z": "0d198607368cb7c8",
-        "name": "FAN_CONTROL_DASHBOARD",
-        "style": {
-            "label": true,
-            "fill": "#dbcbe7"
-        },
-        "nodes": [
-            "217529c37285f991",
-            "6835fb1e55aa1e17"
-        ],
-        "x": 1094,
-        "y": 399,
-        "w": 208,
-        "h": 162
     },
     {
         "id": "15a5f43209b6efac",
@@ -3983,6 +3992,12 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "2a179ae97f839f06",
+        "type": "persist-store",
+        "filename": "PersistFanControlMode.json",
+        "interval": "1"
     },
     {
         "id": "b0e29cad.544b6",
@@ -16508,7 +16523,7 @@
         "offcolor": "grey",
         "animate": true,
         "className": "",
-        "x": 380,
+        "x": 700,
         "y": 900,
         "wires": [
             [
@@ -16537,7 +16552,7 @@
         "payloadType": "bool",
         "topic": "",
         "topicType": "str",
-        "x": 170,
+        "x": 490,
         "y": 900,
         "wires": [
             [
@@ -16566,7 +16581,7 @@
         "payloadType": "bool",
         "topic": "",
         "topicType": "str",
-        "x": 170,
+        "x": 490,
         "y": 1000,
         "wires": [
             [
@@ -16584,7 +16599,7 @@
             "b2994c92.b2886",
             "aa29d793.28a7c8"
         ],
-        "x": 515,
+        "x": 835,
         "y": 900,
         "wires": []
     },
@@ -16620,10 +16635,11 @@
                 "offColor": "#c8c8c8"
             }
         ],
-        "x": 210,
+        "x": 530,
         "y": 1140,
         "wires": [
             [
+                "21638667da50a162",
                 "035a85b3c55d92c8"
             ],
             []
@@ -16641,7 +16657,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
+        "x": 550,
         "y": 1060,
         "wires": [
             [
@@ -16782,6 +16798,103 @@
         "x": 1645,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "21638667da50a162",
+        "type": "persist in",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "PersistFanControlMode",
+        "storageNode": "2a179ae97f839f06",
+        "x": 830,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "cfdf868e3df03972",
+        "type": "persist out",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "PersistFanControlMode",
+        "storageNode": "2a179ae97f839f06",
+        "x": 250,
+        "y": 1140,
+        "wires": [
+            [
+                "fcbd02673ec0af89"
+            ]
+        ]
+    },
+    {
+        "id": "47f17de7234d7f65",
+        "type": "ui_ui_control",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "",
+        "events": "connect",
+        "x": 200,
+        "y": 900,
+        "wires": [
+            [
+                "2d3eb5db9602fdd2"
+            ]
+        ]
+    },
+    {
+        "id": "2d3eb5db9602fdd2",
+        "type": "change",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "connect",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 1060,
+        "wires": [
+            [
+                "4ac0ebf24ca306f2"
+            ]
+        ]
+    },
+    {
+        "id": "4ac0ebf24ca306f2",
+        "type": "delay",
+        "z": "0d198607368cb7c8",
+        "g": "517a0dc17882fa44",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 220,
+        "y": 1100,
+        "wires": [
+            [
+                "cfdf868e3df03972"
+            ]
+        ]
     },
     {
         "id": "90f9ecbdbf98a9e2",
