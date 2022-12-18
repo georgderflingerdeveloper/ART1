@@ -3303,7 +3303,9 @@
             "9ba06b417721406d"
         ],
         "x": 14,
-        "y": 119
+        "y": 119,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "21e80259.d09fde",
@@ -3483,7 +3485,7 @@
         ],
         "x": 64,
         "y": 59,
-        "w": 402,
+        "w": 382,
         "h": 182
     },
     {
@@ -3500,7 +3502,8 @@
             "6835fb1e55aa1e17",
             "1ce6e6cf13a5fbe3",
             "d39f5f04fa950024",
-            "471511cf45dfa0b9"
+            "471511cf45dfa0b9",
+            "b0c38d59d545c3da"
         ],
         "x": 1054,
         "y": 879,
@@ -8111,10 +8114,11 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "name": "HUMIDITY",
-        "label": "FEUCHTIGKEIT",
+        "name": "Feuchtigkeit",
+        "label": "Feuchtigkeit",
         "format": "{{msg.payload}} %",
         "layout": "row-spread",
+        "className": "",
         "x": 1230,
         "y": 1320,
         "wires": []
@@ -8732,7 +8736,8 @@
         "name": "RECEIVE_TEMPERATURE",
         "links": [
             "1c13f8d8.14ebd7",
-            "6d0bc22f94d377c9"
+            "6d0bc22f94d377c9",
+            "b0c38d59d545c3da"
         ],
         "x": 1075,
         "y": 3000,
@@ -15396,8 +15401,8 @@
                 "type": "str"
             }
         ],
-        "x": 530,
-        "y": 100,
+        "x": 790,
+        "y": 160,
         "wires": [
             []
         ]
@@ -16067,11 +16072,12 @@
         "order": 33,
         "width": 0,
         "height": 0,
-        "name": "GARAGENTOOR",
-        "label": "GARAGENTOOR",
+        "name": "Garagentoor",
+        "label": "Garagentoor",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 350,
+        "className": "",
+        "x": 330,
         "y": 200,
         "wires": []
     },
@@ -16792,6 +16798,18 @@
                 "value": "FanOptionOff",
                 "onColor": "#0aae9a",
                 "offColor": "#c8c8c8"
+            },
+            {
+                "label": "TestVorgabe 20°C",
+                "value": "20",
+                "onColor": "#0aae9a",
+                "offColor": "#c8c8c8"
+            },
+            {
+                "label": "TestVorgabe 25°C",
+                "value": "25",
+                "onColor": "#0aae9a",
+                "offColor": "#c8c8c8"
             }
         ],
         "x": 1140,
@@ -16800,7 +16818,8 @@
             [
                 "6835fb1e55aa1e17",
                 "1ce6e6cf13a5fbe3",
-                "d39f5f04fa950024"
+                "d39f5f04fa950024",
+                "b0c38d59d545c3da"
             ],
             []
         ]
@@ -17119,6 +17138,20 @@
                 "48061a2b4922d5d1"
             ]
         ]
+    },
+    {
+        "id": "b0c38d59d545c3da",
+        "type": "link out",
+        "z": "0d198607368cb7c8",
+        "g": "68da8d5d080e84a2",
+        "name": "SEND_TEST_TEMPERATURE",
+        "mode": "link",
+        "links": [
+            "6eba7f.9956a58"
+        ],
+        "x": 1405,
+        "y": 1020,
+        "wires": []
     },
     {
         "id": "90f9ecbdbf98a9e2",
