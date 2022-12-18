@@ -3648,6 +3648,65 @@
         "h": 82
     },
     {
+        "id": "0ce48f5a0caaf9eb",
+        "type": "group",
+        "z": "9087d93a.9a7648",
+        "name": "FROM_DASHBOARD",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "99d3f63a50b9f683",
+            "bf8c4a77170f7676",
+            "b3e53333cf32a9f7",
+            "15acd78293043b3d",
+            "b0f8773d9101efbe"
+        ],
+        "x": 544,
+        "y": 239,
+        "w": 422,
+        "h": 122
+    },
+    {
+        "id": "57685b8a9bb178dd",
+        "type": "group",
+        "z": "9087d93a.9a7648",
+        "name": "MODE_WITH_HEATER",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b21d76ed9b1c0f63",
+            "4c25e11c82391985",
+            "789c55584bb78e83",
+            "e4367b37b154ca54",
+            "cc441b79b5e56f8c",
+            "1fca5c652ac064bc"
+        ],
+        "x": 294,
+        "y": 39,
+        "w": 712,
+        "h": 162
+    },
+    {
+        "id": "42499b4091391b5e",
+        "type": "group",
+        "z": "9087d93a.9a7648",
+        "name": "TO_DASHBOARD",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b60994fef3576660",
+            "1eeaad6de42d2d87",
+            "94acc49315fca520"
+        ],
+        "x": 1144,
+        "y": 39,
+        "w": 312,
+        "h": 122
+    },
+    {
         "id": "15a5f43209b6efac",
         "type": "junction",
         "z": "bbeaf112.72e1d",
@@ -15437,6 +15496,7 @@
         "id": "b21d76ed9b1c0f63",
         "type": "gate",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "",
         "controlTopic": "control",
         "defaultState": "open",
@@ -15448,7 +15508,7 @@
         "persist": false,
         "storeName": "memory",
         "x": 930,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
                 "024c6765c4ab3579",
@@ -15461,6 +15521,7 @@
         "id": "4c25e11c82391985",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "OPEN",
         "rules": [
             {
@@ -15484,7 +15545,7 @@
         "to": "",
         "reg": false,
         "x": 770,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
                 "b21d76ed9b1c0f63"
@@ -15495,6 +15556,7 @@
         "id": "789c55584bb78e83",
         "type": "switch",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "IsFanWithHeater",
         "property": "payload",
         "propertyType": "msg",
@@ -15509,7 +15571,7 @@
         "repair": false,
         "outputs": 1,
         "x": 570,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
                 "4c25e11c82391985"
@@ -15520,6 +15582,7 @@
         "id": "e4367b37b154ca54",
         "type": "switch",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "ELSE",
         "property": "payload",
         "propertyType": "msg",
@@ -15534,7 +15597,7 @@
         "repair": false,
         "outputs": 1,
         "x": 630,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "cc441b79b5e56f8c"
@@ -15545,6 +15608,7 @@
         "id": "cc441b79b5e56f8c",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "CLOSE",
         "rules": [
             {
@@ -15568,7 +15632,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "b21d76ed9b1c0f63"
@@ -15612,19 +15676,21 @@
         "id": "b60994fef3576660",
         "type": "link out",
         "z": "9087d93a.9a7648",
+        "g": "42499b4091391b5e",
         "name": "SEND_FAN_STATUS_DASHBOARD",
         "mode": "link",
         "links": [
             "828529074508faa7"
         ],
-        "x": 1345,
-        "y": 60,
+        "x": 1415,
+        "y": 80,
         "wires": []
     },
     {
         "id": "1eeaad6de42d2d87",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "42499b4091391b5e",
         "name": "ISON",
         "rules": [
             {
@@ -15642,8 +15708,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 60,
+        "x": 1220,
+        "y": 80,
         "wires": [
             [
                 "b60994fef3576660"
@@ -15654,6 +15720,7 @@
         "id": "94acc49315fca520",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "42499b4091391b5e",
         "name": "ISOFF",
         "rules": [
             {
@@ -15671,8 +15738,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 100,
+        "x": 1220,
+        "y": 120,
         "wires": [
             [
                 "b60994fef3576660"
@@ -15683,6 +15750,7 @@
         "id": "99d3f63a50b9f683",
         "type": "link in",
         "z": "9087d93a.9a7648",
+        "g": "0ce48f5a0caaf9eb",
         "name": "FROM_FAN_DASHBOARD_CONTROL",
         "links": [
             "ef2068cce55d05e9"
@@ -15700,6 +15768,7 @@
         "id": "bf8c4a77170f7676",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "0ce48f5a0caaf9eb",
         "name": "TURN_ON",
         "rules": [
             {
@@ -15729,6 +15798,7 @@
         "id": "b3e53333cf32a9f7",
         "type": "change",
         "z": "9087d93a.9a7648",
+        "g": "0ce48f5a0caaf9eb",
         "name": "TURN_OFF",
         "rules": [
             {
@@ -15758,6 +15828,7 @@
         "id": "15acd78293043b3d",
         "type": "switch",
         "z": "9087d93a.9a7648",
+        "g": "0ce48f5a0caaf9eb",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -15783,6 +15854,7 @@
         "id": "b0f8773d9101efbe",
         "type": "switch",
         "z": "9087d93a.9a7648",
+        "g": "0ce48f5a0caaf9eb",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -15808,6 +15880,7 @@
         "id": "1fca5c652ac064bc",
         "type": "inject",
         "z": "9087d93a.9a7648",
+        "g": "57685b8a9bb178dd",
         "name": "init",
         "props": [],
         "repeat": "",
@@ -15816,7 +15889,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 390,
-        "y": 220,
+        "y": 160,
         "wires": [
             [
                 "e4367b37b154ca54"
