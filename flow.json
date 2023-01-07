@@ -2232,6 +2232,7 @@
                 "value": "PublicVintHubInit"
             }
         ],
+        "meta": {},
         "color": "#DDAA99",
         "status": {
             "x": 400,
@@ -2951,7 +2952,9 @@
             "42c9df97d8f79572"
         ],
         "x": 174,
-        "y": 39
+        "y": 39,
+        "w": 622,
+        "h": 202
     },
     {
         "id": "bb63f3b4.d7ba3",
@@ -3132,11 +3135,13 @@
             "b325ea99d950960e",
             "860e709e397805c8",
             "ce510abf5cbda6db",
-            "6cb206500f29e8bd"
+            "6cb206500f29e8bd",
+            "71b3b6853761f8f8",
+            "b7cc8c4360c67dcc"
         ],
-        "x": 254,
+        "x": 154,
         "y": 1939,
-        "w": 1542,
+        "w": 1642,
         "h": 422
     },
     {
@@ -3549,9 +3554,7 @@
             "b0f8773d9101efbe"
         ],
         "x": 524,
-        "y": 519,
-        "w": 422,
-        "h": 122
+        "y": 519
     },
     {
         "id": "57685b8a9bb178dd",
@@ -3572,9 +3575,7 @@
             "24c05f3357c518a5"
         ],
         "x": 344,
-        "y": 59,
-        "w": 702,
-        "h": 182
+        "y": 59
     },
     {
         "id": "42499b4091391b5e",
@@ -3590,9 +3591,7 @@
             "94acc49315fca520"
         ],
         "x": 1144,
-        "y": 39,
-        "w": 312,
-        "h": 122
+        "y": 39
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3977,8 +3976,7 @@
         "order": 6,
         "disp": true,
         "width": "6",
-        "collapse": true,
-        "className": ""
+        "collapse": true
     },
     {
         "id": "8025ee04.39f37",
@@ -4073,8 +4071,7 @@
         "order": 3,
         "disp": true,
         "width": "6",
-        "collapse": false,
-        "className": ""
+        "collapse": false
     },
     {
         "id": "2a179ae97f839f06",
@@ -8023,7 +8020,7 @@
         "once": true,
         "onceDelay": "20",
         "topic": "TOPIC_CONFIG_VINT_HUB_WORKSHOP",
-        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3},\"DigitalOutput0\":{\"port\":5000,\"HubPort\":0},\"DigitalOutput1\":{\"port\":5000,\"HubPort\":1}}",
+        "payload": "{\"VintHub\":{\"ipadress\":\"192.168.1.100\",\"port\":5661,\"serialnumber\":726538,\"timeout\":50000},\"TemperatureSensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":2},\"HumiditySensor\":{\"UpdateIntervall\":5000,\"Precision\":1,\"HubPort\":3},\"DigitalOutput0\":{\"port\":5000,\"HubPort\":0},\"DigitalOutput1\":{\"port\":5000,\"HubPort\":4}}",
         "payloadType": "json",
         "x": 530,
         "y": 320,
@@ -8202,7 +8199,6 @@
         "label": "Feuchtigkeit",
         "format": "{{msg.payload}} %",
         "layout": "row-spread",
-        "className": "",
         "x": 1230,
         "y": 1320,
         "wires": []
@@ -8866,6 +8862,15 @@
         "z": "bbeaf112.72e1d",
         "g": "3d9b3f31.3911d",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -8887,6 +8892,15 @@
         "z": "bbeaf112.72e1d",
         "g": "3d9b3f31.3911d",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -11628,6 +11642,58 @@
         "wires": [
             [
                 "2a4b469a300317b9"
+            ]
+        ]
+    },
+    {
+        "id": "71b3b6853761f8f8",
+        "type": "link in",
+        "z": "bbeaf112.72e1d",
+        "g": "3d9b3f31.3911d",
+        "name": "RECEIVE_ALL_OFF",
+        "links": [
+            "735368a12858031a"
+        ],
+        "x": 195,
+        "y": 2260,
+        "wires": [
+            [
+                "b7cc8c4360c67dcc"
+            ]
+        ]
+    },
+    {
+        "id": "b7cc8c4360c67dcc",
+        "type": "change",
+        "z": "bbeaf112.72e1d",
+        "g": "3d9b3f31.3911d",
+        "name": "MAKE_OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RELAY",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 2260,
+        "wires": [
+            [
+                "36bf26e4.7cae8a"
             ]
         ]
     },
@@ -14604,7 +14670,7 @@
         "z": "e5b0b209.26cfe",
         "g": "e6272.4212ed8e8",
         "name": "INIT_PHIDGETS_VINT_HUB1_WORKSHOP_HALL",
-        "func": "var NewMsg               = { payload : ''};\nvar phidget22            = global.get('phidget22')\nvar IPAdress             = msg.payload.VintHub.ipadress;\nvar ServerPort           = msg.payload.VintHub.port;\nvar SerialNumber         = msg.payload.VintHub.serialnumber;\nvar conn                 = new phidget22.Connection(ServerPort,IPAdress);\nvar Initialized          = context.get('init') || 0;\nvar HubPortDigitalOutput0 = msg.payload.DigitalOutput0.HubPort;\nvar HubPortDigitalOutput1 = msg.payload.DigitalOutput1.HubPort;\n\nvar digitalOutput0       = new phidget22.DigitalOutput();\nvar digitalOutput1       = new phidget22.DigitalOutput();\n\n\ndigitalOutput0.onAttach = ()=> {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = ()=> {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput1.onAttach = () => {\n        global.set(\"PublicVintHubInit\", 1);\n        console.log('Vinthub1 with digital output 1 attached!, Serial number is:' + SerialNumber)\n};\n\ndigitalOutput1.onDetach = () => {\n        global.set(\"PublicVintHubInit\", 0);\n        console.log('Vinthub1 with digital output 1 detached! Serial number is:' + SerialNumber)\n};\n\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(HubPortDigitalOutput0).then( () =>\n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n\n    digitalOutput1.setIsHubPortDevice(true);\n    digitalOutput1.setHubPort(1);\n    digitalOutput1.setDeviceSerialNumber(SerialNumber);\n    digitalOutput1.open(HubPortDigitalOutput1).then(() => {\n        global.set(\"PublicDigitalOutput1\", digitalOutput1);\n    });\n\n}\n\nconn.connect().then(Start).catch( (err)=> {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nNewMsg = msg;\n\nreturn NewMsg;",
+        "func": "var NewMsg               = { payload : ''};\nvar phidget22            = global.get('phidget22')\nvar IPAdress             = msg.payload.VintHub.ipadress;\nvar ServerPort           = msg.payload.VintHub.port;\nvar SerialNumber         = msg.payload.VintHub.serialnumber;\nvar conn                 = new phidget22.Connection(ServerPort,IPAdress);\nvar Initialized          = context.get('init') || 0;\nvar HubPortDigitalOutput0 = msg.payload.DigitalOutput0.HubPort;\nvar HubPortDigitalOutput1 = msg.payload.DigitalOutput1.HubPort;\n\nvar digitalOutput0       = new phidget22.DigitalOutput();\nvar digitalOutput1       = new phidget22.DigitalOutput();\n\n\ndigitalOutput0.onAttach = ()=> {\n        global.set(\"PublicVintHubInit\", 1);\n\t\tconsole.log('Vinthub1 with digital output 0 attached!, Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput0.onDetach = ()=> {\n\t    global.set(\"PublicVintHubInit\", 0);\n\t\tconsole.log('Vinthub1 with digital output 0 detached! Serial number is:' + SerialNumber)\n\t};\n\ndigitalOutput1.onAttach = () => {\n        global.set(\"PublicVintHubInit\", 1);\n        console.log('Vinthub1 with digital output 1 attached!, Serial number is:' + SerialNumber)\n};\n\ndigitalOutput1.onDetach = () => {\n        global.set(\"PublicVintHubInit\", 0);\n        console.log('Vinthub1 with digital output 1 detached! Serial number is:' + SerialNumber)\n};\n\n\n\nfunction Start()\n{\n    digitalOutput0.setIsHubPortDevice(true);\n    digitalOutput0.setHubPort(0);\n    digitalOutput0.setDeviceSerialNumber(SerialNumber);\n    digitalOutput0.open(HubPortDigitalOutput0).then( () =>\n    {\n       global.set(\"PublicDigitalOutput0\", digitalOutput0);\n    });\n\n    digitalOutput1.setIsHubPortDevice(true);\n    digitalOutput1.setHubPort(4);\n    digitalOutput1.setDeviceSerialNumber(SerialNumber);\n    digitalOutput1.open(HubPortDigitalOutput1).then(() => {\n        global.set(\"PublicDigitalOutput1\", digitalOutput1);\n    });\n\n}\n\nconn.connect().then(Start).catch( (err)=> {\n\tconsole.error(\"Error during connect:\", err);\n});\n\nglobal.set(\"PublicPhidget\", conn);\n\nNewMsg = msg;\n\nreturn NewMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14734,6 +14800,7 @@
         "g": "bb63f3b4.d7ba3",
         "name": "PHIDGETSETTINGS",
         "filename": "phidgetsettings",
+        "filenameType": "str",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "true",
@@ -16058,8 +16125,6 @@
             "#c5b0d5"
         ],
         "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
         "x": 1370,
         "y": 320,
         "wires": [
@@ -16476,7 +16541,6 @@
         ],
         "seg1": "",
         "seg2": "",
-        "className": "",
         "x": 340,
         "y": 100,
         "wires": []
@@ -16568,7 +16632,6 @@
         "label": "Garagentoor",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 330,
         "y": 200,
         "wires": []
@@ -16586,7 +16649,6 @@
         "label": "ZÄHLER HEIZUNG",
         "format": "{{msg.count}}",
         "layout": "row-spread",
-        "className": "",
         "x": 1450,
         "y": 100,
         "wires": []
@@ -16657,12 +16719,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
         "topic": "ManualOn",
-        "topicType": "str",
         "x": 200,
         "y": 300,
         "wires": [
@@ -16689,12 +16749,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "ManualOff",
-        "topicType": "str",
         "x": 200,
         "y": 400,
         "wires": [
@@ -16722,12 +16780,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
         "topic": "Start",
-        "topicType": "str",
         "x": 230,
         "y": 500,
         "wires": [
@@ -16782,7 +16838,8 @@
         "links": [
             "6304732902dfc4c2",
             "ccd452443baa2fcb",
-            "c54bc298eca569d0"
+            "c54bc298eca569d0",
+            "71b3b6853761f8f8"
         ],
         "x": 615,
         "y": 440,
@@ -17106,7 +17163,6 @@
         "passthru": true,
         "decouple": "false",
         "topic": "",
-        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -17116,8 +17172,6 @@
         "offvalueType": "bool",
         "officon": "fa-2x fa-superpowers",
         "offcolor": "grey",
-        "animate": true,
-        "className": "",
         "x": 680,
         "y": 860,
         "wires": [
@@ -17142,12 +17196,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "topicType": "str",
         "x": 470,
         "y": 860,
         "wires": [
@@ -17171,12 +17223,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "",
-        "topicType": "str",
         "x": 470,
         "y": 960,
         "wires": [

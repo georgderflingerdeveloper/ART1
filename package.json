@@ -5,18 +5,18 @@
     "dependencies": {
         "node-red-contrib-bigtimer": "2.2.6",
         "node-red-contrib-boolean-logic-ultimate": "1.0.20",
-        "node-red-contrib-chatbot": "0.18.3",
         "node-red-contrib-finite-statemachine": "1.0.4",
         "node-red-contrib-persist": "1.0.4",
         "node-red-contrib-phidget22": "1.0.3",
         "node-red-contrib-simple-gate": "0.3.1",
-        "node-red-contrib-simpletime": "2.8.1",
         "node-red-contrib-telegrambot": "7.1.1",
         "node-red-dashboard": "2.23.3",
         "node-red-node-rbe": "0.2.9",
         "node-red-contrib-calc": "1.0.5",
         "node-red-contrib-config": "1.2.1",
-        "node-red-contrib-assert": "1.3.2"
+        "node-red-contrib-assert": "1.3.2",
+        "node-red-contrib-counter": "0.1.6",
+        "node-red-contrib-remote": "1.4.0"
     },
     "node-red": {
         "settings": {
