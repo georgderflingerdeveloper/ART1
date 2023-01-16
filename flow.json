@@ -2968,9 +2968,7 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59,
-        "w": 602,
-        "h": 82
+        "y": 59
     },
     {
         "id": "6af13e39.fca7a",
@@ -17136,15 +17134,17 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "label": "HANDBETRIEB AUS",
+        "label": "Alle Systeme AUS",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
+        "color": "WHITE",
+        "bgcolor": "ORANGE",
+        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "ManualOff",
-        "x": 320,
+        "topicType": "str",
+        "x": 310,
         "y": 440,
         "wires": [
             [
