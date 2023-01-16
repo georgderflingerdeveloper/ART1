@@ -3385,7 +3385,8 @@
             "0dcc33245e774768",
             "86c599859901e7cd",
             "692b6e89931495c6",
-            "5d577f1182d5deaa"
+            "5d577f1182d5deaa",
+            "ddba73e60341a235"
         ],
         "x": 214,
         "y": 3319,
@@ -3571,8 +3572,10 @@
             "b0f8773d9101efbe",
             "f00aec0f9266118c"
         ],
-        "x": 524,
-        "y": 519
+        "x": 1524,
+        "y": 59,
+        "w": 422,
+        "h": 162
     },
     {
         "id": "57685b8a9bb178dd",
@@ -3592,8 +3595,10 @@
             "1fca5c652ac064bc",
             "24c05f3357c518a5"
         ],
-        "x": 344,
-        "y": 59
+        "x": 324,
+        "y": 19,
+        "w": 742,
+        "h": 282
     },
     {
         "id": "42499b4091391b5e",
@@ -3608,8 +3613,10 @@
             "1eeaad6de42d2d87",
             "94acc49315fca520"
         ],
-        "x": 1144,
-        "y": 39
+        "x": 1154,
+        "y": -1,
+        "w": 312,
+        "h": 122
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3722,6 +3729,52 @@
         "y": 3639,
         "w": 532,
         "h": 422
+    },
+    {
+        "id": "db12de2aed7db61b",
+        "type": "group",
+        "z": "9087d93a.9a7648",
+        "name": "MODE_WHEN_CONTROLLER_COOLS_DOWN",
+        "style": {
+            "label": true,
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "ee7ae706106fa08c",
+            "b821de1565979b50",
+            "cae0a8ea6dc83ae2",
+            "266b9d1a57f6711f",
+            "a1e21e43260e52f7",
+            "2458967cee619b39",
+            "463e49f0ac15518e",
+            "bd17805c4939460d",
+            "9f2a731fb3f9d285",
+            "c11b4bce4e1185d1",
+            "2f7bbb7479b69e8c",
+            "4312d8dee394c6bd",
+            "fffcb2792d639e90"
+        ],
+        "x": 354,
+        "y": 419,
+        "w": 912,
+        "h": 482
+    },
+    {
+        "id": "0683d555f23e0f71",
+        "type": "group",
+        "z": "9087d93a.9a7648",
+        "name": "",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "024c6765c4ab3579"
+        ],
+        "x": 1514,
+        "y": 539,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "15a5f43209b6efac",
@@ -3907,6 +3960,19 @@
             [
                 "a9553dda9b07ec61",
                 "3915d575.b71bba"
+            ]
+        ]
+    },
+    {
+        "id": "20f29cc9c64f5cd2",
+        "type": "junction",
+        "z": "9087d93a.9a7648",
+        "x": 1120,
+        "y": 400,
+        "wires": [
+            [
+                "1eeaad6de42d2d87",
+                "94acc49315fca520"
             ]
         ]
     },
@@ -10807,7 +10873,8 @@
         "wires": [
             [
                 "270a5bfa.c0ad64",
-                "39b4bd8ec03958d3"
+                "39b4bd8ec03958d3",
+                "ddba73e60341a235"
             ]
         ]
     },
@@ -10834,7 +10901,8 @@
         "wires": [
             [
                 "1f4807de.b67a48",
-                "0ad9834b9a72e88f"
+                "0ad9834b9a72e88f",
+                "ddba73e60341a235"
             ]
         ]
     },
@@ -10861,7 +10929,8 @@
         "wires": [
             [
                 "999c100d3509c327",
-                "1afe63fcebe75bc9"
+                "1afe63fcebe75bc9",
+                "ddba73e60341a235"
             ]
         ]
     },
@@ -10887,7 +10956,8 @@
         "y": 4020,
         "wires": [
             [
-                "750b0dc10fcf1659"
+                "750b0dc10fcf1659",
+                "ddba73e60341a235"
             ]
         ]
     },
@@ -12068,6 +12138,20 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ddba73e60341a235",
+        "type": "link out",
+        "z": "bbeaf112.72e1d",
+        "g": "21e80259.d09fde",
+        "name": "SEND_HEATER_CONTROLLER_STATE",
+        "mode": "link",
+        "links": [
+            "2458967cee619b39"
+        ],
+        "x": 2595,
+        "y": 3560,
+        "wires": []
     },
     {
         "id": "b5e965fa.ea98d8",
@@ -15917,6 +16001,7 @@
         "id": "024c6765c4ab3579",
         "type": "subflow:f9c9c4f6.2e9508",
         "z": "9087d93a.9a7648",
+        "g": "0683d555f23e0f71",
         "name": "SUB_DIGITAL_OUTPUT",
         "env": [
             {
@@ -15925,8 +16010,8 @@
                 "type": "str"
             }
         ],
-        "x": 1290,
-        "y": 220,
+        "x": 1650,
+        "y": 580,
         "wires": [
             []
         ]
@@ -15946,13 +16031,12 @@
         "statusCmd": "status",
         "persist": false,
         "storeName": "memory",
-        "x": 970,
-        "y": 100,
+        "x": 990,
+        "y": 160,
         "wires": [
             [
                 "024c6765c4ab3579",
-                "94acc49315fca520",
-                "1eeaad6de42d2d87"
+                "20f29cc9c64f5cd2"
             ]
         ]
     },
@@ -15983,8 +16067,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
-        "y": 100,
+        "x": 830,
+        "y": 60,
         "wires": [
             [
                 "b21d76ed9b1c0f63"
@@ -16010,7 +16094,7 @@
         "repair": false,
         "outputs": 1,
         "x": 610,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "4c25e11c82391985"
@@ -16035,8 +16119,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
-        "y": 140,
+        "x": 690,
+        "y": 200,
         "wires": [
             [
                 "cc441b79b5e56f8c"
@@ -16070,8 +16154,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 140,
+        "x": 840,
+        "y": 200,
         "wires": [
             [
                 "b21d76ed9b1c0f63"
@@ -16086,12 +16170,14 @@
         "links": [
             "120777d154d0d0ea"
         ],
-        "x": 115,
-        "y": 200,
+        "x": 45,
+        "y": 300,
         "wires": [
             [
                 "789c55584bb78e83",
-                "e4367b37b154ca54"
+                "e4367b37b154ca54",
+                "266b9d1a57f6711f",
+                "cae0a8ea6dc83ae2"
             ]
         ]
     },
@@ -16104,8 +16190,8 @@
         "links": [
             "c9692c27.9ccf"
         ],
-        "x": 385,
-        "y": 100,
+        "x": 365,
+        "y": 160,
         "wires": [
             [
                 "b21d76ed9b1c0f63"
@@ -16122,8 +16208,8 @@
         "links": [
             "828529074508faa7"
         ],
-        "x": 1415,
-        "y": 80,
+        "x": 1425,
+        "y": 40,
         "wires": []
     },
     {
@@ -16148,8 +16234,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 80,
+        "x": 1230,
+        "y": 40,
         "wires": [
             [
                 "b60994fef3576660"
@@ -16178,8 +16264,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 120,
+        "x": 1230,
+        "y": 80,
         "wires": [
             [
                 "b60994fef3576660"
@@ -16195,8 +16281,8 @@
         "links": [
             "ef2068cce55d05e9"
         ],
-        "x": 565,
-        "y": 580,
+        "x": 1565,
+        "y": 120,
         "wires": [
             [
                 "bf8c4a77170f7676",
@@ -16226,8 +16312,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 560,
+        "x": 1710,
+        "y": 100,
         "wires": [
             [
                 "15acd78293043b3d"
@@ -16256,8 +16342,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 600,
+        "x": 1710,
+        "y": 140,
         "wires": [
             [
                 "b0f8773d9101efbe"
@@ -16282,8 +16368,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 870,
-        "y": 560,
+        "x": 1870,
+        "y": 100,
         "wires": [
             [
                 "024c6765c4ab3579"
@@ -16308,8 +16394,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 870,
-        "y": 600,
+        "x": 1870,
+        "y": 140,
         "wires": [
             [
                 "024c6765c4ab3579"
@@ -16328,8 +16414,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 530,
-        "y": 200,
+        "x": 550,
+        "y": 260,
         "wires": [
             [
                 "e4367b37b154ca54"
@@ -16345,11 +16431,366 @@
         "links": [
             "735368a12858031a"
         ],
-        "x": 575,
-        "y": 640,
+        "x": 1575,
+        "y": 180,
         "wires": [
             [
                 "b3e53333cf32a9f7"
+            ]
+        ]
+    },
+    {
+        "id": "ee7ae706106fa08c",
+        "type": "gate",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "memory",
+        "x": 1190,
+        "y": 620,
+        "wires": [
+            [
+                "024c6765c4ab3579",
+                "20f29cc9c64f5cd2"
+            ]
+        ]
+    },
+    {
+        "id": "b821de1565979b50",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "OPEN",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "open",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "ee7ae706106fa08c"
+            ]
+        ]
+    },
+    {
+        "id": "cae0a8ea6dc83ae2",
+        "type": "switch",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "IsControllerCoolingDown",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "FanDelayedHeaterOff",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "b821de1565979b50"
+            ]
+        ]
+    },
+    {
+        "id": "266b9d1a57f6711f",
+        "type": "switch",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "ELSE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "FanDelayedHeaterOff",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 860,
+        "wires": [
+            [
+                "a1e21e43260e52f7"
+            ]
+        ]
+    },
+    {
+        "id": "a1e21e43260e52f7",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "CLOSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 860,
+        "wires": [
+            [
+                "ee7ae706106fa08c"
+            ]
+        ]
+    },
+    {
+        "id": "2458967cee619b39",
+        "type": "link in",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "FROM_HEATER_CONTROL",
+        "links": [
+            "ddba73e60341a235"
+        ],
+        "x": 395,
+        "y": 600,
+        "wires": [
+            [
+                "463e49f0ac15518e",
+                "bd17805c4939460d",
+                "9f2a731fb3f9d285"
+            ]
+        ]
+    },
+    {
+        "id": "463e49f0ac15518e",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "TURN_OFF_COMMAND_IDLE",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "IDLE",
+                "fromt": "str",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 600,
+        "wires": [
+            [
+                "ee7ae706106fa08c",
+                "fffcb2792d639e90"
+            ]
+        ]
+    },
+    {
+        "id": "bd17805c4939460d",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "TURN_ON_COMMAND_HEATING",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "HEATING",
+                "fromt": "str",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 560,
+        "wires": [
+            [
+                "ee7ae706106fa08c",
+                "fffcb2792d639e90"
+            ]
+        ]
+    },
+    {
+        "id": "9f2a731fb3f9d285",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "TURN_OFF_COMMAND_COOLING",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "COOLING",
+                "fromt": "str",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "2f7bbb7479b69e8c",
+                "4312d8dee394c6bd"
+            ]
+        ]
+    },
+    {
+        "id": "c11b4bce4e1185d1",
+        "type": "mytimeout",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "",
+        "outtopic": "",
+        "outsafe": "",
+        "outwarning": "Warning",
+        "outunsafe": "OFF",
+        "warning": "5",
+        "timer": "10",
+        "debug": false,
+        "ndebug": false,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "ee7ae706106fa08c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2f7bbb7479b69e8c",
+        "type": "debug",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4312d8dee394c6bd",
+        "type": "switch",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "START_DELAY",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 680,
+        "wires": [
+            [
+                "c11b4bce4e1185d1"
+            ]
+        ]
+    },
+    {
+        "id": "fffcb2792d639e90",
+        "type": "change",
+        "z": "9087d93a.9a7648",
+        "g": "db12de2aed7db61b",
+        "name": "CANCEL_DELAY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 520,
+        "wires": [
+            [
+                "c11b4bce4e1185d1"
             ]
         ]
     },
