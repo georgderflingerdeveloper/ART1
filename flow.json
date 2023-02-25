@@ -3385,7 +3385,6 @@
             "0dcc33245e774768",
             "86c599859901e7cd",
             "692b6e89931495c6",
-            "5d577f1182d5deaa",
             "ddba73e60341a235"
         ],
         "x": 204,
@@ -12077,39 +12076,6 @@
         "reg": false,
         "x": 580,
         "y": 4020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d577f1182d5deaa",
-        "type": "change",
-        "z": "bbeaf112.72e1d",
-        "g": "21e80259.d09fde",
-        "name": "CLOSE_Q_GATE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "close",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "control",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 3600,
         "wires": [
             []
         ]
