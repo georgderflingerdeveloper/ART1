@@ -118,6 +118,22 @@
         "env": []
     },
     {
+        "id": "6209879faf5a1bd3",
+        "type": "tab",
+        "label": "HYSTERESIS_CONTROLLER_PLC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ecadeafe001b63ca",
+        "type": "tab",
+        "label": "PLC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "860956db.3e8bf8",
         "type": "subflow",
         "name": "SUB_ON_HOUR_1",
@@ -2597,7 +2613,9 @@
             "102d4c0e.28df74"
         ],
         "x": 314,
-        "y": 719
+        "y": 719,
+        "w": 1202,
+        "h": 202
     },
     {
         "id": "67e35083.d2ceb",
@@ -2638,7 +2656,9 @@
             "ab2254c8.a1a2f8"
         ],
         "x": 98,
-        "y": 59
+        "y": 59,
+        "w": 1678,
+        "h": 482
     },
     {
         "id": "efc47727.94b3e8",
@@ -2725,7 +2745,9 @@
             "a48e4132e8bf2963"
         ],
         "x": 174,
-        "y": 79
+        "y": 79,
+        "w": 1302,
+        "h": 1002
     },
     {
         "id": "398b2b64.1f06a4",
@@ -2750,7 +2772,9 @@
             "8ac1c009b5f15771"
         ],
         "x": 434,
-        "y": 999
+        "y": 999,
+        "w": 1022,
+        "h": 242
     },
     {
         "id": "1df63d98.541fb2",
@@ -2769,7 +2793,9 @@
             "29a8f6c68d619403"
         ],
         "x": 584,
-        "y": 1279
+        "y": 1279,
+        "w": 762,
+        "h": 142
     },
     {
         "id": "2bb5b220.65b7ee",
@@ -2795,8 +2821,10 @@
             "3f0972ef0acb8577",
             "52c6a0f0ba044bc4"
         ],
-        "x": 304,
-        "y": 1499
+        "x": 294,
+        "y": 1499,
+        "w": 1342,
+        "h": 262
     },
     {
         "id": "2ad9f63a.09eb3a",
@@ -2814,8 +2842,10 @@
             "fcc873b0.d1809",
             "cdc0d56c.091578"
         ],
-        "x": 304,
-        "y": 1799
+        "x": 294,
+        "y": 1799,
+        "w": 1342,
+        "h": 82
     },
     {
         "id": "4d8e889a.780978",
@@ -2832,7 +2862,9 @@
             "aea8093e.b6c6c8"
         ],
         "x": 854,
-        "y": 39
+        "y": 39,
+        "w": 372,
+        "h": 82
     },
     {
         "id": "28dd349f.ec15cc",
@@ -2855,7 +2887,9 @@
             "7e702f94.d8d83"
         ],
         "x": 734,
-        "y": 239
+        "y": 239,
+        "w": 752,
+        "h": 262
     },
     {
         "id": "1876b4fb.31fdfb",
@@ -2879,7 +2913,9 @@
             "88529efb.9767f"
         ],
         "x": 2174,
-        "y": 119
+        "y": 119,
+        "w": 432,
+        "h": 302
     },
     {
         "id": "598b40d2.e8268",
@@ -2898,7 +2934,9 @@
             "4957956b.226ebc"
         ],
         "x": 2674,
-        "y": 179
+        "y": 179,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "61242e42.52d0d",
@@ -2957,7 +2995,9 @@
             "72674ff.60c9bb"
         ],
         "x": 94,
-        "y": 59
+        "y": 59,
+        "w": 602,
+        "h": 82
     },
     {
         "id": "6af13e39.fca7a",
@@ -2984,7 +3024,9 @@
             "fb55a2c14d1ae5b6"
         ],
         "x": 614,
-        "y": 259
+        "y": 259,
+        "w": 682,
+        "h": 302
     },
     {
         "id": "a51a851.9370f78",
@@ -3004,7 +3046,9 @@
             "1b52b3ef.a9adec"
         ],
         "x": 1574,
-        "y": 171.5
+        "y": 171.5,
+        "w": 552,
+        "h": 349.5
     },
     {
         "id": "88c8327a.46d43",
@@ -3021,7 +3065,9 @@
             "f2e41c73.5c255"
         ],
         "x": 474,
-        "y": 79
+        "y": 79,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "47cc638b.63a52c",
@@ -3039,7 +3085,9 @@
             "bfa81f19.97ad9"
         ],
         "x": 314,
-        "y": 219
+        "y": 219,
+        "w": 332,
+        "h": 262
     },
     {
         "id": "f2ae83b.dc73b8",
@@ -3080,7 +3128,9 @@
             "436f60f258eef437"
         ],
         "x": 308,
-        "y": 2513
+        "y": 2513,
+        "w": 1458,
+        "h": 608
     },
     {
         "id": "3d9b3f31.3911d",
@@ -3124,7 +3174,9 @@
             "d95558904ac04a12"
         ],
         "x": 124,
-        "y": 1939
+        "y": 1939,
+        "w": 1692,
+        "h": 422
     },
     {
         "id": "71c1a4a6a573a7cd",
@@ -3157,7 +3209,9 @@
             "4a4e18d3151ad54a"
         ],
         "x": 54,
-        "y": 519
+        "y": 519,
+        "w": 732,
+        "h": 382
     },
     {
         "id": "2fe851a62c7f2b21",
@@ -3190,7 +3244,9 @@
             "5f27293680f57cb4"
         ],
         "x": 14,
-        "y": 1019
+        "y": 1019,
+        "w": 1292,
+        "h": 342
     },
     {
         "id": "f0e001ad3ee9feaf",
@@ -3213,7 +3269,9 @@
             "dc58eb8bd3d0a0aa"
         ],
         "x": 54,
-        "y": 199
+        "y": 199,
+        "w": 892,
+        "h": 202
     },
     {
         "id": "b305f7ea4564d362",
@@ -3250,7 +3308,9 @@
             "fbf38ba8a5a8e3e8"
         ],
         "x": 54,
-        "y": 1439
+        "y": 1439,
+        "w": 732,
+        "h": 402
     },
     {
         "id": "6e2396589a73f28f",
@@ -3290,7 +3350,9 @@
             "9ba06b417721406d"
         ],
         "x": 14,
-        "y": 119
+        "y": 119,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "21e80259.d09fde",
@@ -3371,7 +3433,9 @@
             "ddba73e60341a235"
         ],
         "x": 204,
-        "y": 3299
+        "y": 3299,
+        "w": 2572,
+        "h": 1162
     },
     {
         "id": "517a0dc17882fa44",
@@ -3409,7 +3473,9 @@
             "d0f8bfdfaf7cf9f4"
         ],
         "x": 54,
-        "y": 819
+        "y": 819,
+        "w": 892,
+        "h": 482
     },
     {
         "id": "7f164fd15897d15f",
@@ -3431,7 +3497,9 @@
             "f985179aa70ee562"
         ],
         "x": 1164,
-        "y": 59
+        "y": 59,
+        "w": 442,
+        "h": 142
     },
     {
         "id": "bbf8275e22c3daf5",
@@ -3469,7 +3537,9 @@
             "60081a1d449e49c9"
         ],
         "x": 94,
-        "y": 299
+        "y": 299,
+        "w": 1212,
+        "h": 482
     },
     {
         "id": "98551c8d6c479968",
@@ -3489,7 +3559,9 @@
             "0f2b8a756e25f3c0"
         ],
         "x": 64,
-        "y": 59
+        "y": 59,
+        "w": 382,
+        "h": 182
     },
     {
         "id": "68da8d5d080e84a2",
@@ -3509,7 +3581,9 @@
             "b0c38d59d545c3da"
         ],
         "x": 74,
-        "y": 1419
+        "y": 1419,
+        "w": 592,
+        "h": 182
     },
     {
         "id": "a63b8486cae4bf5c",
@@ -3529,7 +3603,9 @@
             "214d3d4f3ea4d657"
         ],
         "x": 654,
-        "y": 59
+        "y": 59,
+        "w": 382,
+        "h": 82
     },
     {
         "id": "0ce48f5a0caaf9eb",
@@ -3548,7 +3624,9 @@
             "f00aec0f9266118c"
         ],
         "x": 1524,
-        "y": 59
+        "y": 59,
+        "w": 422,
+        "h": 162
     },
     {
         "id": "57685b8a9bb178dd",
@@ -3569,7 +3647,9 @@
             "f35ad2e091e5a757"
         ],
         "x": 304,
-        "y": 59
+        "y": 59,
+        "w": 862,
+        "h": 222
     },
     {
         "id": "42499b4091391b5e",
@@ -3585,7 +3665,9 @@
             "94acc49315fca520"
         ],
         "x": 1304,
-        "y": 259
+        "y": 259,
+        "w": 312,
+        "h": 122
     },
     {
         "id": "db12de2aed7db61b",
@@ -3615,7 +3697,9 @@
             "629286d725a7548a"
         ],
         "x": 334,
-        "y": 439
+        "y": 439,
+        "w": 1012,
+        "h": 502
     },
     {
         "id": "0683d555f23e0f71",
@@ -3630,7 +3714,9 @@
             "024c6765c4ab3579"
         ],
         "x": 1514,
-        "y": 539
+        "y": 539,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "ab2254c8.a1a2f8",
@@ -3648,7 +3734,9 @@
             "eb42fcd1.96712"
         ],
         "x": 124,
-        "y": 399
+        "y": 399,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "e86d8e3b.0c92f",
@@ -3666,7 +3754,9 @@
             "82f570ad.99b19"
         ],
         "x": 334,
-        "y": 2839
+        "y": 2839,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "c91568a6.292ec8",
@@ -3684,7 +3774,9 @@
             "c10435d.84120c8"
         ],
         "x": 334,
-        "y": 2539
+        "y": 2539,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "3665de025bdb8994",
@@ -3704,7 +3796,9 @@
             "98ab7168.9403b"
         ],
         "x": 1174,
-        "y": 2559
+        "y": 2559,
+        "w": 352,
+        "h": 82
     },
     {
         "id": "821acb7ac1484511",
@@ -3734,7 +3828,9 @@
             "1afe63fcebe75bc9"
         ],
         "x": 2084,
-        "y": 3619
+        "y": 3619,
+        "w": 532,
+        "h": 422
     },
     {
         "id": "15a5f43209b6efac",
@@ -4102,8 +4198,7 @@
         "order": 6,
         "disp": true,
         "width": "6",
-        "collapse": true,
-        "className": ""
+        "collapse": true
     },
     {
         "id": "8025ee04.39f37",
@@ -4176,8 +4271,7 @@
         "order": 5,
         "disp": true,
         "width": "6",
-        "collapse": true,
-        "className": ""
+        "collapse": true
     },
     {
         "id": "de16b78ec731b2b0",
@@ -4199,8 +4293,7 @@
         "order": 3,
         "disp": true,
         "width": "6",
-        "collapse": true,
-        "className": ""
+        "collapse": true
     },
     {
         "id": "2a179ae97f839f06",
@@ -7721,8 +7814,7 @@
         "wires": [
             [
                 "cdb4c08c.0da2d"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -10287,7 +10379,6 @@
         "passthru": true,
         "decouple": "false",
         "topic": "control",
-        "topicType": "str",
         "style": "",
         "onvalue": "open",
         "onvalueType": "str",
@@ -10297,8 +10388,6 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "animate": true,
-        "className": "",
         "x": 550,
         "y": 3640,
         "wires": [
@@ -10320,7 +10409,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": true,
         "x": 2260,
         "y": 3440,
@@ -10793,7 +10881,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": true,
         "x": 1090,
         "y": 3640,
@@ -11162,7 +11249,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": true,
         "x": 1630,
         "y": 4020,
@@ -11494,9 +11580,7 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "status",
         "persist": true,
-        "storeName": "memory",
         "x": 860,
         "y": 440,
         "wires": [
@@ -15974,9 +16058,7 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "status",
         "persist": true,
-        "storeName": "memory",
         "x": 970,
         "y": 200,
         "wires": [
@@ -16378,9 +16460,7 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "status",
         "persist": true,
-        "storeName": "memory",
         "x": 1220,
         "y": 640,
         "wires": [
@@ -17561,12 +17641,10 @@
         "tooltip": "",
         "color": "WHITE",
         "bgcolor": "ORANGE",
-        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "ManualOff",
-        "topicType": "str",
         "x": 310,
         "y": 440,
         "wires": [
@@ -18039,12 +18117,10 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "",
-        "topicType": "str",
         "x": 470,
         "y": 960,
         "wires": [
@@ -18422,7 +18498,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": true,
         "x": 970,
         "y": 680,
@@ -18671,12 +18746,10 @@
         "wrap": false,
         "passthru": true,
         "topic": "topic",
-        "topicType": "msg",
         "format": "{{value}}",
         "min": 0,
         "max": 10,
         "step": 1,
-        "className": "",
         "x": 550,
         "y": 1160,
         "wires": [
@@ -18779,7 +18852,6 @@
         "label": "Verbleibende Zeit in Sekunden:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 510,
         "y": 1260,
         "wires": []
@@ -19263,8 +19335,7 @@
         "wires": [
             [
                 "4264d1fb3e142bc4"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -21286,5 +21357,163 @@
                 "31912db3026c81d1"
             ]
         ]
+    },
+    {
+        "id": "a1a9bc4edab9aa62",
+        "type": "redplc-sys-inject",
+        "z": "ecadeafe001b63ca",
+        "sdelay": 200,
+        "tupdate": 10,
+        "outputs": 2,
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [],
+            [
+                "f06935cfadbd714d"
+            ]
+        ]
+    },
+    {
+        "id": "f06935cfadbd714d",
+        "type": "redplc-sys-rail",
+        "z": "ecadeafe001b63ca",
+        "rtype": "1",
+        "outputs": 1,
+        "name": "PLC_NET1",
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "3c38bf916f89c96e"
+            ]
+        ]
+    },
+    {
+        "id": "3c38bf916f89c96e",
+        "type": "redplc-timer",
+        "z": "ecadeafe001b63ca",
+        "operation": "TPI",
+        "address": 0,
+        "timev": "1",
+        "timeu": "s",
+        "persistent": 0,
+        "tpers": 20,
+        "name": "REPETIVE",
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "8a0fc94f0b1db057"
+            ]
+        ]
+    },
+    {
+        "id": "8a0fc94f0b1db057",
+        "type": "redplc-coil",
+        "z": "ecadeafe001b63ca",
+        "operation": "ST",
+        "vartype": "M",
+        "address": 0,
+        "index": 0,
+        "counter": "R",
+        "timer": "R",
+        "fflop": "R",
+        "name": "",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "96a56e7ce42cca95"
+            ]
+        ]
+    },
+    {
+        "id": "96a56e7ce42cca95",
+        "type": "redplc-sys-rail",
+        "z": "ecadeafe001b63ca",
+        "rtype": "0",
+        "outputs": 0,
+        "name": "PLC_NET1",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d7005915fd33b3e2",
+        "type": "redplc-m-memory",
+        "z": "ecadeafe001b63ca",
+        "address": 0,
+        "persistent": 0,
+        "tupdate": 20,
+        "meminit": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        "x": 320,
+        "y": 60,
+        "wires": []
     }
 ]
